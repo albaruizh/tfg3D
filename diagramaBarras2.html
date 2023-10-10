@@ -1,6 +1,6 @@
 <html lang="en">
     <head>
-        <title>Babylon.js sample code</title>
+        <title>TFG-Visualizacion de datos en 3D</title>
         <script src="https://cdn.babylonjs.com/babylon.js"></script>
         <script src=" https://cdn.babylonjs.com/gui/babylon.gui.js"></script>
 
@@ -200,6 +200,7 @@
                         color6[i] = new BABYLON.Color4(0.19, 0.57, 0.67);
                     }
                     var posicionGround = 2.00;
+                    var tamañoPanel = 0.11;
 
                     var posrec1 = new BABYLON.Vector3(4.5,3,0);
                     var posrec2 = new BABYLON.Vector3(3.5,3,0);
@@ -229,7 +230,7 @@
 
                             var rect01 = new BABYLON.GUI.Rectangle();
                             rect01.width = 0.025;
-                            rect01.height = "20px";
+                            rect01.height = "0px";
                             rect01.color = "black";
                             rect01.thickness = 0;
                             advancedTexture.addControl(rect01);
@@ -249,7 +250,7 @@
 
                             var rect02 = new BABYLON.GUI.Rectangle();
                             rect02.width = 0.025;
-                            rect02.height = "20px";
+                            rect02.height = "0px";
                             rect02.color = "black";
                             rect02.thickness = 0;
                             advancedTexture.addControl(rect02);
@@ -269,7 +270,7 @@
 
                             var rect03 = new BABYLON.GUI.Rectangle();
                             rect03.width = 0.025;
-                            rect03.height = "20px";
+                            rect03.height = "0px";
                             rect03.color = "black";
                             rect03.thickness = 0;
                             advancedTexture.addControl(rect03);
@@ -288,7 +289,7 @@
 
                             var rect04 = new BABYLON.GUI.Rectangle();
                             rect04.width = 0.025;
-                            rect04.height = "20px";
+                            rect04.height = "0px";
                             rect04.color = "black";
                             rect04.thickness = 0;
                             advancedTexture.addControl(rect04);
@@ -307,7 +308,7 @@
 
                             var rect05 = new BABYLON.GUI.Rectangle();
                             rect05.width = 0.025;
-                            rect05.height = "20px";
+                            rect05.height = "0px";
                             rect05.color = "black";
                             rect05.thickness = 0;
                             advancedTexture.addControl(rect05);
@@ -349,7 +350,7 @@
 
                             var rect11 = new BABYLON.GUI.Rectangle();
                             rect11.width = 0.025;
-                            rect11.height = "20px";
+                            rect11.height = "0px";
                             rect11.color = "black";
                             rect11.thickness = 0;
                             advancedTexture.addControl(rect11);
@@ -368,7 +369,7 @@
 
                             var rect12 = new BABYLON.GUI.Rectangle();
                             rect12.width = 0.025;
-                            rect12.height = "20px";
+                            rect12.height = "0px";
                             rect12.color = "black";
                             rect12.thickness = 0;
                             advancedTexture.addControl(rect12);
@@ -388,7 +389,7 @@
 
                             var rect13 = new BABYLON.GUI.Rectangle();
                             rect13.width = 0.025;
-                            rect13.height = "20px";
+                            rect13.height = "0px";
                             rect13.color = "black";
                             rect13.thickness = 0;
                             advancedTexture.addControl(rect13);
@@ -407,7 +408,7 @@
 
                             var rect14 = new BABYLON.GUI.Rectangle();
                             rect14.width = 0.025;
-                            rect14.height = "20px";
+                            rect14.height = "0px";
                             rect14.color = "black";
                             rect14.thickness = 0;
                             advancedTexture.addControl(rect14);
@@ -426,7 +427,7 @@
 
                             var rect15 = new BABYLON.GUI.Rectangle();
                             rect15.width = 0.025;
-                            rect15.height = "20px";
+                            rect15.height = "0px";
                             rect15.color = "black";
                             rect15.thickness = 0;
                             advancedTexture.addControl(rect15);
@@ -440,6 +441,7 @@
                         }
 
                         posicionGround-=0.20;
+                        tamañoPanel+=0.03;
 
                         var rectangle2 = new BABYLON.GUI.Rectangle('');
                         rectangle2.width ="20px";
@@ -468,7 +470,7 @@
 
                             var rect21 = new BABYLON.GUI.Rectangle();
                             rect21.width = 0.025;
-                            rect21.height = "20px";
+                            rect21.height = "0px";
                             rect21.color = "black";
                             rect21.thickness = 0;
                             advancedTexture.addControl(rect21);
@@ -487,7 +489,7 @@
 
                             var rect22 = new BABYLON.GUI.Rectangle();
                             rect22.width = 0.025;
-                            rect22.height = "20px";
+                            rect22.height = "0px";
                             rect22.color = "black";
                             rect22.thickness = 0;
                             advancedTexture.addControl(rect22);
@@ -506,7 +508,7 @@
 
                             var rect23 = new BABYLON.GUI.Rectangle();
                             rect23.width = 0.025;
-                            rect23.height = "20px";
+                            rect23.height = "0px";
                             rect23.color = "black";
                             rect23.thickness = 0;
                             advancedTexture.addControl(rect23);
@@ -526,7 +528,7 @@
 
                             var rect24 = new BABYLON.GUI.Rectangle();
                             rect24.width = 0.025;
-                            rect24.height = "20px";
+                            rect24.height = "0px";
                             rect24.color = "black";
                             rect24.thickness = 0;
                             advancedTexture.addControl(rect24);
@@ -545,7 +547,7 @@
 
                             var rect25 = new BABYLON.GUI.Rectangle();
                             rect25.width = 0.025;
-                            rect25.height = "20px";
+                            rect25.height = "0px";
                             rect25.color = "black";
                             rect25.thickness = 0;
                             advancedTexture.addControl(rect25);
@@ -558,6 +560,7 @@
                         }
 
                         posicionGround-=0.20;
+                        tamañoPanel+=0.03;
 
                         var rectangle3 = new BABYLON.GUI.Rectangle('');
                         rectangle3.width ="20px";
@@ -584,7 +587,7 @@
 
                             var rect31 = new BABYLON.GUI.Rectangle();
                             rect31.width = 0.025;
-                            rect31.height = "20px";
+                            rect31.height = "0px";
                             rect31.color = "black";
                             rect31.thickness = 0;
                             advancedTexture.addControl(rect31);
@@ -603,7 +606,7 @@
 
                             var rect32 = new BABYLON.GUI.Rectangle();
                             rect32.width = 0.025;
-                            rect32.height = "20px";
+                            rect32.height = "0px";
                             rect32.color = "black";
                             rect32.thickness = 0;
                             advancedTexture.addControl(rect32);
@@ -622,7 +625,7 @@
 
                             var rect33 = new BABYLON.GUI.Rectangle();
                             rect33.width = 0.025;
-                            rect33.height = "20px";
+                            rect33.height = "0px";
                             rect33.color = "black";
                             rect33.thickness = 0;
                             advancedTexture.addControl(rect33);
@@ -641,7 +644,7 @@
 
                             var rect34 = new BABYLON.GUI.Rectangle();
                             rect34.width = 0.025;
-                            rect34.height = "20px";
+                            rect34.height = "0px";
                             rect34.color = "black";
                             rect34.thickness = 0;
                             advancedTexture.addControl(rect34);
@@ -660,7 +663,7 @@
 
                             var rect35 = new BABYLON.GUI.Rectangle();
                             rect35.width = 0.025;
-                            rect35.height = "20px";
+                            rect35.height = "0px";
                             rect35.color = "black";
                             rect35.thickness = 0;
                             advancedTexture.addControl(rect35);
@@ -673,6 +676,7 @@
                         }
 
                         posicionGround-=0.20;
+                        tamañoPanel+=0.03;
 
                         var rectangle4 = new BABYLON.GUI.Rectangle('');
                         rectangle4.width ="20px";
@@ -701,7 +705,7 @@
 
                             var rect41 = new BABYLON.GUI.Rectangle();
                             rect41.width = 0.025;
-                            rect41.height = "20px";
+                            rect41.height = "0px";
                             rect41.color = "black";
                             rect41.thickness = 0;
                             advancedTexture.addControl(rect41);
@@ -720,7 +724,7 @@
 
                             var rect42 = new BABYLON.GUI.Rectangle();
                             rect42.width = 0.025;
-                            rect42.height = "20px";
+                            rect42.height = "0px";
                             rect42.color = "black";
                             rect42.thickness = 0;
                             advancedTexture.addControl(rect42);
@@ -739,7 +743,7 @@
 
                             var rect43 = new BABYLON.GUI.Rectangle();
                             rect43.width = 0.025;
-                            rect43.height = "20px";
+                            rect43.height = "0px";
                             rect43.color = "black";
                             rect43.thickness = 0;
                             advancedTexture.addControl(rect43);
@@ -758,7 +762,7 @@
 
                             var rect44 = new BABYLON.GUI.Rectangle();
                             rect44.width = 0.025;
-                            rect44.height = "20px";
+                            rect44.height = "0px";
                             rect44.color = "black";
                             rect44.thickness = 0;
                             advancedTexture.addControl(rect44);
@@ -777,7 +781,7 @@
 
                             var rect45 = new BABYLON.GUI.Rectangle();
                             rect45.width = 0.025;
-                            rect45.height = "20px";
+                            rect45.height = "0px";
                             rect45.color = "black";
                             rect45.thickness = 0;
                             advancedTexture.addControl(rect45);
@@ -790,6 +794,7 @@
                         }
 
                         posicionGround-=0.20;
+                        tamañoPanel+=0.035;
 
                         var rectangle5 = new BABYLON.GUI.Rectangle('');
                         rectangle5.width ="20px";
@@ -818,7 +823,7 @@
 
                             var rect51 = new BABYLON.GUI.Rectangle();
                             rect51.width = 0.025;
-                            rect51.height = "20px";
+                            rect51.height = "0px";
                             rect51.color = "black";
                             rect51.thickness = 0;
                             advancedTexture.addControl(rect51);
@@ -837,7 +842,7 @@
 
                             var rect52 = new BABYLON.GUI.Rectangle();
                             rect52.width = 0.025;
-                            rect52.height = "20px";
+                            rect52.height = "0px";
                             rect52.color = "black";
                             rect52.thickness = 0;
                             advancedTexture.addControl(rect52);
@@ -856,7 +861,7 @@
 
                             var rect53 = new BABYLON.GUI.Rectangle();
                             rect53.width = 0.025;
-                            rect53.height = "20px";
+                            rect53.height = "0px";
                             rect53.color = "black";
                             rect53.thickness = 0;
                             advancedTexture.addControl(rect53);
@@ -875,7 +880,7 @@
 
                             var rect54 = new BABYLON.GUI.Rectangle();
                             rect54.width = 0.025;
-                            rect54.height = "20px";
+                            rect54.height = "0px";
                             rect54.color = "black";
                             rect54.thickness = 0;
                             advancedTexture.addControl(rect54);
@@ -894,7 +899,7 @@
 
                             var rect55 = new BABYLON.GUI.Rectangle();
                             rect55.width = 0.025;
-                            rect55.height = "20px";
+                            rect55.height = "0px";
                             rect55.color = "black";
                             rect55.thickness = 0;
                             advancedTexture.addControl(rect55);
@@ -905,6 +910,8 @@
 
                             rect55.linkWithMesh(boxC5F5);
                         }
+
+                        tamañoPanel+=0.035;
 
                         var rectangle6 = new BABYLON.GUI.Rectangle('');
                         rectangle6.width ="20px";
@@ -924,6 +931,187 @@
 
                     }
 
+                    var mostrarValores = function(isChecked) {
+                        if (isChecked) {
+                            rect01.height = "20px";
+                            rect02.height = "20px";
+                            rect03.height = "20px";
+                            rect04.height = "20px";
+                            rect05.height = "20px";
+                            rect11.height = "20px";
+                            rect12.height = "20px";
+                            rect13.height = "20px";
+                            rect14.height = "20px";
+                            rect15.height = "20px";
+                            rect21.height = "20px";
+                            rect22.height = "20px";
+                            rect23.height = "20px";
+                            rect24.height = "20px";
+                            rect25.height = "20px";
+                            rect31.height = "20px";
+                            rect32.height = "20px";
+                            rect33.height = "20px";
+                            rect34.height = "20px";
+                            rect35.height = "20px";
+                            rect41.height = "20px";
+                            rect42.height = "20px";
+                            rect43.height = "20px";
+                            rect44.height = "20px";
+                            rect45.height = "20px";
+                            rect51.height = "20px";
+                            rect52.height = "20px";
+                            rect53.height = "20px";
+                            rect54.height = "20px";
+                            rect55.height = "20px";
+                        }
+                        else {
+                            rect01.height = "0px";
+                            rect02.height = "0px";
+                            rect03.height = "0px";
+                            rect04.height = "0px";
+                            rect05.height = "0px";
+                            rect11.height = "0px";
+                            rect12.height = "0px";
+                            rect13.height = "0px";
+                            rect14.height = "0px";
+                            rect15.height = "0px";
+                            rect21.height = "0px";
+                            rect22.height = "0px";
+                            rect23.height = "0px";
+                            rect24.height = "0px";
+                            rect25.height = "0px";
+                            rect31.height = "0px";
+                            rect32.height = "0px";
+                            rect33.height = "0px";
+                            rect34.height = "0px";
+                            rect35.height = "0px";
+                            rect41.height = "0px";
+                            rect42.height = "0px";
+                            rect43.height = "0px";
+                            rect44.height = "0px";
+                            rect45.height = "0px";
+                            rect51.height = "0px";
+                            rect52.height = "0px";
+                            rect53.height = "0px";
+                            rect54.height = "0px";
+                            rect55.height = "0px";
+                        }
+	                }
+	                var mostrarValoresColumna1 = function(isChecked) {
+                        if (isChecked) {
+                            rect01.height = "20px";
+                            rect02.height = "20px";
+                            rect03.height = "20px";
+                            rect04.height = "20px";
+                            rect05.height = "20px";
+                        }
+                        else {
+                            rect01.height = "0px";
+                            rect02.height = "0px";
+                            rect03.height = "0px";
+                            rect04.height = "0px";
+                            rect05.height = "0px";
+                        }
+	                }
+	                var mostrarValoresColumna2 = function(isChecked) {
+                        if (isChecked) {
+                            rect11.height = "20px";
+                            rect12.height = "20px";
+                            rect13.height = "20px";
+                            rect14.height = "20px";
+                            rect15.height = "20px";
+                        }
+                        else {
+                            rect11.height = "0px";
+                            rect12.height = "0px";
+                            rect13.height = "0px";
+                            rect14.height = "0px";
+                            rect15.height = "0px";
+                        }
+	                }
+	                var mostrarValoresColumna3 = function(isChecked) {
+                        if (isChecked) {
+                            rect21.height = "20px";
+                            rect22.height = "20px";
+                            rect23.height = "20px";
+                            rect24.height = "20px";
+                            rect25.height = "20px";
+                        }
+                        else {
+                            rect21.height = "0px";
+                            rect22.height = "0px";
+                            rect23.height = "0px";
+                            rect24.height = "0px";
+                            rect25.height = "0px";
+                        }
+	                }
+	                var mostrarValoresColumna4 = function(isChecked) {
+                        if (isChecked) {
+                            rect31.height = "20px";
+                            rect32.height = "20px";
+                            rect33.height = "20px";
+                            rect34.height = "20px";
+                            rect35.height = "20px";
+                        }
+                        else {
+                            rect31.height = "0px";
+                            rect32.height = "0px";
+                            rect33.height = "0px";
+                            rect34.height = "0px";
+                            rect35.height = "0px";
+                        }
+	                }
+	                var mostrarValoresColumna5 = function(isChecked) {
+                        if (isChecked) {
+                            rect41.height = "20px";
+                            rect42.height = "20px";
+                            rect43.height = "20px";
+                            rect44.height = "20px";
+                            rect45.height = "20px";
+                        }
+                        else {
+                            rect41.height = "0px";
+                            rect42.height = "0px";
+                            rect43.height = "0px";
+                            rect44.height = "0px";
+                            rect45.height = "0px";
+                        }
+	                }
+	                var mostrarValoresColumna6 = function(isChecked) {
+                        if (isChecked) {
+                            rect51.height = "20px";
+                            rect52.height = "20px";
+                            rect53.height = "20px";
+                            rect54.height = "20px";
+                            rect55.height = "20px";
+                        }
+                        else {
+                            rect51.height = "0px";
+                            rect52.height = "0px";
+                            rect53.height = "0px";
+                            rect54.height = "0px";
+                            rect55.height = "0px";
+                        }
+	                }
+
+                    var transformGroup = new BABYLON.GUI.CheckboxGroup("VALORES");
+	                transformGroup.addCheckbox("All", mostrarValores);
+	                transformGroup.addCheckbox(nameC1, mostrarValoresColumna1);
+	                transformGroup.addCheckbox(nameC2, mostrarValoresColumna2);
+	                transformGroup.addCheckbox(nameC3, mostrarValoresColumna3);
+	                transformGroup.addCheckbox(nameC4, mostrarValoresColumna4);
+	                transformGroup.addCheckbox(nameC5, mostrarValoresColumna5);
+	                transformGroup.addCheckbox(nameC6, mostrarValoresColumna6);
+
+	                var selectBox = new BABYLON.GUI.SelectionPanel("sp", [transformGroup]);
+                    selectBox.width = 0.10;
+                    selectBox.height = tamañoPanel;
+                    selectBox.color ="black";
+                    selectBox.fontSize ="15px";
+                    selectBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+                    selectBox.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
+
+                    advancedTexture.addControl(selectBox);
 
                     <!--AÑADIMOS LA LUZ-->
                     const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0.5, 0.80, 1));
