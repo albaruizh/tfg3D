@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <title>TFG-Visualizacion de datos en 3D</title>
@@ -123,6 +124,7 @@
                 reader.onload = function (e) {
                     var text = e.target.result;
                     var array = csvToArray(text);
+                    console.log(array);
                     arrayToGraficos(array);
                     creamosGrafico();
 
@@ -281,6 +283,7 @@
                     var postext10 = new BABYLON.Vector3(-4.5,2.85,0.05);
 
                     scene.updateTransformMatrix(true);
+                    var transformGroup = new BABYLON.GUI.CheckboxGroup("VALORES");
 
                     <!--CREAMOS LAS FIGURAS-->
 
@@ -322,6 +325,16 @@
 
                         rect1.linkWithMesh(box);
 
+                        var mostrarValoresColumna1 = function(isChecked) {
+                            if (isChecked) {
+                                rect1.height = "20px";
+                            }
+                            else {
+                                rect1.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC1, mostrarValoresColumna1);
+
                     }
                     if (yColumn2 !== 0) {
                         const box1 = BABYLON.MeshBuilder.CreateBox("box1", {height: yColumn2, width: 0.30, depth: 0.30, faceColors:color2});
@@ -329,7 +342,6 @@
                         box1.position.y = yColumn2/2;
                         box1.position.z = 0;
                         posicionGround-=0.20;
-                        tamañoPanel+=0.03;
 
                         var rectangle2 = new BABYLON.GUI.Rectangle('');
                         rectangle2.width ="20px";
@@ -360,6 +372,16 @@
 
                         rect2.linkWithMesh(box1);
 
+                        var mostrarValoresColumna2 = function(isChecked) {
+                            if (isChecked) {
+                                rect2.height = "20px";
+                            }
+                            else {
+                                rect2.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC2, mostrarValoresColumna2);
+
                     }
                     if (yColumn3 !== 0) {
                         const box2 = BABYLON.MeshBuilder.CreateBox("box2", {height: yColumn3, width: 0.30, depth: 0.30, faceColors:color3});
@@ -367,7 +389,6 @@
                         box2.position.y = yColumn3/2;
                         box2.position.z = 0;
                         posicionGround-=0.20;
-                        tamañoPanel+=0.03;
 
                         var rectangle3 = new BABYLON.GUI.Rectangle('');
                         rectangle3.width ="20px";
@@ -397,6 +418,15 @@
                         rect3.addControl(label3);
 
                         rect3.linkWithMesh(box2);
+                        var mostrarValoresColumna3 = function(isChecked) {
+                            if (isChecked) {
+                                rect3.height = "20px";
+                            }
+                            else {
+                                rect3.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC3, mostrarValoresColumna3);
 
                     }
                     if (yColumn4 !== 0) {
@@ -405,7 +435,6 @@
                         box3.position.y = yColumn4/2;
                         box3.position.z = 0;
                         posicionGround-=0.20;
-                        tamañoPanel+=0.03;
 
                         var rectangle4 = new BABYLON.GUI.Rectangle('');
                         rectangle4.width ="20px";
@@ -436,6 +465,16 @@
 
                         rect4.linkWithMesh(box3);
 
+                        var mostrarValoresColumna4 = function(isChecked) {
+                            if (isChecked) {
+                                rect4.height = "20px";
+                            }
+                            else {
+                                rect4.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC4, mostrarValoresColumna4);
+
 
                     }
                     if (yColumn5 !== 0) {
@@ -444,7 +483,6 @@
                         box4.position.y = yColumn5/2;
                         box4.position.z = 0;
                         posicionGround-=0.20;
-                        tamañoPanel+=0.035;
 
                         var rectangle5 = new BABYLON.GUI.Rectangle('');
                         rectangle5.width ="20px";
@@ -475,6 +513,16 @@
 
                         rect5.linkWithMesh(box4);
 
+                        var mostrarValoresColumna5 = function(isChecked) {
+                            if (isChecked) {
+                                rect5.height = "20px";
+                            }
+                            else {
+                                rect5.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC5, mostrarValoresColumna5);
+
 
                     }
                     if (yColumn6 !== 0) {
@@ -483,7 +531,6 @@
                         box5.position.y = yColumn6/2;
                         box5.position.z = 0;
                         posicionGround-=0.20;
-                        tamañoPanel+=0.035;
 
                         var rectangle6 = new BABYLON.GUI.Rectangle('');
                         rectangle6.width ="20px";
@@ -514,6 +561,16 @@
 
                         rect6.linkWithMesh(box5);
 
+                        var mostrarValoresColumna6 = function(isChecked) {
+                            if (isChecked) {
+                                rect6.height = "20px";
+                            }
+                            else {
+                                rect6.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC6, mostrarValoresColumna6);
+
 
                     }
                     if (yColumn7 !== 0) {
@@ -522,7 +579,6 @@
                         box6.position.y = yColumn7/2;
                         box6.position.z = 0;
                         posicionGround-=0.20;
-                        tamañoPanel+=0.03;
 
                         var rectangle7 = new BABYLON.GUI.Rectangle('');
                         rectangle7.width ="20px";
@@ -553,6 +609,16 @@
 
                         rect7.linkWithMesh(box6);
 
+                        var mostrarValoresColumna7 = function(isChecked) {
+                            if (isChecked) {
+                                rect7.height = "20px";
+                            }
+                            else {
+                                rect7.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC7, mostrarValoresColumna7);
+
                     }
                     if (yColumn8 !== 0) {
                         const box7 = BABYLON.MeshBuilder.CreateBox("box7", {height: yColumn8, width: 0.30, depth: 0.30, faceColors:color8});
@@ -560,7 +626,6 @@
                         box7.position.y = yColumn8/2;
                         box7.position.z = 0;
                         posicionGround-=0.20;
-                        tamañoPanel+=0.03;
 
                         var rectangle8 = new BABYLON.GUI.Rectangle('');
                         rectangle8.width ="20px";
@@ -591,6 +656,16 @@
 
                         rect8.linkWithMesh(box7);
 
+                        var mostrarValoresColumna8 = function(isChecked) {
+                            if (isChecked) {
+                                rect8.height = "20px";
+                            }
+                            else {
+                                rect8.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC8, mostrarValoresColumna8);
+
 
                     }
                     if (yColumn9 !== 0) {
@@ -599,7 +674,6 @@
                         box8.position.y = yColumn9/2;
                         box8.position.z = 0;
                         posicionGround-=0.10;
-                        tamañoPanel+=0.03;
 
                         var rectangle9 = new BABYLON.GUI.Rectangle('');
                         rectangle9.width ="20px";
@@ -630,6 +704,16 @@
 
                         rect9.linkWithMesh(box8);
 
+                        var mostrarValoresColumna9 = function(isChecked) {
+                            if (isChecked) {
+                                rect9.height = "20px";
+                            }
+                            else {
+                                rect9.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC9, mostrarValoresColumna9);
+
 
                     }
                     if (yColumn10 !== 0) {
@@ -638,7 +722,6 @@
                         box9.position.y = yColumn10/2;
                         box9.position.z = 0;
                         posicionGround-=0.10;
-                        tamañoPanel+=0.04;
 
                         var rectangle10 = new BABYLON.GUI.Rectangle('');
                         rectangle10.width ="20px";
@@ -669,6 +752,17 @@
 
                         rect10.linkWithMesh(box9);
 
+                        var mostrarValoresColumna10 = function(isChecked) {
+                            if (isChecked) {
+                                rect10.height = "20px";
+                            }
+                            else {
+                                rect10.height = "0px";
+                            }
+	                    }
+
+	                    transformGroup.addCheckbox(nameC10, mostrarValoresColumna10);
+
                     }
                     var mostrarValores = function(isChecked) {
                         if (isChecked) {
@@ -696,105 +790,15 @@
                             rect10.height = "0px";
                         }
 	                }
-	                var mostrarValoresColumna1 = function(isChecked) {
-                        if (isChecked) {
-                            rect1.height = "20px";
-                        }
-                        else {
-                            rect1.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna2 = function(isChecked) {
-                        if (isChecked) {
-                            rect2.height = "20px";
-                        }
-                        else {
-                            rect2.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna3 = function(isChecked) {
-                        if (isChecked) {
-                            rect3.height = "20px";
-                        }
-                        else {
-                            rect3.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna4 = function(isChecked) {
-                        if (isChecked) {
-                            rect4.height = "20px";
-                        }
-                        else {
-                            rect4.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna5 = function(isChecked) {
-                        if (isChecked) {
-                            rect5.height = "20px";
-                        }
-                        else {
-                            rect5.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna6 = function(isChecked) {
-                        if (isChecked) {
-                            rect6.height = "20px";
-                        }
-                        else {
-                            rect6.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna7 = function(isChecked) {
-                        if (isChecked) {
-                            rect7.height = "20px";
-                        }
-                        else {
-                            rect7.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna8 = function(isChecked) {
-                        if (isChecked) {
-                            rect8.height = "20px";
-                        }
-                        else {
-                            rect8.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna9 = function(isChecked) {
-                        if (isChecked) {
-                            rect9.height = "20px";
-                        }
-                        else {
-                            rect9.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna10 = function(isChecked) {
-                        if (isChecked) {
-                            rect10.height = "20px";
-                        }
-                        else {
-                            rect10.height = "0px";
-                        }
-	                }
 
-	                var transformGroup = new BABYLON.GUI.CheckboxGroup("VALORES");
 	                transformGroup.addCheckbox("All", mostrarValores);
-	                transformGroup.addCheckbox(nameC1, mostrarValoresColumna1);
-	                transformGroup.addCheckbox(nameC2, mostrarValoresColumna2);
-	                transformGroup.addCheckbox(nameC3, mostrarValoresColumna3);
-	                transformGroup.addCheckbox(nameC4, mostrarValoresColumna4);
-	                transformGroup.addCheckbox(nameC5, mostrarValoresColumna5);
-	                transformGroup.addCheckbox(nameC6, mostrarValoresColumna6);
-	                transformGroup.addCheckbox(nameC7, mostrarValoresColumna7);
-	                transformGroup.addCheckbox(nameC8, mostrarValoresColumna8);
-	                transformGroup.addCheckbox(nameC9, mostrarValoresColumna9);
-	                transformGroup.addCheckbox(nameC10, mostrarValoresColumna10);
 
 	                var selectBox = new BABYLON.GUI.SelectionPanel("sp", [transformGroup]);
                     selectBox.width = 0.10;
-                    selectBox.height = tamañoPanel;
-                    selectBox.color ="black";
+                    selectBox.height = 0.80;
+                    selectBox.color ="white";
                     selectBox.fontSize ="15px";
+                    selectBox.labelColor="black";
                     selectBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
                     selectBox.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
 
