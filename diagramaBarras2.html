@@ -218,6 +218,7 @@
 
 
                     scene.updateTransformMatrix(true);
+                    var transformGroup = new BABYLON.GUI.CheckboxGroup("VALORES");
 
                     <!--CREAMOS LAS FIGURAS-->
 
@@ -339,6 +340,24 @@
                         advancedTexture.addControl(text1);
                         text1.moveToVector3(postext1,scene);
 
+                        var mostrarValoresColumna1 = function(isChecked) {
+                            if (isChecked) {
+                                rect01.height = "20px";
+                                rect02.height = "20px";
+                                rect03.height = "20px";
+                                rect04.height = "20px";
+                                rect05.height = "20px";
+                            }
+                            else {
+                                rect01.height = "0px";
+                                rect02.height = "0px";
+                                rect03.height = "0px";
+                                rect04.height = "0px";
+                                rect05.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC1, mostrarValoresColumna1);
+
                     }
 
                     if (!Number.isNaN(column2)) {
@@ -441,7 +460,6 @@
                         }
 
                         posicionGround-=0.20;
-                        tamañoPanel+=0.03;
 
                         var rectangle2 = new BABYLON.GUI.Rectangle('');
                         rectangle2.width ="20px";
@@ -458,6 +476,24 @@
                         text2.height = "20px";
                         advancedTexture.addControl(text2);
                         text2.moveToVector3(postext2,scene);
+
+                        var mostrarValoresColumna2 = function(isChecked) {
+                            if (isChecked) {
+                                rect11.height = "20px";
+                                rect12.height = "20px";
+                                rect13.height = "20px";
+                                rect14.height = "20px";
+                                rect15.height = "20px";
+                            }
+                            else {
+                                rect11.height = "0px";
+                                rect12.height = "0px";
+                                rect13.height = "0px";
+                                rect14.height = "0px";
+                                rect15.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC2, mostrarValoresColumna2);
 
                     }
 
@@ -560,7 +596,6 @@
                         }
 
                         posicionGround-=0.20;
-                        tamañoPanel+=0.03;
 
                         var rectangle3 = new BABYLON.GUI.Rectangle('');
                         rectangle3.width ="20px";
@@ -577,6 +612,24 @@
                         text3.height = "20px";
                         advancedTexture.addControl(text3);
                         text3.moveToVector3(postext3,scene);
+
+                        var mostrarValoresColumna3 = function(isChecked) {
+                            if (isChecked) {
+                                rect21.height = "20px";
+                                rect22.height = "20px";
+                                rect23.height = "20px";
+                                rect24.height = "20px";
+                                rect25.height = "20px";
+                            }
+                            else {
+                                rect21.height = "0px";
+                                rect22.height = "0px";
+                                rect23.height = "0px";
+                                rect24.height = "0px";
+                                rect25.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC3, mostrarValoresColumna3);
                     }
                     if (!Number.isNaN(column4)) {
                         if(yC3F1 !==0){
@@ -676,7 +729,6 @@
                         }
 
                         posicionGround-=0.20;
-                        tamañoPanel+=0.03;
 
                         var rectangle4 = new BABYLON.GUI.Rectangle('');
                         rectangle4.width ="20px";
@@ -693,6 +745,24 @@
                         text4.height = "20px";
                         advancedTexture.addControl(text4);
                         text4.moveToVector3(postext4,scene);
+
+                        var mostrarValoresColumna4 = function(isChecked) {
+                            if (isChecked) {
+                                rect31.height = "20px";
+                                rect32.height = "20px";
+                                rect33.height = "20px";
+                                rect34.height = "20px";
+                                rect35.height = "20px";
+                            }
+                            else {
+                                rect31.height = "0px";
+                                rect32.height = "0px";
+                                rect33.height = "0px";
+                                rect34.height = "0px";
+                                rect35.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC4, mostrarValoresColumna4);
 
                     }
 
@@ -794,7 +864,6 @@
                         }
 
                         posicionGround-=0.20;
-                        tamañoPanel+=0.035;
 
                         var rectangle5 = new BABYLON.GUI.Rectangle('');
                         rectangle5.width ="20px";
@@ -811,6 +880,24 @@
                         text5.height = "20px";
                         advancedTexture.addControl(text5);
                         text5.moveToVector3(postext5,scene);
+
+                        var mostrarValoresColumna5 = function(isChecked) {
+                            if (isChecked) {
+                                rect41.height = "20px";
+                                rect42.height = "20px";
+                                rect43.height = "20px";
+                                rect44.height = "20px";
+                                rect45.height = "20px";
+                            }
+                            else {
+                                rect41.height = "0px";
+                                rect42.height = "0px";
+                                rect43.height = "0px";
+                                rect44.height = "0px";
+                                rect45.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC5, mostrarValoresColumna5);
 
                     }
 
@@ -911,8 +998,6 @@
                             rect55.linkWithMesh(boxC5F5);
                         }
 
-                        tamañoPanel+=0.035;
-
                         var rectangle6 = new BABYLON.GUI.Rectangle('');
                         rectangle6.width ="20px";
                         rectangle6.height = "20px";
@@ -928,6 +1013,24 @@
                         text6.height = "20px";
                         advancedTexture.addControl(text6);
                         text6.moveToVector3(postext6,scene);
+
+                        var mostrarValoresColumna6 = function(isChecked) {
+                            if (isChecked) {
+                                rect51.height = "20px";
+                                rect52.height = "20px";
+                                rect53.height = "20px";
+                                rect54.height = "20px";
+                                rect55.height = "20px";
+                            }
+                            else {
+                                rect51.height = "0px";
+                                rect52.height = "0px";
+                                rect53.height = "0px";
+                                rect54.height = "0px";
+                                rect55.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC6, mostrarValoresColumna6);
 
                     }
 
@@ -997,116 +1100,15 @@
                             rect55.height = "0px";
                         }
 	                }
-	                var mostrarValoresColumna1 = function(isChecked) {
-                        if (isChecked) {
-                            rect01.height = "20px";
-                            rect02.height = "20px";
-                            rect03.height = "20px";
-                            rect04.height = "20px";
-                            rect05.height = "20px";
-                        }
-                        else {
-                            rect01.height = "0px";
-                            rect02.height = "0px";
-                            rect03.height = "0px";
-                            rect04.height = "0px";
-                            rect05.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna2 = function(isChecked) {
-                        if (isChecked) {
-                            rect11.height = "20px";
-                            rect12.height = "20px";
-                            rect13.height = "20px";
-                            rect14.height = "20px";
-                            rect15.height = "20px";
-                        }
-                        else {
-                            rect11.height = "0px";
-                            rect12.height = "0px";
-                            rect13.height = "0px";
-                            rect14.height = "0px";
-                            rect15.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna3 = function(isChecked) {
-                        if (isChecked) {
-                            rect21.height = "20px";
-                            rect22.height = "20px";
-                            rect23.height = "20px";
-                            rect24.height = "20px";
-                            rect25.height = "20px";
-                        }
-                        else {
-                            rect21.height = "0px";
-                            rect22.height = "0px";
-                            rect23.height = "0px";
-                            rect24.height = "0px";
-                            rect25.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna4 = function(isChecked) {
-                        if (isChecked) {
-                            rect31.height = "20px";
-                            rect32.height = "20px";
-                            rect33.height = "20px";
-                            rect34.height = "20px";
-                            rect35.height = "20px";
-                        }
-                        else {
-                            rect31.height = "0px";
-                            rect32.height = "0px";
-                            rect33.height = "0px";
-                            rect34.height = "0px";
-                            rect35.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna5 = function(isChecked) {
-                        if (isChecked) {
-                            rect41.height = "20px";
-                            rect42.height = "20px";
-                            rect43.height = "20px";
-                            rect44.height = "20px";
-                            rect45.height = "20px";
-                        }
-                        else {
-                            rect41.height = "0px";
-                            rect42.height = "0px";
-                            rect43.height = "0px";
-                            rect44.height = "0px";
-                            rect45.height = "0px";
-                        }
-	                }
-	                var mostrarValoresColumna6 = function(isChecked) {
-                        if (isChecked) {
-                            rect51.height = "20px";
-                            rect52.height = "20px";
-                            rect53.height = "20px";
-                            rect54.height = "20px";
-                            rect55.height = "20px";
-                        }
-                        else {
-                            rect51.height = "0px";
-                            rect52.height = "0px";
-                            rect53.height = "0px";
-                            rect54.height = "0px";
-                            rect55.height = "0px";
-                        }
-	                }
 
-                    var transformGroup = new BABYLON.GUI.CheckboxGroup("VALORES");
 	                transformGroup.addCheckbox("All", mostrarValores);
-	                transformGroup.addCheckbox(nameC1, mostrarValoresColumna1);
-	                transformGroup.addCheckbox(nameC2, mostrarValoresColumna2);
-	                transformGroup.addCheckbox(nameC3, mostrarValoresColumna3);
-	                transformGroup.addCheckbox(nameC4, mostrarValoresColumna4);
-	                transformGroup.addCheckbox(nameC5, mostrarValoresColumna5);
-	                transformGroup.addCheckbox(nameC6, mostrarValoresColumna6);
+
 
 	                var selectBox = new BABYLON.GUI.SelectionPanel("sp", [transformGroup]);
                     selectBox.width = 0.10;
-                    selectBox.height = tamañoPanel;
-                    selectBox.color ="black";
+                    selectBox.height = 0.80;
+                    selectBox.color ="white";
+                    selectBox.labelColor="black";
                     selectBox.fontSize ="15px";
                     selectBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
                     selectBox.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
