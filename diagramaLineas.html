@@ -1,0 +1,640 @@
+<html lang="en">
+    <head>
+        <title>TFG-Visualizacion de datos en 3D</title>
+        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+        <script src=" https://cdn.babylonjs.com/gui/babylon.gui.js"></script>
+
+        <style>
+
+            .container-input {
+                text-align: center;
+                width: 50%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            #submit {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                padding: 5px;
+                margin: 0 20px 20px 75px;
+                border: none;
+                background: #8AB17D;
+                color: white;
+                border-radius: 8px 8px 8px 8px;
+                width: 136px;
+            }
+
+            #submit:hover {
+                background: #A6C79B;
+            }
+            input[type=file]::file-selector-button {
+                border: 2px solid #659475;
+                padding: .2em .4em;
+                border-radius: .2em;
+                background-color: #659475;
+                transition: 1s;
+                color:white;
+            }
+
+            input[type=file]::file-selector-button:hover {
+                background-color: #40776D;
+                border: 2px solid #40776D;
+            }
+
+            #file {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 5px 10px;
+                background: #8AB17D;
+                color: white;
+                border-radius: 8px 8px 8px 8px;
+
+            }
+
+            body,#renderCanvas { width: 100%; height: 100%;}
+
+        </style>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <div class="container-input">
+            <form id="form">
+                <br />
+                <input type="file" id="file" accept=".csv" name="file" class="inputfile"/>
+                <br />
+                <input type="submit" value="Submit" id="submit" name="submit" />
+            </form>
+        </div>
+        <canvas id="renderCanvas"></canvas>
+        <script type="text/javascript">
+
+<!--            CODIGO DEL HTML-->
+            const myForm = document.getElementById("form");
+            const csvFile = document.getElementById("file");
+
+
+            myForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const input = csvFile.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var text = e.target.result;
+                    var array = csvToArray(text);
+                    arrayToGraficos(array);
+                    creamosGrafico();
+
+
+                };
+
+                reader.readAsText(input);
+
+                function csvToArray(str, delimiter = ",") {
+                    let array = str.split("\r\n").map(function (line) {
+                        return line.split(delimiter);
+                    });
+
+                    return array;
+                }
+            });
+
+            function arrayToGraficos(datos){
+
+                yC0F1 = parseInt(datos[1][0]);
+                yC0F2 = (parseInt(datos[2][0]));
+                yC0F3 = (parseInt(datos[3][0]));
+                yC0F4 = (parseInt(datos[4][0]));
+                yC0F5 = (parseInt(datos[5][0]));
+                linea1 = yC0F1+yC0F2+yC0F3+yC0F4+yC0F5;
+
+                yC1F1 = parseInt(datos[1][1]);
+                yC1F2 = parseInt(datos[2][1]);
+                yC1F3 = parseInt(datos[3][1]);
+                yC1F4 = parseInt(datos[4][1]);
+                yC1F5 = parseInt(datos[5][1]);
+                linea2 = yC1F1+yC1F2+yC1F3+yC1F4+yC1F5;
+
+                yC2F1 = parseInt(datos[1][2]);
+                yC2F2 = parseInt(datos[2][2]);
+                yC2F3 = parseInt(datos[3][2]);
+                yC2F4 = parseInt(datos[4][2]);
+                yC2F5 = parseInt(datos[5][2]);
+                linea3 = yC2F1+yC2F2+yC2F3+yC2F4+yC2F5;
+
+                yC3F1 = parseInt(datos[1][3]);
+                yC3F2 = parseInt(datos[2][3]);
+                yC3F3 = parseInt(datos[3][3]);
+                yC3F4 = parseInt(datos[4][3]);
+                yC3F5 = parseInt(datos[5][3]);
+                linea4 = yC3F1+yC3F2+yC3F3+yC3F4+yC3F5;
+
+                yC4F1 = parseInt(datos[1][4]);
+                yC4F2 = parseInt(datos[2][4]);
+                yC4F3 = parseInt(datos[3][4]);
+                yC4F4 = parseInt(datos[4][4]);
+                yC4F5 = parseInt(datos[5][4]);
+                linea5 = yC4F1+yC4F2+yC4F3+yC4F4+yC4F5;
+
+                yC5F1 = parseInt(datos[1][5]);
+                yC5F2 = parseInt(datos[2][5]);
+                yC5F3 = parseInt(datos[3][5]);
+                yC5F4 = parseInt(datos[4][5]);
+                yC5F5 = parseInt(datos[5][5]);
+                linea6 = yC5F1+yC5F2+yC5F3+yC5F4+yC5F5;
+
+                nameC1 = datos[0][0];
+                nameC2 = datos[0][1];
+                nameC3 = datos[0][2];
+                nameC4 = datos[0][3];
+                nameC5 = datos[0][4];
+                nameC6 = datos[0][5];
+
+            }
+
+            function creamosGrafico(){
+                <!--AÑADIMOS LA ESCENA-->
+                const canvas = document.getElementById("renderCanvas");
+                const engine = new BABYLON.Engine(canvas, true);
+
+                const createScene = function() {
+                    const scene = new BABYLON.Scene(engine);
+                    scene.clearColor = new BABYLON.Color3(1.00, 1.00, 1.00);
+
+                    <!--CREAMOS LA CAMARA-->
+                    const alpha =  Math.PI/2;
+                    const beta = Math.PI/3;
+                    const radius = 8;
+                    const target = new BABYLON.Vector3(0, 0, 0);
+
+                    const camera = new BABYLON.ArcRotateCamera("Camera", alpha, beta, radius, target, scene);
+                    camera.attachControl(canvas, true);
+
+
+                    var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
+
+
+                    const color1 = new BABYLON.Color4(1.00, 0.74, 0.26);
+                    const color2 = new BABYLON.Color4(0.96, 0.57, 0.28);
+                    const color3 = new BABYLON.Color4(0.68, 0.35, 0.41);
+                    const color4 = new BABYLON.Color4(0.63, 0.72, 0.41);
+                    const color5 = new BABYLON.Color4(0.93, 0.32, 0.31);
+                    const color6 = new BABYLON.Color4(0.19, 0.57, 0.67);
+
+                    var posicionGround = 2.00;
+
+                    var posrec1 = new BABYLON.Vector3(3.5,3,0);
+                    var posrec2 = new BABYLON.Vector3(2.5,3,0);
+                    var posrec3 = new BABYLON.Vector3(1.5,3,0);
+                    var posrec4 = new BABYLON.Vector3(0.5,3,0);
+                    var posrec5 = new BABYLON.Vector3(-0.5,3,0);
+                    var posrec6 = new BABYLON.Vector3(-1.5,3,0);
+
+                    var postext1 = new BABYLON.Vector3(3.5,2.85,0.05);
+                    var postext2 = new BABYLON.Vector3(2.5,2.85,0.05);
+                    var postext3 = new BABYLON.Vector3(1.5,2.85,0.05);
+                    var postext4 = new BABYLON.Vector3(0.5,2.85,0.05);
+                    var postext5 = new BABYLON.Vector3(-0.5,2.85,0.05);
+                    var postext6 = new BABYLON.Vector3(-1.5,2.85,0.05);
+
+
+                    scene.updateTransformMatrix(true);
+                    var transformGroup = new BABYLON.GUI.CheckboxGroup("VALORES");
+
+                    <!--CREAMOS LAS FIGURAS-->
+
+                    if (!Number.isNaN(linea1)) {
+                        const plinea1 = [
+                            new BABYLON.Vector3(2.6, yC0F1/5, 2.4),
+                            new BABYLON.Vector3(1.6, yC0F2/5, 2.4),
+                            new BABYLON.Vector3(0.6, yC0F3/5, 2.4),
+                            new BABYLON.Vector3(-0.6, yC0F4/5, 2.4),
+                            new BABYLON.Vector3(-1.6, yC0F5/5, 2.4),
+                        ];
+                        const tube1 = BABYLON.MeshBuilder.CreateTube("tube1", {path: plinea1, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions1 = tube1.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors1 = new Array(positions1.length * 4);
+                        for(let i=0; i<positions1.length; i++){
+                            colors1[i * 4 + 0] = color1.r;
+                            colors1[i * 4 + 1] = color1.g;
+                            colors1[i * 4 + 2] = color1.b;
+                            colors1[i * 4 + 3] = 1;
+                        }
+                        tube1.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors1);
+
+                        posicionGround-=0.20;
+
+                        var rectangle1 = new BABYLON.GUI.Rectangle('');
+                        rectangle1.width ="20px";
+                        rectangle1.height = "20px";
+                        rectangle1.background="rgb(255,188,66)";
+                        advancedTexture.addControl(rectangle1);
+                        rectangle1.moveToVector3(posrec1, scene);
+
+                        var text1 = new BABYLON.GUI.TextBlock();
+                        text1.text = nameC1;
+                        text1.color = "black";
+                        text1.fontSize = 15;
+                        text1.width ="100px";
+                        text1.height = "20px";
+                        advancedTexture.addControl(text1);
+                        text1.moveToVector3(postext1,scene);
+
+                        var rect1 = new BABYLON.GUI.Rectangle();
+                        rect1.width = 0.1;
+                        rect1.height = "0px";
+                        rect1.color = "black";
+                        rect1.thickness = 0;
+                        advancedTexture.addControl(rect1);
+
+                        var label1 = new BABYLON.GUI.TextBlock();
+                        label1.text = "( "+yC0F1+" , "+yC0F2+" , "+yC0F3+" , "+yC0F4+" , "+yC0F5+" )";
+                        rect1.addControl(label1);
+
+                        rect1.linkWithMesh(tube1);
+
+                        var mostrarValoresLinea1 = function(isChecked) {
+                            if (isChecked) {
+                                rect1.height = "20px";
+                            }
+                            else {
+                                rect1.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC1, mostrarValoresLinea1);
+
+                    }
+                    if (!Number.isNaN(linea2)) {
+                        const plinea2 = [
+                            new BABYLON.Vector3(2.6, yC1F1/5, 1.4),
+                            new BABYLON.Vector3(1.6, yC1F2/5, 1.4),
+                            new BABYLON.Vector3(0.6, yC1F3/5, 1.4),
+                            new BABYLON.Vector3(-0.6, yC1F4/5, 1.4),
+                            new BABYLON.Vector3(-1.6, yC1F5/5, 1.4),
+                        ];
+                        const tube2 = BABYLON.MeshBuilder.CreateTube("tube2", {path: plinea2, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions2 = tube2.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors2 = new Array(positions2.length * 4);
+                        for(let i=0; i<positions2.length; i++){
+                            colors2[i * 4 + 0] = color2.r;
+                            colors2[i * 4 + 1] = color2.g;
+                            colors2[i * 4 + 2] = color2.b;
+                            colors2[i * 4 + 3] = 1;
+                        }
+                        tube2.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors2);
+
+                        posicionGround-=0.20;
+
+                        var rectangle2 = new BABYLON.GUI.Rectangle('');
+                        rectangle2.width ="20px";
+                        rectangle2.height = "20px";
+                        rectangle2.background="rgb(246,146,72)";
+                        advancedTexture.addControl(rectangle2);
+                        rectangle2.moveToVector3(posrec2, scene);
+
+                        var text2 = new BABYLON.GUI.TextBlock();
+                        text2.text = nameC2;
+                        text2.color = "black";
+                        text2.fontSize = 15;
+                        text2.width ="100px";
+                        text2.height = "20px";
+                        advancedTexture.addControl(text2);
+                        text2.moveToVector3(postext2,scene);
+
+                        var rect2 = new BABYLON.GUI.Rectangle();
+                        rect2.width = 0.1;
+                        rect2.height = "0px";
+                        rect2.color = "black";
+                        rect2.thickness = 0;
+                        advancedTexture.addControl(rect2);
+
+                        var label2 = new BABYLON.GUI.TextBlock();
+                        label2.text = "( "+yC1F1+" , "+yC1F2+" , "+yC1F3+" , "+yC1F4+" , "+yC1F5+" )";
+                        rect2.addControl(label2);
+
+                        rect2.linkWithMesh(tube2);
+
+                        var mostrarValoresLinea2 = function(isChecked) {
+                            if (isChecked) {
+                                rect2.height = "20px";
+                            }
+                            else {
+                                rect2.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC2, mostrarValoresLinea2);
+
+                    }
+                    if (!Number.isNaN(linea3)) {
+                        const plinea3 = [
+                            new BABYLON.Vector3(2.6, yC2F1/5, 0.5),
+                            new BABYLON.Vector3(1.6, yC2F2/5, 0.5),
+                            new BABYLON.Vector3(0.6, yC2F3/5, 0.5),
+                            new BABYLON.Vector3(-0.6, yC2F4/5, 0.5),
+                            new BABYLON.Vector3(-1.6, yC2F5/5, 0.5),
+                        ];
+                        const tube3 = BABYLON.MeshBuilder.CreateTube("tube3", {path: plinea3, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions3 = tube3.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors3 = new Array(positions3.length * 4);
+                        for(let i=0; i<positions3.length; i++){
+                            colors3[i * 4 + 0] = color3.r;
+                            colors3[i * 4 + 1] = color3.g;
+                            colors3[i * 4 + 2] = color3.b;
+                            colors3[i * 4 + 3] = 1;
+                        }
+                        tube3.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors3);
+
+                        posicionGround-=0.20;
+
+                        var rectangle3 = new BABYLON.GUI.Rectangle('');
+                        rectangle3.width ="20px";
+                        rectangle3.height = "20px";
+                        rectangle3.background="rgb(173,88,104)";
+                        advancedTexture.addControl(rectangle3);
+                        rectangle3.moveToVector3(posrec3, scene);
+
+                        var text3 = new BABYLON.GUI.TextBlock();
+                        text3.text = nameC3;
+                        text3.color = "black";
+                        text3.fontSize = 15;
+                        text3.width ="100px";
+                        text3.height = "20px";
+                        advancedTexture.addControl(text3);
+                        text3.moveToVector3(postext3,scene);
+
+                        var rect3 = new BABYLON.GUI.Rectangle();
+                        rect3.width = 0.1;
+                        rect3.height = "0px";
+                        rect3.color = "black";
+                        rect3.thickness = 0;
+                        advancedTexture.addControl(rect3);
+
+                        var label3 = new BABYLON.GUI.TextBlock();
+                        label3.text = "( "+yC2F1+" , "+yC2F2+" , "+yC2F3+" , "+yC2F4+" , "+yC2F5+" )";
+                        rect3.addControl(label3);
+
+                        rect3.linkWithMesh(tube3);
+
+                        var mostrarValoresLinea3 = function(isChecked) {
+                            if (isChecked) {
+                                rect3.height = "20px";
+                            }
+                            else {
+                                rect3.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC3, mostrarValoresLinea3);
+
+                    }
+                    if (!Number.isNaN(linea4)) {
+                        const plinea4 = [
+                            new BABYLON.Vector3(2.6, yC3F1/5, -0.5),
+                            new BABYLON.Vector3(1.6, yC3F2/5, -0.5),
+                            new BABYLON.Vector3(0.6, yC3F3/5, -0.5),
+                            new BABYLON.Vector3(-0.6, yC3F4/5, -0.5),
+                            new BABYLON.Vector3(-1.6, yC3F5/5, -0.5),
+                        ];
+                        const tube4 = BABYLON.MeshBuilder.CreateTube("tube4", {path: plinea4, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions4 = tube4.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors4 = new Array(positions4.length * 4);
+                        for(let i=0; i<positions4.length; i++){
+                            colors4[i * 4 + 0] = color4.r;
+                            colors4[i * 4 + 1] = color4.g;
+                            colors4[i * 4 + 2] = color4.b;
+                            colors4[i * 4 + 3] = 1;
+                        }
+                        tube4.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors4);
+
+                        posicionGround-=0.20;
+
+                        var rectangle4 = new BABYLON.GUI.Rectangle('');
+                        rectangle4.width ="20px";
+                        rectangle4.height = "20px";
+                        rectangle4.background="rgb(160,184,104)";
+                        advancedTexture.addControl(rectangle4);
+                        rectangle4.moveToVector3(posrec4, scene);
+
+                        var text4 = new BABYLON.GUI.TextBlock();
+                        text4.text = nameC4;
+                        text4.color = "black";
+                        text4.fontSize = 15;
+                        text4.width ="100px";
+                        text4.height = "20px";
+                        advancedTexture.addControl(text4);
+                        text4.moveToVector3(postext4,scene);
+
+                        var rect4 = new BABYLON.GUI.Rectangle();
+                        rect4.width = 0.1;
+                        rect4.height = "0px";
+                        rect4.color = "black";
+                        rect4.thickness = 0;
+                        advancedTexture.addControl(rect4);
+
+                        var label4 = new BABYLON.GUI.TextBlock();
+                        label4.text = "( "+yC3F1+" , "+yC3F2+" , "+yC3F3+" , "+yC3F4+" , "+yC3F5+" )";
+                        rect4.addControl(label4);
+
+                        rect4.linkWithMesh(tube4);
+
+                        var mostrarValoresLinea4 = function(isChecked) {
+                            if (isChecked) {
+                                rect4.height = "20px";
+                            }
+                            else {
+                                rect4.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC4, mostrarValoresLinea4);
+
+                    }
+                    if (!Number.isNaN(linea5)) {
+                        const plinea5 = [
+                            new BABYLON.Vector3(2.6, yC4F1/5, -1.4),
+                            new BABYLON.Vector3(1.6, yC4F2/5, -1.4),
+                            new BABYLON.Vector3(0.6, yC4F3/5, -1.4),
+                            new BABYLON.Vector3(-0.6, yC4F4/5, -1.4),
+                            new BABYLON.Vector3(-1.6, yC4F5/5, -1.4),
+                        ];
+                        const tube5 = BABYLON.MeshBuilder.CreateTube("tube5", {path: plinea5, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions5 = tube5.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors5 = new Array(positions5.length * 4);
+                        for(let i=0; i<positions5.length; i++){
+                            colors5[i * 4 + 0] = color5.r;
+                            colors5[i * 4 + 1] = color5.g;
+                            colors5[i * 4 + 2] = color5.b;
+                            colors5[i * 4 + 3] = 1;
+                        }
+                        tube5.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors5);
+
+                        posicionGround-=0.20;
+
+                        var rectangle5 = new BABYLON.GUI.Rectangle('');
+                        rectangle5.width ="20px";
+                        rectangle5.height = "20px";
+                        rectangle5.background="rgb(236,82,78)";
+                        advancedTexture.addControl(rectangle5);
+                        rectangle5.moveToVector3(posrec5, scene);
+
+                        var text5 = new BABYLON.GUI.TextBlock();
+                        text5.text = nameC5;
+                        text5.color = "black";
+                        text5.fontSize = 15;
+                        text5.width ="100px";
+                        text5.height = "20px";
+                        advancedTexture.addControl(text5);
+                        text5.moveToVector3(postext5,scene);
+
+                        var rect5 = new BABYLON.GUI.Rectangle();
+                        rect5.width = 0.1;
+                        rect5.height = "0px";
+                        rect5.color = "black";
+                        rect5.thickness = 0;
+                        advancedTexture.addControl(rect5);
+
+                        var label5= new BABYLON.GUI.TextBlock();
+                        label5.text = "( "+yC4F1+" , "+yC4F2+" , "+yC4F3+" , "+yC4F4+" , "+yC4F5+" )";
+                        rect5.addControl(label5);
+
+                        rect5.linkWithMesh(tube5);
+
+                        var mostrarValoresLinea5 = function(isChecked) {
+                            if (isChecked) {
+                                rect5.height = "20px";
+                            }
+                            else {
+                                rect5.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC5, mostrarValoresLinea5);
+
+                    }
+                    if (!Number.isNaN(linea6)) {
+                        const plinea6 = [
+                            new BABYLON.Vector3(2.6, yC5F1/5, -2.4),
+                            new BABYLON.Vector3(1.6, yC5F2/5, -2.4),
+                            new BABYLON.Vector3(0.6, yC5F3/5, -2.4),
+                            new BABYLON.Vector3(-0.6, yC5F4/5, -2.4),
+                            new BABYLON.Vector3(-1.6, yC5F5/5, -2.4),
+                        ];
+                        const tube6 = BABYLON.MeshBuilder.CreateTube("tube6", {path: plinea6, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions6 = tube6.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors6 = new Array(positions6.length * 4);
+                        for(let i=0; i<positions6.length; i++){
+                            colors6[i * 4 + 0] = color6.r;
+                            colors6[i * 4 + 1] = color6.g;
+                            colors6[i * 4 + 2] = color6.b;
+                            colors6[i * 4 + 3] = 1;
+                        }
+                        tube6.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors6);
+
+                        posicionGround-=0.20;
+
+                        var rectangle6 = new BABYLON.GUI.Rectangle('');
+                        rectangle6.width ="20px";
+                        rectangle6.height = "20px";
+                        rectangle6.background="rgb(49,145,171)";
+                        advancedTexture.addControl(rectangle6);
+                        rectangle6.moveToVector3(posrec6, scene);
+
+                        var text6 = new BABYLON.GUI.TextBlock();
+                        text6.text = nameC6;
+                        text6.color = "black";
+                        text6.fontSize = 15;
+                        text6.width ="100px";
+                        text6.height = "20px";
+                        advancedTexture.addControl(text6);
+                        text6.moveToVector3(postext6,scene);
+
+                        var rect6 = new BABYLON.GUI.Rectangle();
+                        rect6.width = 0.1;
+                        rect6.height = "0px";
+                        rect6.color = "black";
+                        rect6.thickness = 0;
+                        advancedTexture.addControl(rect6);
+
+                        var label6 = new BABYLON.GUI.TextBlock();
+                        label6.text = "( "+yC5F1+" , "+yC5F2+" , "+yC5F3+" , "+yC5F4+" , "+yC5F5+" )";
+                        rect6.addControl(label6);
+
+                        rect6.linkWithMesh(tube6);
+
+                        var mostrarValoresLinea6 = function(isChecked) {
+                            if (isChecked) {
+                                rect6.height = "20px";
+                            }
+                            else {
+                                rect6.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC6, mostrarValoresLinea6);
+
+                    }
+                    var mostrarValores = function(isChecked) {
+                        if (isChecked) {
+                            rect1.height = "20px";
+                            rect2.height = "20px";
+                            rect3.height = "20px";
+                            rect4.height = "20px";
+                            rect5.height = "20px";
+                            rect6.height = "20px";
+                        }
+                        else {
+                            rect1.height = "0px";
+                            rect2.height = "0px";
+                            rect3.height = "0px";
+                            rect4.height = "0px";
+                            rect5.height = "0px";
+                            rect6.height = "0px";
+                        }
+	                }
+
+	                transformGroup.addCheckbox("All", mostrarValores);
+
+	                var selectBox = new BABYLON.GUI.SelectionPanel("sp", [transformGroup]);
+                    selectBox.width = 0.10;
+                    selectBox.height = 0.80;
+                    selectBox.color ="white";
+                    selectBox.fontSize ="15px";
+                    selectBox.labelColor="black";
+                    selectBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+                    selectBox.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
+
+                    advancedTexture.addControl(selectBox);
+
+
+
+                    <!--AÑADIMOS LA LUZ-->
+                    const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0.5, 0.80, 1));
+
+                    const ground = BABYLON.MeshBuilder.CreateGround("ground", {height: 5.5, width: 5, subdivisions: 4},scene);
+                    ground.position = new BABYLON.Vector3(0.6,0,0);
+
+
+                    return scene;
+                }
+                
+                const sceneToRender = createScene();
+                engine.runRenderLoop(function () {
+                sceneToRender.render();
+                });
+
+            }
+
+        </script>
+    </body>
+</html>
