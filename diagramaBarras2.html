@@ -108,49 +108,427 @@
                 }
             });
 
+            var C0F1 =0;
+            var C0F2 =0;
+            var C0F3 =0;
+            var C0F4 =0;
+            var C0F5 =0;
+            var C1F1 =0;
+            var C1F2 =0;
+            var C1F3 =0;
+            var C1F4 =0;
+            var C1F5 =0;
+            var C2F1 =0;
+            var C2F2 =0;
+            var C2F3 =0;
+            var C2F4 =0;
+            var C2F5 =0;
+            var C3F1 =0;
+            var C3F2 =0;
+            var C3F3 =0;
+            var C3F4 =0;
+            var C3F5 =0;
+            var C4F1 =0;
+            var C4F2 =0;
+            var C4F3 =0;
+            var C4F4 =0;
+            var C4F5 =0;
+            var C5F1 =0;
+            var C5F2 =0;
+            var C5F3 =0;
+            var C5F4 =0;
+            var C5F5 =0;
+            var C6F1 =0;
+            var C6F2 =0;
+            var C6F3 =0;
+            var C6F4 =0;
+            var C6F5 =0;
+            var C7F1 =0;
+            var C7F2 =0;
+            var C7F3 =0;
+            var C7F4 =0;
+            var C7F5 =0;
+            var C8F1 =0;
+            var C8F2 =0;
+            var C8F3 =0;
+            var C8F4 =0;
+            var C8F5 =0;
+            var C9F1 =0;
+            var C9F2 =0;
+            var C9F3 =0;
+            var C9F4 =0;
+            var C9F5 =0;
+            var C10F1 =0;
+            var C10F2 =0;
+            var C10F3 =0;
+            var C10F4 =0;
+            var C10F5 =0;
+            var C11F1 =0;
+            var C11F2 =0;
+            var C11F3 =0;
+            var C11F4 =0;
+            var C11F5 =0;
+            var C12F1 =0;
+            var C12F2 =0;
+            var C12F3 =0;
+            var C12F4 =0;
+            var C12F5 =0;
+            var C13F1 =0;
+            var C13F2 =0;
+            var C13F3 =0;
+            var C13F4 =0;
+            var C13F5 =0;
+            var C14F1 =0;
+            var C14F2 =0;
+            var C14F3 =0;
+            var C14F4 =0;
+            var C14F5 =0;
+
+            var total=0;
+
+
             function arrayToGraficos(datos){
 
-                yC0F1 = parseInt(datos[1][0]);
-                yC0F2 = (parseInt(datos[2][0]));
-                yC0F3 = (parseInt(datos[3][0]));
-                yC0F4 = (parseInt(datos[4][0]));
-                yC0F5 = (parseInt(datos[5][0]));
-                column1 = yC0F1+yC0F2+yC0F3+yC0F4+yC0F5;
+                for (i=1;i<datos.length;i=i+5){
 
-                yC1F1 = parseInt(datos[1][1]);
-                yC1F2 = parseInt(datos[2][1]);
-                yC1F3 = parseInt(datos[3][1]);
-                yC1F4 = parseInt(datos[4][1]);
-                yC1F5 = parseInt(datos[5][1]);
-                column2 = yC1F1+yC1F2+yC1F3+yC1F4+yC1F5;
+                    for (j=0;j<datos[i].length;j++){
 
-                yC2F1 = parseInt(datos[1][2]);
-                yC2F2 = parseInt(datos[2][2]);
-                yC2F3 = parseInt(datos[3][2]);
-                yC2F4 = parseInt(datos[4][2]);
-                yC2F5 = parseInt(datos[5][2]);
-                column3 = yC2F1+yC2F2+yC2F3+yC2F4+yC2F5;
+                        switch(j){
+                            case 1:
+                                C1F1+=parseInt(datos[i][j]);
+                                C0F1+=parseInt(datos[i][0]);
+                                break;
+                            case 2:
+                                C2F1+=parseInt(datos[i][j]);
+                                break;
+                            case 3:
+                                C3F1+=parseInt(datos[i][j]);
+                                break;
+                            case 4:
+                                C4F1+=parseInt(datos[i][j]);
+                                break;
+                            case 5:
+                                C5F1+=parseInt(datos[i][j]);
+                                break;
+                            case 6:
+                                C6F1+=parseInt(datos[i][j]);
+                                break;
+                            case 7:
+                                C7F1+=parseInt(datos[i][j]);
+                                break;
+                            case 8:
+                                C8F1+=parseInt(datos[i][j]);
+                                break;
+                            case 9:
+                                C9F1+=parseInt(datos[i][j]);
+                                break;
+                            case 10:
+                                C10F1+=parseInt(datos[i][j]);
+                                break;
+                            case 11:
+                                C11F1+=parseInt(datos[i][j]);
+                                break;
+                            case 12:
+                                C12F1+=parseInt(datos[i][j]);
+                                break;
+                            case 13:
+                                C13F1+=parseInt(datos[i][j]);
+                                break;
+                            case 14:
+                                C14F1+=parseInt(datos[i][j]);
+                                break;
 
-                yC3F1 = parseInt(datos[1][3]);
-                yC3F2 = parseInt(datos[2][3]);
-                yC3F3 = parseInt(datos[3][3]);
-                yC3F4 = parseInt(datos[4][3]);
-                yC3F5 = parseInt(datos[5][3]);
-                column4 = yC3F1+yC3F2+yC3F3+yC3F4+yC3F5;
+                        }
+                    }
+                    for (j=0;j<datos[i+1].length;j++){
 
-                yC4F1 = parseInt(datos[1][4]);
-                yC4F2 = parseInt(datos[2][4]);
-                yC4F3 = parseInt(datos[3][4]);
-                yC4F4 = parseInt(datos[4][4]);
-                yC4F5 = parseInt(datos[5][4]);
-                column5 = yC4F1+yC4F2+yC4F3+yC4F4+yC4F5;
+                        switch(j){
+                            case 1:
+                                C1F2+=parseInt(datos[i+1][j]);
+                                C0F2+=parseInt(datos[i+1][0]);
+                                break;
+                            case 2:
+                                C2F2+=parseInt(datos[i+1][j]);
+                                break;
+                            case 3:
+                                C3F2+=parseInt(datos[i+1][j]);
+                                break;
+                            case 4:
+                                C4F2+=parseInt(datos[i+1][j]);
+                                break;
+                            case 5:
+                                C5F2+=parseInt(datos[i+1][j]);
+                                break;
+                            case 6:
+                                C6F2+=parseInt(datos[i+1][j]);
+                                break;
+                            case 7:
+                                C7F2+=parseInt(datos[i+1][j]);
+                                break;
+                            case 8:
+                                C8F2+=parseInt(datos[i+1][j]);
+                                break;
+                            case 9:
+                                C9F2+=parseInt(datos[i+1][j]);
+                                break;
+                            case 10:
+                                C10F2+=parseInt(datos[i+1][j]);
+                                break;
+                            case 11:
+                                C11F2+=parseInt(datos[i+1][j]);
+                                break;
+                            case 12:
+                                C12F2+=parseInt(datos[i+1][j]);
+                                break;
+                            case 13:
+                                C13F2+=parseInt(datos[i+1][j]);
+                                break;
+                            case 14:
+                                C14F2+=parseInt(datos[i+1][j]);
+                                break;
+                        }
+                    }
+                    for (j=0;j<datos[i+2].length;j++){
 
-                yC5F1 = parseInt(datos[1][5]);
-                yC5F2 = parseInt(datos[2][5]);
-                yC5F3 = parseInt(datos[3][5]);
-                yC5F4 = parseInt(datos[4][5]);
-                yC5F5 = parseInt(datos[5][5]);
-                column6 = yC5F1+yC5F2+yC5F3+yC5F4+yC5F5;
+                        switch(j){
+                            case 1:
+                                C1F3+=parseInt(datos[i+2][j]);
+                                C0F3+=parseInt(datos[i+2][0]);
+                                break;
+                            case 2:
+                                C2F3+=parseInt(datos[i+2][j]);
+                                break;
+                            case 3:
+                                C3F3+=parseInt(datos[i+2][j]);
+                                break;
+                            case 4:
+                                C4F3+=parseInt(datos[i+2][j]);
+                                break;
+                            case 5:
+                                C5F3+=parseInt(datos[i+2][j]);
+                                break;
+                            case 6:
+                                C6F3+=parseInt(datos[i+2][j]);
+                                break;
+                            case 7:
+                                C7F3+=parseInt(datos[i+2][j]);
+                                break;
+                            case 8:
+                                C8F3+=parseInt(datos[i+2][j]);
+                                break;
+                            case 9:
+                                C9F3+=parseInt(datos[i+2][j]);
+                                break;
+                            case 10:
+                                C10F3+=parseInt(datos[i+2][j]);
+                                break;
+                            case 11:
+                                C11F3+=parseInt(datos[i+2][j]);
+                                break;
+                            case 12:
+                                C12F3+=parseInt(datos[i+2][j]);
+                                break;
+                            case 13:
+                                C13F3+=parseInt(datos[i+2][j]);
+                                break;
+                            case 14:
+                                C14F3+=parseInt(datos[i+2][j]);
+                                break;
+                        }
+                    }
+                    for (j=0;j<datos[i+3].length;j++){
+
+                        switch(j){
+                            case 1:
+                                C1F4+=parseInt(datos[i+3][j]);
+                                C0F4+=parseInt(datos[i+3][0]);
+                                break;
+                            case 2:
+                                C2F4+=parseInt(datos[i+3][j]);
+                                break;
+                            case 3:
+                                C3F4+=parseInt(datos[i+3][j]);
+                                break;
+                            case 4:
+                                C4F4+=parseInt(datos[i+3][j]);
+                                break;
+                            case 5:
+                                C5F4+=parseInt(datos[i+3][j]);
+                                break;
+                            case 6:
+                                C6F4+=parseInt(datos[i+3][j]);
+                                break;
+                            case 7:
+                                C7F4+=parseInt(datos[i+3][j]);
+                                break;
+                            case 8:
+                                C8F4+=parseInt(datos[i+3][j]);
+                                break;
+                            case 9:
+                                C9F4+=parseInt(datos[i+3][j]);
+                                break;
+                            case 10:
+                                C10F4+=parseInt(datos[i+3][j]);
+                                break;
+                            case 11:
+                                C11F4+=parseInt(datos[i+3][j]);
+                                break;
+                            case 12:
+                                C12F4+=parseInt(datos[i+3][j]);
+                                break;
+                            case 13:
+                                C13F4+=parseInt(datos[i+3][j]);
+                                break;
+                            case 14:
+                                C14F4+=parseInt(datos[i+3][j]);
+                                break;
+                        }
+                    }
+                    for (j=0;j<datos[i+4].length;j++){
+
+                        switch(j){
+                            case 1:
+                                C1F5+=parseInt(datos[i+4][j]);
+                                C0F5+=parseInt(datos[i+4][0]);
+                                break;
+                            case 2:
+                                C2F5+=parseInt(datos[i+4][j]);
+                                break;
+                            case 3:
+                                C3F5+=parseInt(datos[i+4][j]);
+                                break;
+                            case 4:
+                                C4F5+=parseInt(datos[i+4][j]);
+                                break;
+                            case 5:
+                                C5F5+=parseInt(datos[i+4][j]);
+                                break;
+                            case 6:
+                                C6F5+=parseInt(datos[i+4][j]);
+                                break;
+                            case 7:
+                                C7F5+=parseInt(datos[i+4][j]);
+                                break;
+                            case 8:
+                                C8F5+=parseInt(datos[i+4][j]);
+                                break;
+                            case 9:
+                                C9F5+=parseInt(datos[i+4][j]);
+                                break;
+                            case 10:
+                                C10F5+=parseInt(datos[i+4][j]);
+                                break;
+                            case 11:
+                                C11F5+=parseInt(datos[i+4][j]);
+                                break;
+                            case 12:
+                                C12F5+=parseInt(datos[i+4][j]);
+                                break;
+                            case 13:
+                                C13F5+=parseInt(datos[i+4][j]);
+                                break;
+                            case 14:
+                                C14F5+=parseInt(datos[i+4][j]);
+                                break;
+                        }
+                    }
+
+                }
+
+
+                column1 = C0F1+C0F2+C0F3+C0F4+C0F5;
+                column2 = C1F1+C1F2+C1F3+C1F4+C1F5;
+                column3 = C2F1+C2F2+C2F3+C2F4+C2F5;
+                column4 = C3F1+C3F2+C3F3+C3F4+C3F5;
+                column5 = C4F1+C4F2+C4F3+C4F4+C4F5;
+                column6 = C5F1+C5F2+C5F3+C5F4+C5F5;
+                column7 = C6F1+C6F2+C6F3+C6F4+C6F5;
+                column8 = C7F1+C7F2+C7F3+C7F4+C7F5;
+                column9 = C8F1+C8F2+C8F3+C8F4+C8F5;
+                column10 = C9F1+C9F2+C9F3+C9F4+C9F5;
+                column11 = C10F1+C10F2+C10F3+C10F4+C10F5;
+                column12 = C11F1+C11F2+C11F3+C11F4+C11F5;
+                column13 = C12F1+C12F2+C12F3+C12F4+C12F5;
+                column14 = C13F1+C13F2+C13F3+C13F4+C13F5;
+                column15 = C14F1+C14F2+C14F3+C14F4+C14F5;
+
+                total = (column1 + column2 + column3 + column4 + column5 + column6 + column7 + column8 + column9 + column10 + column11 + column12 + column13 + column14 + column15)/15;
+                console.log(total);
+                yC0F1 = C0F1 / total;
+                yC0F2 = C0F2 / total;
+                yC0F3 = C0F3 / total;
+                yC0F4 = C0F4 / total;
+                yC0F5 = C0F5 / total;
+                yC1F1 = C1F1 / total;
+                yC1F2 = C1F2 / total;
+                yC1F3 = C1F3 / total;
+                yC1F4 = C1F4 / total;
+                yC1F5 = C1F5 / total;
+                yC2F1 = C2F1 / total;
+                yC2F2 = C2F2 / total;
+                yC2F3 = C2F3 / total;
+                yC2F4 = C2F4 / total;
+                yC2F5 = C2F5 / total;
+                yC3F1 = C3F1 / total;
+                yC3F2 = C3F2 / total;
+                yC3F3 = C3F3 / total;
+                yC3F4 = C3F4  / total;
+                yC3F5 = C3F5  / total;
+                yC4F1 = C4F1  / total;
+                yC4F2 = C4F2  / total;
+                yC4F3 = C4F3  / total;
+                yC4F4 = C4F4  / total;
+                yC4F5 = C4F5  / total;
+                yC5F1 = C5F1  / total;
+                yC5F2 = C5F2  / total;
+                yC5F3 = C5F3  / total;
+                yC5F4 = C5F4  / total;
+                yC5F5 = C5F5  / total;
+                yC6F1 = C6F1  / total;
+                yC6F2 = C6F2  / total;
+                yC6F3 = C6F3  / total;
+                yC6F4 = C6F4  / total;
+                yC6F5 = C6F5  / total;
+                yC7F1 = C7F1  / total;
+                yC7F2 = C7F2  / total;
+                yC7F3 = C7F3  / total;
+                yC7F4 = C7F4  / total;
+                yC7F5 = C7F5  / total;
+                yC8F1 = C8F1  / total;
+                yC8F2 = C8F2  / total;
+                yC8F3 = C8F3  / total;
+                yC8F4 = C8F4  / total;
+                yC8F5 = C8F5  / total;
+                yC9F1 = C9F1  / total;
+                yC9F2 = C9F2  / total;
+                yC9F3 = C9F3  / total;
+                yC9F4 = C9F4  / total;
+                yC9F5 = C9F5  / total;
+                yC10F1 = C10F1  / total;
+                yC10F2 = C10F2  / total;
+                yC10F3 = C10F3  / total;
+                yC10F4 = C10F4  / total;
+                yC10F5 = C10F5  / total;
+                yC11F1 = C11F1  / total;
+                yC11F2 = C11F2  / total;
+                yC11F3 = C11F3  / total;
+                yC11F4 = C11F4  / total;
+                yC11F5 = C11F5  / total;
+                yC12F1 = C12F1  / total;
+                yC12F2 = C12F2  / total;
+                yC12F3 = C12F3  / total;
+                yC12F4 = C12F4  / total;
+                yC12F5 = C12F5  / total;
+                yC13F1 = C13F1  / total;
+                yC13F2 = C13F2  / total;
+                yC13F3 = C13F3  / total;
+                yC13F4 = C13F4  / total;
+                yC13F5 = C13F5  / total;
+                yC14F1 = C14F1  / total;
+                yC14F2 = C14F2  / total;
+                yC14F3 = C14F3  / total;
+                yC14F4 = C14F4  / total;
+                yC14F5 = C14F5  / total;
 
                 nameC1 = datos[0][0];
                 nameC2 = datos[0][1];
@@ -158,6 +536,20 @@
                 nameC4 = datos[0][3];
                 nameC5 = datos[0][4];
                 nameC6 = datos[0][5];
+                nameC7 = datos[0][6];
+                nameC8 = datos[0][7];
+                nameC9 = datos[0][8];
+                nameC10 = datos[0][9];
+                nameC11 = datos[0][10];
+                nameC12 = datos[0][11];
+                nameC13 = datos[0][12];
+                nameC14 = datos[0][13];
+                nameC15 = datos[0][14];
+                nameC16 = datos[0][15];
+                nameC17 = datos[0][16];
+                nameC18 = datos[0][17];
+                nameC19 = datos[0][18];
+                nameC20 = datos[0][19];
 
             }
 
@@ -189,32 +581,87 @@
                     const color4 = new Array(6);
                     const color5 = new Array(6);
                     const color6 = new Array(6);
+                    const color7 = new Array(6);
+                    const color8 = new Array(6);
+                    const color9 = new Array(6);
+                    const color10 = new Array(6);
+                    const color11 = new Array(6);
+                    const color12 = new Array(6);
+                    const color13 = new Array(6);
+                    const color14 = new Array(6);
+                    const color15 = new Array(6);
+                    const color16 = new Array(6);
+                    const color17 = new Array(6);
+                    const color18 = new Array(6);
+                    const color19 = new Array(6);
+                    const color20 = new Array(6);
 
 
                     for ( var i=0; i<6;i++){
-                        color1[i] = new BABYLON.Color4(1.00, 0.74, 0.26);
-                        color2[i] = new BABYLON.Color4(0.96, 0.57, 0.28);
-                        color3[i] = new BABYLON.Color4(0.68, 0.35, 0.41);
-                        color4[i] = new BABYLON.Color4(0.63, 0.72, 0.41);
-                        color5[i] = new BABYLON.Color4(0.93, 0.32, 0.31);
-                        color6[i] = new BABYLON.Color4(0.19, 0.57, 0.67);
+                        color1[i] = new BABYLON.Color4(0.25, 0.50, 0.55);
+                        color2[i] = new BABYLON.Color4(1.00, 0.74, 0.26);
+                        color3[i] = new BABYLON.Color4(0.96, 0.57, 0.28);
+                        color4[i] = new BABYLON.Color4(0.43, 0.28, 0.51);
+                        color5[i] = new BABYLON.Color4(0.68, 0.35, 0.41);
+                        color6[i] = new BABYLON.Color4(0.63, 0.72, 0.41);
+                        color7[i] = new BABYLON.Color4(0.43, 0.33, 0.67);
+                        color8[i] = new BABYLON.Color4(0.93, 0.32, 0.31);
+                        color9[i] = new BABYLON.Color4(0.19, 0.57, 0.67);
+                        color10[i] = new BABYLON.Color4(0.56, 0.18, 0.34);
+                        color11[i] = new BABYLON.Color4(0.25, 0.71, 0.64);
+                        color12[i] = new BABYLON.Color4(0.89, 0.28, 0.09);
+                        color13[i] = new BABYLON.Color4(0.48, 0.73, 0.31);
+                        color14[i] = new BABYLON.Color4(0.94, 0.78, 0.03);
+                        color15[i] = new BABYLON.Color4(0.25, 0.59, 0.84);
+                        color16[i] = new BABYLON.Color4(0.93, 0.62, 0.05);
+                        color17[i] = new BABYLON.Color4(0.71, 0.41, 0.57);
+                        color18[i] = new BABYLON.Color4(0.97, 0.39, 0.01);
+                        color19[i] = new BABYLON.Color4(0.48, 0.37, 0.50);
+                        color20[i] = new BABYLON.Color4(0.02, 0.68, 0.78);
                     }
-                    var posicionGround = 2.00;
-                    var tamañoPanel = 0.11;
+                    var posicionGround = 4.00;
 
                     var posrec1 = new BABYLON.Vector3(4.5,3,0);
-                    var posrec2 = new BABYLON.Vector3(3.5,3,0);
-                    var posrec3 = new BABYLON.Vector3(2.5,3,0);
-                    var posrec4 = new BABYLON.Vector3(1.5,3,0);
-                    var posrec5 = new BABYLON.Vector3(0.5,3,0);
-                    var posrec6 = new BABYLON.Vector3(-0.5,3,0);
+                    var posrec2 = new BABYLON.Vector3(4,3,0);
+                    var posrec3 = new BABYLON.Vector3(3.5,3,0);
+                    var posrec4 = new BABYLON.Vector3(3,3,0);
+                    var posrec5 = new BABYLON.Vector3(2.5,3,0);
+                    var posrec6 = new BABYLON.Vector3(2,3,0);
+                    var posrec7 = new BABYLON.Vector3(1.5,3,0);
+                    var posrec8 = new BABYLON.Vector3(1,3,0);
+                    var posrec9 = new BABYLON.Vector3(0.5,3,0);
+                    var posrec10 = new BABYLON.Vector3(0,3,0);
+                    var posrec11 = new BABYLON.Vector3(4.65,2.60,0);
+                    var posrec12 = new BABYLON.Vector3(4.10,2.60,0);
+                    var posrec13 = new BABYLON.Vector3(3.60,2.60,0);
+                    var posrec14 = new BABYLON.Vector3(3.10,2.60,0);
+                    var posrec15 = new BABYLON.Vector3(2.55,2.60,0);
+                    var posrec16 = new BABYLON.Vector3(2.05,2.60,0);
+                    var posrec17 = new BABYLON.Vector3(1.52,2.60,0);
+                    var posrec18 = new BABYLON.Vector3(1,2.60,0);
+                    var posrec19 = new BABYLON.Vector3(0.48,2.60,0);
+                    var posrec20 = new BABYLON.Vector3(-0.03,2.60,0);
 
                     var postext1 = new BABYLON.Vector3(4.5,2.85,0.05);
-                    var postext2 = new BABYLON.Vector3(3.5,2.85,0.05);
-                    var postext3 = new BABYLON.Vector3(2.5,2.85,0.05);
-                    var postext4 = new BABYLON.Vector3(1.5,2.85,0.05);
-                    var postext5 = new BABYLON.Vector3(0.5,2.85,0.05);
-                    var postext6 = new BABYLON.Vector3(-0.5,2.85,0.05);
+                    var postext2 = new BABYLON.Vector3(4,2.85,0.05);
+                    var postext3 = new BABYLON.Vector3(3.5,2.85,0.05);
+                    var postext4 = new BABYLON.Vector3(3,2.85,0.05);
+                    var postext5 = new BABYLON.Vector3(2.5,2.85,0.05);
+                    var postext6 = new BABYLON.Vector3(2,2.85,0.05);
+                    var postext7 = new BABYLON.Vector3(1.5,2.85,0.05);
+                    var postext8 = new BABYLON.Vector3(1,2.85,0.05);
+                    var postext9 = new BABYLON.Vector3(0.5,2.85,0.05);
+                    var postext10 = new BABYLON.Vector3(0,2.85,0.05);
+                    var postext11 = new BABYLON.Vector3(4.65,2.45,0.05);
+                    var postext12 = new BABYLON.Vector3(4.1,2.45,0.05);
+                    var postext13 = new BABYLON.Vector3(3.6,2.45,0.05);
+                    var postext14 = new BABYLON.Vector3(3.1,2.45,0.05);
+                    var postext15 = new BABYLON.Vector3(2.55,2.45,0.05);
+                    var postext16 = new BABYLON.Vector3(2.05,2.45,0.05);
+                    var postext17 = new BABYLON.Vector3(1.52,2.45,0.05);
+                    var postext18 = new BABYLON.Vector3(1,2.45,0.05);
+                    var postext19 = new BABYLON.Vector3(0.48,2.45,0.05);
+                    var postext20 = new BABYLON.Vector3(-0.03,2.45,0.05);
 
 
                     scene.updateTransformMatrix(true);
@@ -224,10 +671,10 @@
 
                     if (!Number.isNaN(column1)) {
                         if(yC0F1 !== 0){
-                            const boxC0F1 = BABYLON.MeshBuilder.CreateBox("boxC0F1", {height: yC0F1/10, width: 0.30, depth: 0.30, faceColors:color1});
-                            boxC0F1.position.x = 2.60;
-                            boxC0F1.position.y = yC0F1/10/2;
-                            boxC0F1.position.z = 2.00;
+                            const boxC0F1 = BABYLON.MeshBuilder.CreateBox("boxC0F1", {height: yC0F1, width: 0.30, depth: 0.30, faceColors:color1});
+                            boxC0F1.position.x = 5;
+                            boxC0F1.position.y = yC0F1/2;
+                            boxC0F1.position.z = 1;
 
                             var rect01 = new BABYLON.GUI.Rectangle();
                             rect01.width = 0.025;
@@ -237,17 +684,17 @@
                             advancedTexture.addControl(rect01);
 
                             var label01 = new BABYLON.GUI.TextBlock();
-                            label01.text = yC0F1;
+                            label01.text = C0F1;
                             rect01.addControl(label01);
 
                             rect01.linkWithMesh(boxC0F1);
 
                         }
                         if(yC0F2 !==0){
-                            const boxC0F2 = BABYLON.MeshBuilder.CreateBox("boxC0F2", {height: yC0F2/10, width: 0.30, depth: 0.30, faceColors:color1});
-                            boxC0F2.position.x = 2.60;
-                            boxC0F2.position.y = yC0F2/10/2;
-                            boxC0F2.position.z = 1.00;
+                            const boxC0F2 = BABYLON.MeshBuilder.CreateBox("boxC0F2", {height: yC0F2, width: 0.30, depth: 0.30, faceColors:color1});
+                            boxC0F2.position.x = 5;
+                            boxC0F2.position.y = yC0F2/2;
+                            boxC0F2.position.z = 0;
 
                             var rect02 = new BABYLON.GUI.Rectangle();
                             rect02.width = 0.025;
@@ -257,17 +704,17 @@
                             advancedTexture.addControl(rect02);
 
                             var label02 = new BABYLON.GUI.TextBlock();
-                            label02.text = yC0F2;
+                            label02.text = C0F2;
                             rect02.addControl(label02);
 
                             rect02.linkWithMesh(boxC0F2);
 
                         }
                         if(yC0F3 !==0){
-                            const boxC0F3 = BABYLON.MeshBuilder.CreateBox("boxC0F3", {height: yC0F3/10, width: 0.30, depth: 0.30, faceColors:color1});
-                            boxC0F3.position.x = 2.60;
-                            boxC0F3.position.y = yC0F3/10/2;
-                            boxC0F3.position.z = 0;
+                            const boxC0F3 = BABYLON.MeshBuilder.CreateBox("boxC0F3", {height: yC0F3, width: 0.30, depth: 0.30, faceColors:color1});
+                            boxC0F3.position.x = 5;
+                            boxC0F3.position.y = yC0F3/2;
+                            boxC0F3.position.z = -1;
 
                             var rect03 = new BABYLON.GUI.Rectangle();
                             rect03.width = 0.025;
@@ -277,16 +724,16 @@
                             advancedTexture.addControl(rect03);
 
                             var label03 = new BABYLON.GUI.TextBlock();
-                            label03.text = yC0F3;
+                            label03.text = C0F3;
                             rect03.addControl(label03);
 
                             rect03.linkWithMesh(boxC0F3);
                         }
                         if(yC0F4 !==0){
-                            const boxC0F4 = BABYLON.MeshBuilder.CreateBox("boxC0F4", {height: yC0F4/10, width: 0.30, depth: 0.30, faceColors:color1});
-                            boxC0F4.position.x = 2.60;
-                            boxC0F4.position.y = yC0F4/10/2;
-                            boxC0F4.position.z = -1.00;
+                            const boxC0F4 = BABYLON.MeshBuilder.CreateBox("boxC0F4", {height: yC0F4, width: 0.30, depth: 0.30, faceColors:color1});
+                            boxC0F4.position.x = 5;
+                            boxC0F4.position.y = yC0F4/2;
+                            boxC0F4.position.z = -2;
 
                             var rect04 = new BABYLON.GUI.Rectangle();
                             rect04.width = 0.025;
@@ -296,16 +743,16 @@
                             advancedTexture.addControl(rect04);
 
                             var label04 = new BABYLON.GUI.TextBlock();
-                            label04.text = yC0F4;
+                            label04.text = C0F4;
                             rect04.addControl(label04);
 
                             rect04.linkWithMesh(boxC0F4);
                         }
                         if(yC0F5 !==0){
-                            const boxC0F5 = BABYLON.MeshBuilder.CreateBox("boxC0F5", {height: yC0F5/10, width: 0.30, depth: 0.30, faceColors:color1});
-                            boxC0F5.position.x = 2.60;
-                            boxC0F5.position.y = yC0F5/10/2;
-                            boxC0F5.position.z = -2.00;
+                            const boxC0F5 = BABYLON.MeshBuilder.CreateBox("boxC0F5", {height: yC0F5, width: 0.30, depth: 0.30, faceColors:color1});
+                            boxC0F5.position.x = 5;
+                            boxC0F5.position.y = yC0F5/2;
+                            boxC0F5.position.z = -3;
 
                             var rect05 = new BABYLON.GUI.Rectangle();
                             rect05.width = 0.025;
@@ -315,7 +762,7 @@
                             advancedTexture.addControl(rect05);
 
                             var label05 = new BABYLON.GUI.TextBlock();
-                            label05.text = yC0F5;
+                            label05.text = C0F5;
                             rect05.addControl(label05);
 
                             rect05.linkWithMesh(boxC0F5);
@@ -327,14 +774,14 @@
                         var rectangle1 = new BABYLON.GUI.Rectangle('');
                         rectangle1.width ="20px";
                         rectangle1.height = "20px";
-                        rectangle1.background="rgb(255,188,66)";
+                        rectangle1.background="rgb(64,128,141)";
                         advancedTexture.addControl(rectangle1);
                         rectangle1.moveToVector3(posrec1, scene);
 
                         var text1 = new BABYLON.GUI.TextBlock();
                         text1.text = nameC1;
                         text1.color = "black";
-                        text1.fontSize = 15;
+                        text1.fontSize = 12;
                         text1.width ="100px";
                         text1.height = "20px";
                         advancedTexture.addControl(text1);
@@ -362,10 +809,10 @@
 
                     if (!Number.isNaN(column2)) {
                         if(yC1F1 !==0){
-                            const boxC1F1 = BABYLON.MeshBuilder.CreateBox("boxC1F1", {height: yC1F1/10, width: 0.30, depth: 0.30, faceColors:color2});
-                            boxC1F1.position.x = 2.00;
-                            boxC1F1.position.y = yC1F1/10/2;
-                            boxC1F1.position.z = 2.00;
+                            const boxC1F1 = BABYLON.MeshBuilder.CreateBox("boxC1F1", {height: yC1F1, width: 0.30, depth: 0.30, faceColors:color2});
+                            boxC1F1.position.x = 4.40;
+                            boxC1F1.position.y = yC1F1/2;
+                            boxC1F1.position.z = 1;
 
                             var rect11 = new BABYLON.GUI.Rectangle();
                             rect11.width = 0.025;
@@ -375,16 +822,16 @@
                             advancedTexture.addControl(rect11);
 
                             var label11 = new BABYLON.GUI.TextBlock();
-                            label11.text = yC1F1;
+                            label11.text = C1F1;
                             rect11.addControl(label11);
 
                             rect11.linkWithMesh(boxC1F1);
                         }
                         if(yC1F2 !==0){
-                            const boxC1F2 = BABYLON.MeshBuilder.CreateBox("boxC1F2", {height: yC1F2/10, width: 0.30, depth: 0.30, faceColors:color2});
-                            boxC1F2.position.x = 2.00;
-                            boxC1F2.position.y = yC1F2/10/2;
-                            boxC1F2.position.z = 1.00;
+                            const boxC1F2 = BABYLON.MeshBuilder.CreateBox("boxC1F2", {height: yC1F2, width: 0.30, depth: 0.30, faceColors:color2});
+                            boxC1F2.position.x = 4.40;
+                            boxC1F2.position.y = yC1F2/2;
+                            boxC1F2.position.z = 0;
 
                             var rect12 = new BABYLON.GUI.Rectangle();
                             rect12.width = 0.025;
@@ -394,17 +841,17 @@
                             advancedTexture.addControl(rect12);
 
                             var label12 = new BABYLON.GUI.TextBlock();
-                            label12.text = yC1F2;
+                            label12.text = C1F2;
                             rect12.addControl(label12);
 
                             rect12.linkWithMesh(boxC1F2);
 
                         }
                         if(yC1F3 !==0){
-                            const boxC1F3 = BABYLON.MeshBuilder.CreateBox("boxC1F3", {height: yC1F3/10, width: 0.30, depth: 0.30, faceColors:color2});
-                            boxC1F3.position.x = 2.00;
-                            boxC1F3.position.y = yC1F3/10/2;
-                            boxC1F3.position.z = 0;
+                            const boxC1F3 = BABYLON.MeshBuilder.CreateBox("boxC1F3", {height: yC1F3, width: 0.30, depth: 0.30, faceColors:color2});
+                            boxC1F3.position.x = 4.40;
+                            boxC1F3.position.y = yC1F3/2;
+                            boxC1F3.position.z = -1;
 
                             var rect13 = new BABYLON.GUI.Rectangle();
                             rect13.width = 0.025;
@@ -414,16 +861,16 @@
                             advancedTexture.addControl(rect13);
 
                             var label13 = new BABYLON.GUI.TextBlock();
-                            label13.text = yC1F3;
+                            label13.text = C1F3;
                             rect13.addControl(label13);
 
                             rect13.linkWithMesh(boxC1F3);
                         }
                         if(yC1F4 !==0){
-                            const boxC1F4 = BABYLON.MeshBuilder.CreateBox("boxC1F4", {height: yC1F4/10, width: 0.30, depth: 0.30, faceColors:color2});
-                            boxC1F4.position.x = 2.00;
-                            boxC1F4.position.y = yC1F4/10/2;
-                            boxC1F4.position.z = -1.00;
+                            const boxC1F4 = BABYLON.MeshBuilder.CreateBox("boxC1F4", {height: yC1F4, width: 0.30, depth: 0.30, faceColors:color2});
+                            boxC1F4.position.x = 4.40;
+                            boxC1F4.position.y = yC1F4/2;
+                            boxC1F4.position.z = -2;
 
                             var rect14 = new BABYLON.GUI.Rectangle();
                             rect14.width = 0.025;
@@ -433,16 +880,16 @@
                             advancedTexture.addControl(rect14);
 
                             var label14 = new BABYLON.GUI.TextBlock();
-                            label14.text = yC1F4;
+                            label14.text = C1F4;
                             rect14.addControl(label14);
 
                             rect14.linkWithMesh(boxC1F4);
                         }
                         if(yC1F5 !==0){
-                            const boxC1F5 = BABYLON.MeshBuilder.CreateBox("boxC1F5", {height: yC1F5/10, width: 0.30, depth: 0.30, faceColors:color2});
-                            boxC1F5.position.x = 2.00;
-                            boxC1F5.position.y = yC1F5/10/2;
-                            boxC1F5.position.z = -2.00;
+                            const boxC1F5 = BABYLON.MeshBuilder.CreateBox("boxC1F5", {height: yC1F5, width: 0.30, depth: 0.30, faceColors:color2});
+                            boxC1F5.position.x = 4.40;
+                            boxC1F5.position.y = yC1F5/2;
+                            boxC1F5.position.z = -3;
 
                             var rect15 = new BABYLON.GUI.Rectangle();
                             rect15.width = 0.025;
@@ -452,7 +899,7 @@
                             advancedTexture.addControl(rect15);
 
                             var label15 = new BABYLON.GUI.TextBlock();
-                            label15.text = yC1F5;
+                            label15.text = C1F5;
                             rect15.addControl(label15);
 
                             rect15.linkWithMesh(boxC1F5);
@@ -464,14 +911,14 @@
                         var rectangle2 = new BABYLON.GUI.Rectangle('');
                         rectangle2.width ="20px";
                         rectangle2.height = "20px";
-                        rectangle2.background="rgb(246,146,72)";
+                        rectangle2.background="rgb(255,188,66)";
                         advancedTexture.addControl(rectangle2);
                         rectangle2.moveToVector3(posrec2, scene);
 
                         var text2 = new BABYLON.GUI.TextBlock();
                         text2.text = nameC2;
                         text2.color = "black";
-                        text2.fontSize = 15;
+                        text2.fontSize = 12;
                         text2.width ="100px";
                         text2.height = "20px";
                         advancedTexture.addControl(text2);
@@ -499,10 +946,10 @@
 
                     if (!Number.isNaN(column3)) {
                         if(yC2F1 !==0){
-                            const boxC2F1 = BABYLON.MeshBuilder.CreateBox("boxC2F1", {height: yC2F1/10, width: 0.30, depth: 0.30, faceColors:color3});
-                            boxC2F1.position.x = 1.40;
-                            boxC2F1.position.y = yC2F1/10/2;
-                            boxC2F1.position.z = 2.00;
+                            const boxC2F1 = BABYLON.MeshBuilder.CreateBox("boxC2F1", {height: yC2F1, width: 0.30, depth: 0.30, faceColors:color3});
+                            boxC2F1.position.x = 3.80;
+                            boxC2F1.position.y = yC2F1/2;
+                            boxC2F1.position.z = 1;
 
                             var rect21 = new BABYLON.GUI.Rectangle();
                             rect21.width = 0.025;
@@ -512,16 +959,16 @@
                             advancedTexture.addControl(rect21);
 
                             var label21 = new BABYLON.GUI.TextBlock();
-                            label21.text = yC2F1;
+                            label21.text = C2F1;
                             rect21.addControl(label21);
 
                             rect21.linkWithMesh(boxC2F1);
                         }
                         if(yC2F2 !==0){
-                            const boxC2F2 = BABYLON.MeshBuilder.CreateBox("boxC2F2", {height: yC2F2/10, width: 0.30, depth: 0.30, faceColors:color3});
-                            boxC2F2.position.x = 1.40;
-                            boxC2F2.position.y = yC2F2/10/2;
-                            boxC2F2.position.z = 1.00;
+                            const boxC2F2 = BABYLON.MeshBuilder.CreateBox("boxC2F2", {height: yC2F2, width: 0.30, depth: 0.30, faceColors:color3});
+                            boxC2F2.position.x = 3.80;
+                            boxC2F2.position.y = yC2F2/2;
+                            boxC2F2.position.z = 0;
 
                             var rect22 = new BABYLON.GUI.Rectangle();
                             rect22.width = 0.025;
@@ -531,16 +978,16 @@
                             advancedTexture.addControl(rect22);
 
                             var label22 = new BABYLON.GUI.TextBlock();
-                            label22.text = yC2F2;
+                            label22.text = C2F2;
                             rect22.addControl(label22);
 
                             rect22.linkWithMesh(boxC2F2);
                         }
                         if(yC2F3 !==0){
-                            const boxC2F3 = BABYLON.MeshBuilder.CreateBox("boxC2F3", {height: yC2F3/10, width: 0.30, depth: 0.30, faceColors:color3});
-                            boxC2F3.position.x = 1.40;
-                            boxC2F3.position.y = yC2F3/10/2;
-                            boxC2F3.position.z = 0;
+                            const boxC2F3 = BABYLON.MeshBuilder.CreateBox("boxC2F3", {height: yC2F3, width: 0.30, depth: 0.30, faceColors:color3});
+                            boxC2F3.position.x = 3.80;
+                            boxC2F3.position.y = yC2F3/2;
+                            boxC2F3.position.z = -1;
 
                             var rect23 = new BABYLON.GUI.Rectangle();
                             rect23.width = 0.025;
@@ -550,17 +997,17 @@
                             advancedTexture.addControl(rect23);
 
                             var label23 = new BABYLON.GUI.TextBlock();
-                            label23.text = yC2F3;
+                            label23.text = C2F3;
                             rect23.addControl(label23);
 
                             rect23.linkWithMesh(boxC2F3);
 
                         }
                         if(yC2F4 !==0){
-                            const boxC2F4 = BABYLON.MeshBuilder.CreateBox("boxC2F4", {height: yC2F4/10, width: 0.30, depth: 0.30, faceColors:color3});
-                            boxC2F4.position.x = 1.40;
-                            boxC2F4.position.y = yC2F4/10/2;
-                            boxC2F4.position.z = -1.00;
+                            const boxC2F4 = BABYLON.MeshBuilder.CreateBox("boxC2F4", {height: yC2F4, width: 0.30, depth: 0.30, faceColors:color3});
+                            boxC2F4.position.x = 3.80;
+                            boxC2F4.position.y = yC2F4/2;
+                            boxC2F4.position.z = -2;
 
                             var rect24 = new BABYLON.GUI.Rectangle();
                             rect24.width = 0.025;
@@ -570,16 +1017,16 @@
                             advancedTexture.addControl(rect24);
 
                             var label24 = new BABYLON.GUI.TextBlock();
-                            label24.text = yC2F4;
+                            label24.text = C2F4;
                             rect24.addControl(label24);
 
                             rect24.linkWithMesh(boxC2F4);
                         }
                         if(yC2F5 !==0){
-                            const boxC2F5 = BABYLON.MeshBuilder.CreateBox("boxC2F5", {height: yC2F5/10, width: 0.30, depth: 0.30, faceColors:color3});
-                            boxC2F5.position.x = 1.40;
-                            boxC2F5.position.y = yC2F5/10/2;
-                            boxC2F5.position.z = -2.00;
+                            const boxC2F5 = BABYLON.MeshBuilder.CreateBox("boxC2F5", {height: yC2F5, width: 0.30, depth: 0.30, faceColors:color3});
+                            boxC2F5.position.x = 3.80;
+                            boxC2F5.position.y = yC2F5/2;
+                            boxC2F5.position.z = -3;
 
                             var rect25 = new BABYLON.GUI.Rectangle();
                             rect25.width = 0.025;
@@ -589,7 +1036,7 @@
                             advancedTexture.addControl(rect25);
 
                             var label25 = new BABYLON.GUI.TextBlock();
-                            label25.text = yC2F5;
+                            label25.text = C2F5;
                             rect25.addControl(label25);
 
                             rect25.linkWithMesh(boxC2F5);
@@ -600,14 +1047,14 @@
                         var rectangle3 = new BABYLON.GUI.Rectangle('');
                         rectangle3.width ="20px";
                         rectangle3.height = "20px";
-                        rectangle3.background="rgb(173,88,104)";
+                        rectangle3.background="rgb(246,146,72)";
                         advancedTexture.addControl(rectangle3);
                         rectangle3.moveToVector3(posrec3, scene);
 
                         var text3 = new BABYLON.GUI.TextBlock();
                         text3.text = nameC3;
                         text3.color = "black";
-                        text3.fontSize = 15;
+                        text3.fontSize = 12;
                         text3.width ="100px";
                         text3.height = "20px";
                         advancedTexture.addControl(text3);
@@ -633,10 +1080,10 @@
                     }
                     if (!Number.isNaN(column4)) {
                         if(yC3F1 !==0){
-                            const boxC3F1 = BABYLON.MeshBuilder.CreateBox("boxC3F1", {height: yC3F1/10, width: 0.30, depth: 0.30, faceColors:color4});
-                            boxC3F1.position.x = 0.80;
-                            boxC3F1.position.y = yC3F1/10/2;
-                            boxC3F1.position.z = 2.00;
+                            const boxC3F1 = BABYLON.MeshBuilder.CreateBox("boxC3F1", {height: yC3F1, width: 0.30, depth: 0.30, faceColors:color4});
+                            boxC3F1.position.x = 3.2;
+                            boxC3F1.position.y = yC3F1/2;
+                            boxC3F1.position.z = 1;
 
                             var rect31 = new BABYLON.GUI.Rectangle();
                             rect31.width = 0.025;
@@ -646,16 +1093,16 @@
                             advancedTexture.addControl(rect31);
 
                             var label31 = new BABYLON.GUI.TextBlock();
-                            label31.text = yC3F1;
+                            label31.text = C3F1;
                             rect31.addControl(label31);
 
                             rect31.linkWithMesh(boxC3F1);
                         }
                         if(yC3F2 !==0){
-                            const boxC3F2 = BABYLON.MeshBuilder.CreateBox("boxC3F2", {height: yC3F2/10, width: 0.30, depth: 0.30, faceColors:color4});
-                            boxC3F2.position.x = 0.80;
-                            boxC3F2.position.y = yC3F2/10/2;
-                            boxC3F2.position.z = 1.00;
+                            const boxC3F2 = BABYLON.MeshBuilder.CreateBox("boxC3F2", {height: yC3F2, width: 0.30, depth: 0.30, faceColors:color4});
+                            boxC3F2.position.x = 3.2;
+                            boxC3F2.position.y = yC3F2/2;
+                            boxC3F2.position.z = 0;
 
                             var rect32 = new BABYLON.GUI.Rectangle();
                             rect32.width = 0.025;
@@ -665,16 +1112,16 @@
                             advancedTexture.addControl(rect32);
 
                             var label32 = new BABYLON.GUI.TextBlock();
-                            label32.text = yC3F2;
+                            label32.text = C3F2;
                             rect32.addControl(label32);
 
                             rect32.linkWithMesh(boxC3F2);
                         }
                         if(yC3F3 !==0){
-                            const boxC3F3 = BABYLON.MeshBuilder.CreateBox("boxC3F3", {height: yC3F3/10, width: 0.30, depth: 0.30, faceColors:color4});
-                            boxC3F3.position.x = 0.80;
-                            boxC3F3.position.y = yC3F3/10/2;
-                            boxC3F3.position.z = 0;
+                            const boxC3F3 = BABYLON.MeshBuilder.CreateBox("boxC3F3", {height: yC3F3, width: 0.30, depth: 0.30, faceColors:color4});
+                            boxC3F3.position.x = 3.2;
+                            boxC3F3.position.y = yC3F3/2;
+                            boxC3F3.position.z = -1;
 
                             var rect33 = new BABYLON.GUI.Rectangle();
                             rect33.width = 0.025;
@@ -684,16 +1131,16 @@
                             advancedTexture.addControl(rect33);
 
                             var label33 = new BABYLON.GUI.TextBlock();
-                            label33.text = yC3F3;
+                            label33.text = C3F3;
                             rect33.addControl(label33);
 
                             rect33.linkWithMesh(boxC3F3);
                         }
                         if(yC3F4 !==0){
-                            const boxC3F4 = BABYLON.MeshBuilder.CreateBox("boxC3F4", {height: yC3F4/10, width: 0.30, depth: 0.30, faceColors:color4});
-                            boxC3F4.position.x = 0.80;
-                            boxC3F4.position.y = yC3F4/10/2;
-                            boxC3F4.position.z = -1.00;
+                            const boxC3F4 = BABYLON.MeshBuilder.CreateBox("boxC3F4", {height: yC3F4, width: 0.30, depth: 0.30, faceColors:color4});
+                            boxC3F4.position.x = 3.2;
+                            boxC3F4.position.y = yC3F4/2;
+                            boxC3F4.position.z = -2;
 
                             var rect34 = new BABYLON.GUI.Rectangle();
                             rect34.width = 0.025;
@@ -703,16 +1150,16 @@
                             advancedTexture.addControl(rect34);
 
                             var label34 = new BABYLON.GUI.TextBlock();
-                            label34.text = yC3F4;
+                            label34.text = C3F4;
                             rect34.addControl(label34);
 
                             rect34.linkWithMesh(boxC3F4);
                         }
                         if(yC3F5 !==0){
-                            const boxC3F5 = BABYLON.MeshBuilder.CreateBox("boxC3F5", {height: yC3F5/10, width: 0.30, depth: 0.30, faceColors:color4});
-                            boxC3F5.position.x = 0.80;
-                            boxC3F5.position.y = yC3F5/10/2;
-                            boxC3F5.position.z = -2.00;
+                            const boxC3F5 = BABYLON.MeshBuilder.CreateBox("boxC3F5", {height: yC3F5, width: 0.30, depth: 0.30, faceColors:color4});
+                            boxC3F5.position.x = 3.2;
+                            boxC3F5.position.y = yC3F5/2;
+                            boxC3F5.position.z = -3;
 
                             var rect35 = new BABYLON.GUI.Rectangle();
                             rect35.width = 0.025;
@@ -722,7 +1169,7 @@
                             advancedTexture.addControl(rect35);
 
                             var label35 = new BABYLON.GUI.TextBlock();
-                            label35.text = yC3F5;
+                            label35.text = C3F5;
                             rect35.addControl(label35);
 
                             rect35.linkWithMesh(boxC3F5);
@@ -733,14 +1180,14 @@
                         var rectangle4 = new BABYLON.GUI.Rectangle('');
                         rectangle4.width ="20px";
                         rectangle4.height = "20px";
-                        rectangle4.background="rgb(160,184,104)";
+                        rectangle4.background="rgb(109,72,129)";
                         advancedTexture.addControl(rectangle4);
                         rectangle4.moveToVector3(posrec4, scene);
 
                         var text4 = new BABYLON.GUI.TextBlock();
                         text4.text = nameC4;
                         text4.color = "black";
-                        text4.fontSize = 15;
+                        text4.fontSize = 12;
                         text4.width ="100px";
                         text4.height = "20px";
                         advancedTexture.addControl(text4);
@@ -768,10 +1215,10 @@
 
                     if (!Number.isNaN(column5)) {
                         if(yC4F1 !==0){
-                            const boxC4F1 = BABYLON.MeshBuilder.CreateBox("boxC4F1", {height: yC4F1/10, width: 0.30, depth: 0.30, faceColors:color5});
-                            boxC4F1.position.x = 0.20;
-                            boxC4F1.position.y = yC4F1/10/2;
-                            boxC4F1.position.z = 2.00;
+                            const boxC4F1 = BABYLON.MeshBuilder.CreateBox("boxC4F1", {height: yC4F1, width: 0.30, depth: 0.30, faceColors:color5});
+                            boxC4F1.position.x = 2.60;
+                            boxC4F1.position.y = yC4F1/2;
+                            boxC4F1.position.z = 1;
 
                             var rect41 = new BABYLON.GUI.Rectangle();
                             rect41.width = 0.025;
@@ -781,16 +1228,16 @@
                             advancedTexture.addControl(rect41);
 
                             var label41 = new BABYLON.GUI.TextBlock();
-                            label41.text = yC4F1;
+                            label41.text = C4F1;
                             rect41.addControl(label41);
 
                             rect41.linkWithMesh(boxC4F1);
                         }
                         if(yC4F2 !==0){
-                            const boxC4F2 = BABYLON.MeshBuilder.CreateBox("boxC4F2", {height: yC4F2/10, width: 0.30, depth: 0.30, faceColors:color5});
-                            boxC4F2.position.x = 0.20;
-                            boxC4F2.position.y = yC4F2/10/2;
-                            boxC4F2.position.z = 1.00;
+                            const boxC4F2 = BABYLON.MeshBuilder.CreateBox("boxC4F2", {height: yC4F2, width: 0.30, depth: 0.30, faceColors:color5});
+                            boxC4F2.position.x = 2.60;
+                            boxC4F2.position.y = yC4F2/2;
+                            boxC4F2.position.z = 0;
 
                             var rect42 = new BABYLON.GUI.Rectangle();
                             rect42.width = 0.025;
@@ -800,16 +1247,16 @@
                             advancedTexture.addControl(rect42);
 
                             var label42 = new BABYLON.GUI.TextBlock();
-                            label42.text = yC4F2;
+                            label42.text = C4F2;
                             rect42.addControl(label42);
 
                             rect42.linkWithMesh(boxC4F2);
                         }
                         if(yC4F3 !==0){
-                            const boxC4F3 = BABYLON.MeshBuilder.CreateBox("boxC4F3", {height: yC4F3/10, width: 0.30, depth: 0.30, faceColors:color5});
-                            boxC4F3.position.x = 0.20;
-                            boxC4F3.position.y = yC4F3/10/2;
-                            boxC4F3.position.z = 0;
+                            const boxC4F3 = BABYLON.MeshBuilder.CreateBox("boxC4F3", {height: yC4F3, width: 0.30, depth: 0.30, faceColors:color5});
+                            boxC4F3.position.x = 2.60;
+                            boxC4F3.position.y = yC4F3/2;
+                            boxC4F3.position.z = -1;
 
                             var rect43 = new BABYLON.GUI.Rectangle();
                             rect43.width = 0.025;
@@ -819,16 +1266,16 @@
                             advancedTexture.addControl(rect43);
 
                             var label43 = new BABYLON.GUI.TextBlock();
-                            label43.text = yC4F3;
+                            label43.text = C4F3;
                             rect43.addControl(label43);
 
                             rect43.linkWithMesh(boxC4F3);
                         }
                         if(yC4F4 !==0){
-                            const boxC4F4 = BABYLON.MeshBuilder.CreateBox("boxC4F4", {height: yC4F4/10, width: 0.30, depth: 0.30, faceColors:color5});
-                            boxC4F4.position.x = 0.20;
-                            boxC4F4.position.y = yC4F4/10/2;
-                            boxC4F4.position.z = -1.00;
+                            const boxC4F4 = BABYLON.MeshBuilder.CreateBox("boxC4F4", {height: yC4F4, width: 0.30, depth: 0.30, faceColors:color5});
+                            boxC4F4.position.x = 2.60;
+                            boxC4F4.position.y = yC4F4/2;
+                            boxC4F4.position.z = -2;
 
                             var rect44 = new BABYLON.GUI.Rectangle();
                             rect44.width = 0.025;
@@ -838,16 +1285,16 @@
                             advancedTexture.addControl(rect44);
 
                             var label44 = new BABYLON.GUI.TextBlock();
-                            label44.text = yC4F4;
+                            label44.text = C4F4;
                             rect44.addControl(label44);
 
                             rect44.linkWithMesh(boxC4F4);
                         }
                         if(yC4F5 !==0){
-                            const boxC4F5 = BABYLON.MeshBuilder.CreateBox("boxC4F5", {height: yC4F5/10, width: 0.30, depth: 0.30, faceColors:color5});
-                            boxC4F5.position.x = 0.20;
-                            boxC4F5.position.y = yC4F5/10/2;
-                            boxC4F5.position.z = -2.00;
+                            const boxC4F5 = BABYLON.MeshBuilder.CreateBox("boxC4F5", {height: yC4F5, width: 0.30, depth: 0.30, faceColors:color5});
+                            boxC4F5.position.x = 2.60;
+                            boxC4F5.position.y = yC4F5/2;
+                            boxC4F5.position.z = -3;
 
                             var rect45 = new BABYLON.GUI.Rectangle();
                             rect45.width = 0.025;
@@ -857,7 +1304,7 @@
                             advancedTexture.addControl(rect45);
 
                             var label45 = new BABYLON.GUI.TextBlock();
-                            label45.text = yC4F5;
+                            label45.text = C4F5;
                             rect45.addControl(label45);
 
                             rect45.linkWithMesh(boxC4F5);
@@ -868,14 +1315,14 @@
                         var rectangle5 = new BABYLON.GUI.Rectangle('');
                         rectangle5.width ="20px";
                         rectangle5.height = "20px";
-                        rectangle5.background="rgb(236,82,78)";
+                        rectangle5.background="rgb(173,88,104)";
                         advancedTexture.addControl(rectangle5);
                         rectangle5.moveToVector3(posrec5, scene);
 
                         var text5 = new BABYLON.GUI.TextBlock();
                         text5.text = nameC5;
                         text5.color = "black";
-                        text5.fontSize = 15;
+                        text5.fontSize = 12;
                         text5.width ="100px";
                         text5.height = "20px";
                         advancedTexture.addControl(text5);
@@ -903,10 +1350,10 @@
 
                     if (!Number.isNaN(column6)) {
                         if(yC5F1 !==0){
-                            const boxC5F1 = BABYLON.MeshBuilder.CreateBox("boxC5F1", {height: yC5F1/10, width: 0.30, depth: 0.30, faceColors:color6});
-                            boxC5F1.position.x = -0.40;
-                            boxC5F1.position.y = yC5F1/10/2;
-                            boxC5F1.position.z = 2.00;
+                            const boxC5F1 = BABYLON.MeshBuilder.CreateBox("boxC5F1", {height: yC5F1, width: 0.30, depth: 0.30, faceColors:color6});
+                            boxC5F1.position.x = 2;
+                            boxC5F1.position.y = yC5F1/2;
+                            boxC5F1.position.z = 1;
 
                             var rect51 = new BABYLON.GUI.Rectangle();
                             rect51.width = 0.025;
@@ -916,16 +1363,16 @@
                             advancedTexture.addControl(rect51);
 
                             var label51 = new BABYLON.GUI.TextBlock();
-                            label51.text = yC5F1;
+                            label51.text = C5F1;
                             rect51.addControl(label51);
 
                             rect51.linkWithMesh(boxC5F1);
                         }
                         if(yC5F2 !==0){
-                            const boxC5F2 = BABYLON.MeshBuilder.CreateBox("boxC5F2", {height: yC5F2/10, width: 0.30, depth: 0.30, faceColors:color6});
-                            boxC5F2.position.x = -0.40;
-                            boxC5F2.position.y = yC5F2/10/2;
-                            boxC5F2.position.z = 1.00;
+                            const boxC5F2 = BABYLON.MeshBuilder.CreateBox("boxC5F2", {height: yC5F2, width: 0.30, depth: 0.30, faceColors:color6});
+                            boxC5F2.position.x = 2;
+                            boxC5F2.position.y = yC5F2/2;
+                            boxC5F2.position.z = 0;
 
                             var rect52 = new BABYLON.GUI.Rectangle();
                             rect52.width = 0.025;
@@ -935,16 +1382,16 @@
                             advancedTexture.addControl(rect52);
 
                             var label52 = new BABYLON.GUI.TextBlock();
-                            label52.text = yC5F2;
+                            label52.text = C5F2;
                             rect52.addControl(label52);
 
                             rect52.linkWithMesh(boxC5F2);
                         }
                         if(yC5F3 !==0){
-                            const boxC5F3 = BABYLON.MeshBuilder.CreateBox("boxC5F3", {height: yC5F3/10, width: 0.30, depth: 0.30, faceColors:color6});
-                            boxC5F3.position.x = -0.40;
-                            boxC5F3.position.y = yC5F3/10/2;
-                            boxC5F3.position.z = 0;
+                            const boxC5F3 = BABYLON.MeshBuilder.CreateBox("boxC5F3", {height: yC5F3, width: 0.30, depth: 0.30, faceColors:color6});
+                            boxC5F3.position.x = 2;
+                            boxC5F3.position.y = yC5F3/2;
+                            boxC5F3.position.z = -1;
 
                             var rect53 = new BABYLON.GUI.Rectangle();
                             rect53.width = 0.025;
@@ -954,16 +1401,16 @@
                             advancedTexture.addControl(rect53);
 
                             var label53 = new BABYLON.GUI.TextBlock();
-                            label53.text = yC5F3;
+                            label53.text = C5F3;
                             rect53.addControl(label53);
 
                             rect53.linkWithMesh(boxC5F3);
                         }
                         if(yC5F4 !==0){
-                            const boxC5F4 = BABYLON.MeshBuilder.CreateBox("boxC5F4", {height: yC5F4/10, width: 0.30, depth: 0.30, faceColors:color6});
-                            boxC5F4.position.x = -0.40;
-                            boxC5F4.position.y = yC5F4/10/2;
-                            boxC5F4.position.z = -1.00;
+                            const boxC5F4 = BABYLON.MeshBuilder.CreateBox("boxC5F4", {height: yC5F4, width: 0.30, depth: 0.30, faceColors:color6});
+                            boxC5F4.position.x = 2;
+                            boxC5F4.position.y = yC5F4/2;
+                            boxC5F4.position.z = -2;
 
                             var rect54 = new BABYLON.GUI.Rectangle();
                             rect54.width = 0.025;
@@ -973,16 +1420,16 @@
                             advancedTexture.addControl(rect54);
 
                             var label54 = new BABYLON.GUI.TextBlock();
-                            label54.text = yC5F4;
+                            label54.text = C5F4;
                             rect54.addControl(label54);
 
                             rect54.linkWithMesh(boxC5F4);
                         }
                         if(yC5F5 !==0){
-                            const boxC5F5 = BABYLON.MeshBuilder.CreateBox("boxC5F5", {height: yC5F5/10, width: 0.30, depth: 0.30, faceColors:color6});
-                            boxC5F5.position.x = -0.40;
-                            boxC5F5.position.y = yC5F5/10/2;
-                            boxC5F5.position.z = -2.00;
+                            const boxC5F5 = BABYLON.MeshBuilder.CreateBox("boxC5F5", {height: yC5F5, width: 0.30, depth: 0.30, faceColors:color6});
+                            boxC5F5.position.x = 2;
+                            boxC5F5.position.y = yC5F5/2;
+                            boxC5F5.position.z = -3;
 
                             var rect55 = new BABYLON.GUI.Rectangle();
                             rect55.width = 0.025;
@@ -992,23 +1439,24 @@
                             advancedTexture.addControl(rect55);
 
                             var label55 = new BABYLON.GUI.TextBlock();
-                            label55.text = yC5F5;
+                            label55.text = C5F5;
                             rect55.addControl(label55);
 
                             rect55.linkWithMesh(boxC5F5);
                         }
+                        posicionGround-=0.20;
 
                         var rectangle6 = new BABYLON.GUI.Rectangle('');
                         rectangle6.width ="20px";
                         rectangle6.height = "20px";
-                        rectangle6.background="rgb(49,145,171)";
+                        rectangle6.background="rgb(160,184,104)";
                         advancedTexture.addControl(rectangle6);
                         rectangle6.moveToVector3(posrec6, scene);
 
                         var text6 = new BABYLON.GUI.TextBlock();
                         text6.text = nameC6;
                         text6.color = "black";
-                        text6.fontSize = 15;
+                        text6.fontSize = 12;
                         text6.width ="100px";
                         text6.height = "20px";
                         advancedTexture.addControl(text6);
@@ -1031,6 +1479,1216 @@
                             }
 	                    }
 	                    transformGroup.addCheckbox(nameC6, mostrarValoresColumna6);
+
+                    }
+                    if (!Number.isNaN(column7)) {
+                        if(yC6F1 !==0){
+                            const boxC6F1 = BABYLON.MeshBuilder.CreateBox("boxC6F1", {height: yC6F1, width: 0.30, depth: 0.30, faceColors:color7});
+                            boxC6F1.position.x = 1.4;
+                            boxC6F1.position.y = yC6F1/2;
+                            boxC6F1.position.z = 1;
+
+                            var rect61 = new BABYLON.GUI.Rectangle();
+                            rect61.width = 0.025;
+                            rect61.height = "0px";
+                            rect61.color = "black";
+                            rect61.thickness = 0;
+                            advancedTexture.addControl(rect61);
+
+                            var label61 = new BABYLON.GUI.TextBlock();
+                            label61.text = C6F1;
+                            rect61.addControl(label61);
+
+                            rect61.linkWithMesh(boxC6F1);
+                        }
+                        if(yC6F2 !==0){
+                            const boxC6F2 = BABYLON.MeshBuilder.CreateBox("boxC6F2", {height: yC6F2, width: 0.30, depth: 0.30, faceColors:color7});
+                            boxC6F2.position.x = 1.4;
+                            boxC6F2.position.y = yC6F2/2;
+                            boxC6F2.position.z = 0;
+
+                            var rect62 = new BABYLON.GUI.Rectangle();
+                            rect62.width = 0.025;
+                            rect62.height = "0px";
+                            rect62.color = "black";
+                            rect62.thickness = 0;
+                            advancedTexture.addControl(rect62);
+
+                            var label62 = new BABYLON.GUI.TextBlock();
+                            label62.text = C6F2;
+                            rect62.addControl(label62);
+
+                            rect62.linkWithMesh(boxC6F2);
+                        }
+                        if(yC6F3 !==0){
+                            const boxC6F3 = BABYLON.MeshBuilder.CreateBox("boxC6F3", {height: yC6F3, width: 0.30, depth: 0.30, faceColors:color7});
+                            boxC6F3.position.x = 1.4;
+                            boxC6F3.position.y = yC6F3/2;
+                            boxC6F3.position.z = -1;
+
+                            var rect63 = new BABYLON.GUI.Rectangle();
+                            rect63.width = 0.025;
+                            rect63.height = "0px";
+                            rect63.color = "black";
+                            rect63.thickness = 0;
+                            advancedTexture.addControl(rect63);
+
+                            var label63 = new BABYLON.GUI.TextBlock();
+                            label63.text = C6F3;
+                            rect63.addControl(label63);
+
+                            rect63.linkWithMesh(boxC6F3);
+                        }
+                        if(yC6F4 !==0){
+                            const boxC6F4 = BABYLON.MeshBuilder.CreateBox("boxC6F4", {height: yC6F4, width: 0.30, depth: 0.30, faceColors:color7});
+                            boxC6F4.position.x = 1.4;
+                            boxC6F4.position.y = yC6F4/2;
+                            boxC6F4.position.z = -2;
+
+                            var rect64 = new BABYLON.GUI.Rectangle();
+                            rect64.width = 0.025;
+                            rect64.height = "0px";
+                            rect64.color = "black";
+                            rect64.thickness = 0;
+                            advancedTexture.addControl(rect64);
+
+                            var label64 = new BABYLON.GUI.TextBlock();
+                            label64.text = C6F4;
+                            rect64.addControl(label64);
+
+                            rect64.linkWithMesh(boxC6F4);
+                        }
+                        if(yC6F5 !==0){
+                            const boxC6F5 = BABYLON.MeshBuilder.CreateBox("boxC6F5", {height: yC6F5, width: 0.30, depth: 0.30, faceColors:color7});
+                            boxC6F5.position.x = 1.4;
+                            boxC6F5.position.y = yC6F5/2;
+                            boxC6F5.position.z = -3;
+
+                            var rect65 = new BABYLON.GUI.Rectangle();
+                            rect65.width = 0.025;
+                            rect65.height = "0px";
+                            rect65.color = "black";
+                            rect65.thickness = 0;
+                            advancedTexture.addControl(rect65);
+
+                            var label65 = new BABYLON.GUI.TextBlock();
+                            label65.text = C6F5;
+                            rect65.addControl(label65);
+
+                            rect65.linkWithMesh(boxC6F5);
+                        }
+                        posicionGround-=0.20;
+
+                        var rectangle7 = new BABYLON.GUI.Rectangle('');
+                        rectangle7.width ="20px";
+                        rectangle7.height = "20px";
+                        rectangle7.background="rgb(110,84,172)";
+                        advancedTexture.addControl(rectangle7);
+                        rectangle7.moveToVector3(posrec7, scene);
+
+                        var text7 = new BABYLON.GUI.TextBlock();
+                        text7.text = nameC7;
+                        text7.color = "black";
+                        text7.fontSize = 12;
+                        text7.width ="100px";
+                        text7.height = "20px";
+                        advancedTexture.addControl(text7);
+                        text7.moveToVector3(postext7,scene);
+
+                        var mostrarValoresColumna7 = function(isChecked) {
+                            if (isChecked) {
+                                rect61.height = "20px";
+                                rect62.height = "20px";
+                                rect63.height = "20px";
+                                rect64.height = "20px";
+                                rect65.height = "20px";
+                            }
+                            else {
+                                rect61.height = "0px";
+                                rect62.height = "0px";
+                                rect63.height = "0px";
+                                rect64.height = "0px";
+                                rect65.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC7, mostrarValoresColumna7);
+
+                    }
+                    if (!Number.isNaN(column8)) {
+                        if(yC7F1 !==0){
+                            const boxC7F1 = BABYLON.MeshBuilder.CreateBox("boxC7F1", {height: yC7F1, width: 0.30, depth: 0.30, faceColors:color8});
+                            boxC7F1.position.x = 0.80;
+                            boxC7F1.position.y = yC7F1/2;
+                            boxC7F1.position.z = 1;
+
+                            var rect71 = new BABYLON.GUI.Rectangle();
+                            rect71.width = 0.025;
+                            rect71.height = "0px";
+                            rect71.color = "black";
+                            rect71.thickness = 0;
+                            advancedTexture.addControl(rect71);
+
+                            var label71 = new BABYLON.GUI.TextBlock();
+                            label71.text = C7F1;
+                            rect71.addControl(label71);
+
+                            rect71.linkWithMesh(boxC7F1);
+                        }
+                        if(yC7F2 !==0){
+                            const boxC7F2 = BABYLON.MeshBuilder.CreateBox("boxC7F2", {height: yC7F2, width: 0.30, depth: 0.30, faceColors:color8});
+                            boxC7F2.position.x = 0.8;
+                            boxC7F2.position.y = yC7F2/2;
+                            boxC7F2.position.z = 0;
+
+                            var rect72 = new BABYLON.GUI.Rectangle();
+                            rect72.width = 0.025;
+                            rect72.height = "0px";
+                            rect72.color = "black";
+                            rect72.thickness = 0;
+                            advancedTexture.addControl(rect72);
+
+                            var label72 = new BABYLON.GUI.TextBlock();
+                            label72.text = C7F2;
+                            rect72.addControl(label72);
+
+                            rect72.linkWithMesh(boxC7F2);
+                        }
+                        if(yC7F3 !==0){
+                            const boxC7F3 = BABYLON.MeshBuilder.CreateBox("boxC7F3", {height: yC7F3, width: 0.30, depth: 0.30, faceColors:color8});
+                            boxC7F3.position.x = 0.8;
+                            boxC7F3.position.y = yC7F3/2;
+                            boxC7F3.position.z = -1;
+
+                            var rect73 = new BABYLON.GUI.Rectangle();
+                            rect73.width = 0.025;
+                            rect73.height = "0px";
+                            rect73.color = "black";
+                            rect73.thickness = 0;
+                            advancedTexture.addControl(rect73);
+
+                            var label73 = new BABYLON.GUI.TextBlock();
+                            label73.text = C7F3;
+                            rect73.addControl(label73);
+
+                            rect73.linkWithMesh(boxC7F3);
+                        }
+                        if(yC7F4 !==0){
+                            const boxC7F4 = BABYLON.MeshBuilder.CreateBox("boxC7F4", {height: yC7F4, width: 0.30, depth: 0.30, faceColors:color8});
+                            boxC7F4.position.x = 0.8;
+                            boxC7F4.position.y = yC7F4/2;
+                            boxC7F4.position.z = -2;
+
+                            var rect74 = new BABYLON.GUI.Rectangle();
+                            rect74.width = 0.025;
+                            rect74.height = "0px";
+                            rect74.color = "black";
+                            rect74.thickness = 0;
+                            advancedTexture.addControl(rect74);
+
+                            var label74 = new BABYLON.GUI.TextBlock();
+                            label74.text = C7F4;
+                            rect74.addControl(label74);
+
+                            rect74.linkWithMesh(boxC7F4);
+                        }
+                        if(yC7F5 !==0){
+                            const boxC7F5 = BABYLON.MeshBuilder.CreateBox("boxC7F5", {height: yC7F5, width: 0.30, depth: 0.30, faceColors:color8});
+                            boxC7F5.position.x = 0.8;
+                            boxC7F5.position.y = yC7F5/2;
+                            boxC7F5.position.z = -3;
+
+                            var rect75 = new BABYLON.GUI.Rectangle();
+                            rect75.width = 0.025;
+                            rect75.height = "0px";
+                            rect75.color = "black";
+                            rect75.thickness = 0;
+                            advancedTexture.addControl(rect75);
+
+                            var label75 = new BABYLON.GUI.TextBlock();
+                            label75.text = C7F5;
+                            rect75.addControl(label75);
+
+                            rect75.linkWithMesh(boxC7F5);
+                        }
+                        posicionGround-=0.20;
+
+                        var rectangle8 = new BABYLON.GUI.Rectangle('');
+                        rectangle8.width ="20px";
+                        rectangle8.height = "20px";
+                        rectangle8.background="rgb(236,82,78)";
+                        advancedTexture.addControl(rectangle8);
+                        rectangle8.moveToVector3(posrec8, scene);
+
+                        var text8 = new BABYLON.GUI.TextBlock();
+                        text8.text = nameC8;
+                        text8.color = "black";
+                        text8.fontSize = 12;
+                        text8.width ="100px";
+                        text8.height = "20px";
+                        advancedTexture.addControl(text8);
+                        text8.moveToVector3(postext8,scene);
+
+                        var mostrarValoresColumna8 = function(isChecked) {
+                            if (isChecked) {
+                                rect71.height = "20px";
+                                rect72.height = "20px";
+                                rect73.height = "20px";
+                                rect74.height = "20px";
+                                rect75.height = "20px";
+                            }
+                            else {
+                                rect71.height = "0px";
+                                rect72.height = "0px";
+                                rect73.height = "0px";
+                                rect74.height = "0px";
+                                rect75.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC8, mostrarValoresColumna8);
+
+                    }
+                    if (!Number.isNaN(column9)) {
+                        if(yC8F1 !==0){
+                            const boxC8F1 = BABYLON.MeshBuilder.CreateBox("boxC8F1", {height: yC8F1, width: 0.30, depth: 0.30, faceColors:color9});
+                            boxC8F1.position.x = 0.20;
+                            boxC8F1.position.y = yC8F1/2;
+                            boxC8F1.position.z = 1;
+
+                            var rect81 = new BABYLON.GUI.Rectangle();
+                            rect81.width = 0.025;
+                            rect81.height = "0px";
+                            rect81.color = "black";
+                            rect81.thickness = 0;
+                            advancedTexture.addControl(rect81);
+
+                            var label81 = new BABYLON.GUI.TextBlock();
+                            label81.text = C8F1;
+                            rect81.addControl(label81);
+
+                            rect81.linkWithMesh(boxC8F1);
+                        }
+                        if(yC8F2 !==0){
+                            const boxC8F2 = BABYLON.MeshBuilder.CreateBox("boxC8F2", {height: yC8F2, width: 0.30, depth: 0.30, faceColors:color9});
+                            boxC8F2.position.x = 0.20;
+                            boxC8F2.position.y = yC8F2/2;
+                            boxC8F2.position.z = 0;
+
+                            var rect82 = new BABYLON.GUI.Rectangle();
+                            rect82.width = 0.025;
+                            rect82.height = "0px";
+                            rect82.color = "black";
+                            rect82.thickness = 0;
+                            advancedTexture.addControl(rect82);
+
+                            var label82 = new BABYLON.GUI.TextBlock();
+                            label82.text = C8F2;
+                            rect82.addControl(label82);
+
+                            rect82.linkWithMesh(boxC8F2);
+                        }
+                        if(yC8F3 !==0){
+                            const boxC8F3 = BABYLON.MeshBuilder.CreateBox("boxC8F3", {height: yC8F3, width: 0.30, depth: 0.30, faceColors:color9});
+                            boxC8F3.position.x = 0.20;
+                            boxC8F3.position.y = yC8F3/2;
+                            boxC8F3.position.z = -1;
+
+                            var rect83 = new BABYLON.GUI.Rectangle();
+                            rect83.width = 0.025;
+                            rect83.height = "0px";
+                            rect83.color = "black";
+                            rect83.thickness = 0;
+                            advancedTexture.addControl(rect83);
+
+                            var label83 = new BABYLON.GUI.TextBlock();
+                            label83.text = C8F3;
+                            rect83.addControl(label83);
+
+                            rect83.linkWithMesh(boxC8F3);
+                        }
+                        if(yC8F4 !==0){
+                            const boxC8F4 = BABYLON.MeshBuilder.CreateBox("boxC8F4", {height: yC8F4, width: 0.30, depth: 0.30, faceColors:color9});
+                            boxC8F4.position.x = 0.20;
+                            boxC8F4.position.y = yC8F4/2;
+                            boxC8F4.position.z = -2;
+
+                            var rect84 = new BABYLON.GUI.Rectangle();
+                            rect84.width = 0.025;
+                            rect84.height = "0px";
+                            rect84.color = "black";
+                            rect84.thickness = 0;
+                            advancedTexture.addControl(rect84);
+
+                            var label84 = new BABYLON.GUI.TextBlock();
+                            label84.text = C8F4;
+                            rect84.addControl(label84);
+
+                            rect84.linkWithMesh(boxC8F4);
+                        }
+                        if(yC8F5 !==0){
+                            const boxC8F5 = BABYLON.MeshBuilder.CreateBox("boxC8F5", {height: yC8F5, width: 0.30, depth: 0.30, faceColors:color9});
+                            boxC8F5.position.x = 0.20;
+                            boxC8F5.position.y = yC8F5/2;
+                            boxC8F5.position.z = -3;
+
+                            var rect85 = new BABYLON.GUI.Rectangle();
+                            rect85.width = 0.025;
+                            rect85.height = "0px";
+                            rect85.color = "black";
+                            rect85.thickness = 0;
+                            advancedTexture.addControl(rect85);
+
+                            var label85 = new BABYLON.GUI.TextBlock();
+                            label85.text = C8F5;
+                            rect85.addControl(label85);
+
+                            rect85.linkWithMesh(boxC8F5);
+                        }
+                        posicionGround-=0.20;
+
+                        var rectangle9 = new BABYLON.GUI.Rectangle('');
+                        rectangle9.width ="20px";
+                        rectangle9.height = "20px";
+                        rectangle9.background="rgb(49,145,171)";
+                        advancedTexture.addControl(rectangle9);
+                        rectangle9.moveToVector3(posrec9, scene);
+
+                        var text9 = new BABYLON.GUI.TextBlock();
+                        text9.text = nameC9;
+                        text9.color = "black";
+                        text9.fontSize = 12;
+                        text9.width ="100px";
+                        text9.height = "20px";
+                        advancedTexture.addControl(text9);
+                        text9.moveToVector3(postext9,scene);
+
+                        var mostrarValoresColumna9 = function(isChecked) {
+                            if (isChecked) {
+                                rect81.height = "20px";
+                                rect82.height = "20px";
+                                rect83.height = "20px";
+                                rect84.height = "20px";
+                                rect85.height = "20px";
+                            }
+                            else {
+                                rect81.height = "0px";
+                                rect82.height = "0px";
+                                rect83.height = "0px";
+                                rect84.height = "0px";
+                                rect85.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC9, mostrarValoresColumna9);
+
+                    }
+                    if (!Number.isNaN(column10)) {
+                        if(yC9F1 !==0){
+                            const boxC9F1 = BABYLON.MeshBuilder.CreateBox("boxC9F1", {height: yC9F1, width: 0.30, depth: 0.30, faceColors:color10});
+                            boxC9F1.position.x = -0.4;
+                            boxC9F1.position.y = yC9F1/2;
+                            boxC9F1.position.z = 1;
+
+                            var rect91 = new BABYLON.GUI.Rectangle();
+                            rect91.width = 0.025;
+                            rect91.height = "0px";
+                            rect91.color = "black";
+                            rect91.thickness = 0;
+                            advancedTexture.addControl(rect91);
+
+                            var label91 = new BABYLON.GUI.TextBlock();
+                            label91.text = C9F1;
+                            rect91.addControl(label91);
+
+                            rect91.linkWithMesh(boxC9F1);
+                        }
+                        if(yC9F2 !==0){
+                            const boxC9F2 = BABYLON.MeshBuilder.CreateBox("boxC9F2", {height: yC9F2, width: 0.30, depth: 0.30, faceColors:color10});
+                            boxC9F2.position.x = -0.4;
+                            boxC9F2.position.y = yC9F2/2;
+                            boxC9F2.position.z = 0;
+
+                            var rect92 = new BABYLON.GUI.Rectangle();
+                            rect92.width = 0.025;
+                            rect92.height = "0px";
+                            rect92.color = "black";
+                            rect92.thickness = 0;
+                            advancedTexture.addControl(rect92);
+
+                            var label92 = new BABYLON.GUI.TextBlock();
+                            label92.text = C9F2;
+                            rect92.addControl(label92);
+
+                            rect92.linkWithMesh(boxC9F2);
+                        }
+                        if(yC9F3 !==0){
+                            const boxC9F3 = BABYLON.MeshBuilder.CreateBox("boxC9F3", {height: yC9F3, width: 0.30, depth: 0.30, faceColors:color10});
+                            boxC9F3.position.x = -0.4;
+                            boxC9F3.position.y = yC9F3/2;
+                            boxC9F3.position.z = -1;
+
+                            var rect93 = new BABYLON.GUI.Rectangle();
+                            rect93.width = 0.025;
+                            rect93.height = "0px";
+                            rect93.color = "black";
+                            rect93.thickness = 0;
+                            advancedTexture.addControl(rect93);
+
+                            var label93 = new BABYLON.GUI.TextBlock();
+                            label93.text = C9F3;
+                            rect93.addControl(label93);
+
+                            rect93.linkWithMesh(boxC9F3);
+                        }
+                        if(yC9F4 !==0){
+                            const boxC9F4 = BABYLON.MeshBuilder.CreateBox("boxC9F4", {height: yC9F4, width: 0.30, depth: 0.30, faceColors:color10});
+                            boxC9F4.position.x = -0.4;
+                            boxC9F4.position.y = yC9F4/2;
+                            boxC9F4.position.z = -2;
+
+                            var rect94 = new BABYLON.GUI.Rectangle();
+                            rect94.width = 0.025;
+                            rect94.height = "0px";
+                            rect94.color = "black";
+                            rect94.thickness = 0;
+                            advancedTexture.addControl(rect94);
+
+                            var label94 = new BABYLON.GUI.TextBlock();
+                            label94.text = C9F4;
+                            rect94.addControl(label94);
+
+                            rect94.linkWithMesh(boxC9F4);
+                        }
+                        if(yC9F5 !==0){
+                            const boxC9F5 = BABYLON.MeshBuilder.CreateBox("boxC9F5", {height: yC9F5, width: 0.30, depth: 0.30, faceColors:color10});
+                            boxC9F5.position.x = -0.4;
+                            boxC9F5.position.y = yC9F5/2;
+                            boxC9F5.position.z = -3;
+
+                            var rect95 = new BABYLON.GUI.Rectangle();
+                            rect95.width = 0.025;
+                            rect95.height = "0px";
+                            rect95.color = "black";
+                            rect95.thickness = 0;
+                            advancedTexture.addControl(rect95);
+
+                            var label95 = new BABYLON.GUI.TextBlock();
+                            label95.text = C9F5;
+                            rect95.addControl(label95);
+
+                            rect95.linkWithMesh(boxC9F5);
+                        }
+                        posicionGround-=0.20;
+
+                        var rectangle10 = new BABYLON.GUI.Rectangle('');
+                        rectangle10.width ="20px";
+                        rectangle10.height = "20px";
+                        rectangle10.background="rgb(143,45,86)";
+                        advancedTexture.addControl(rectangle10);
+                        rectangle10.moveToVector3(posrec10, scene);
+
+                        var text10 = new BABYLON.GUI.TextBlock();
+                        text10.text = nameC10;
+                        text10.color = "black";
+                        text10.fontSize = 12;
+                        text10.width ="100px";
+                        text10.height = "20px";
+                        advancedTexture.addControl(text10);
+                        text10.moveToVector3(postext10,scene);
+
+                        var mostrarValoresColumna10 = function(isChecked) {
+                            if (isChecked) {
+                                rect91.height = "20px";
+                                rect92.height = "20px";
+                                rect93.height = "20px";
+                                rect94.height = "20px";
+                                rect95.height = "20px";
+                            }
+                            else {
+                                rect91.height = "0px";
+                                rect92.height = "0px";
+                                rect93.height = "0px";
+                                rect94.height = "0px";
+                                rect95.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC10, mostrarValoresColumna10);
+
+                    }
+                    if (!Number.isNaN(column11)) {
+                        if(yC10F1 !== 0){
+                            const boxC10F1 = BABYLON.MeshBuilder.CreateBox("boxC10F1", {height: yC10F1, width: 0.30, depth: 0.30, faceColors:color11});
+                            boxC10F1.position.x = -1;
+                            boxC10F1.position.y = yC10F1/2;
+                            boxC10F1.position.z = 1;
+
+                            var rect101 = new BABYLON.GUI.Rectangle();
+                            rect101.width = 0.025;
+                            rect101.height = "0px";
+                            rect101.color = "black";
+                            rect101.thickness = 0;
+                            advancedTexture.addControl(rect101);
+
+                            var label101 = new BABYLON.GUI.TextBlock();
+                            label101.text = C10F1;
+                            rect101.addControl(label101);
+
+                            rect101.linkWithMesh(boxC10F1);
+
+                        }
+                        if(yC10F2 !==0){
+                            const boxC10F2 = BABYLON.MeshBuilder.CreateBox("boxC10F2", {height: yC10F2, width: 0.30, depth: 0.30, faceColors:color11});
+                            boxC10F2.position.x = -1;
+                            boxC10F2.position.y = yC10F2/2;
+                            boxC10F2.position.z = 0;
+
+                            var rect102 = new BABYLON.GUI.Rectangle();
+                            rect102.width = 0.025;
+                            rect102.height = "0px";
+                            rect102.color = "black";
+                            rect102.thickness = 0;
+                            advancedTexture.addControl(rect102);
+
+                            var label102 = new BABYLON.GUI.TextBlock();
+                            label102.text = C10F2;
+                            rect102.addControl(label102);
+
+                            rect102.linkWithMesh(boxC10F2);
+
+                        }
+                        if(yC10F3 !==0){
+                            const boxC10F3 = BABYLON.MeshBuilder.CreateBox("boxC10F3", {height: yC10F3, width: 0.30, depth: 0.30, faceColors:color11});
+                            boxC10F3.position.x = -1;
+                            boxC10F3.position.y = yC10F3/2;
+                            boxC10F3.position.z = -1;
+
+                            var rect103 = new BABYLON.GUI.Rectangle();
+                            rect103.width = 0.025;
+                            rect103.height = "0px";
+                            rect103.color = "black";
+                            rect103.thickness = 0;
+                            advancedTexture.addControl(rect103);
+
+                            var label103 = new BABYLON.GUI.TextBlock();
+                            label103.text = C10F3;
+                            rect103.addControl(label103);
+
+                            rect103.linkWithMesh(boxC10F3);
+                        }
+                        if(yC10F4 !==0){
+                            const boxC10F4 = BABYLON.MeshBuilder.CreateBox("boxC10F4", {height: yC10F4, width: 0.30, depth: 0.30, faceColors:color11});
+                            boxC10F4.position.x = -1;
+                            boxC10F4.position.y = yC10F4/2;
+                            boxC10F4.position.z = -2;
+
+                            var rect104 = new BABYLON.GUI.Rectangle();
+                            rect104.width = 0.025;
+                            rect104.height = "0px";
+                            rect104.color = "black";
+                            rect104.thickness = 0;
+                            advancedTexture.addControl(rect104);
+
+                            var label104 = new BABYLON.GUI.TextBlock();
+                            label104.text = C0F4;
+                            rect104.addControl(label104);
+
+                            rect104.linkWithMesh(boxC10F4);
+                        }
+                        if(yC10F5 !==0){
+                            const boxC10F5 = BABYLON.MeshBuilder.CreateBox("boxC10F5", {height: yC10F5, width: 0.30, depth: 0.30, faceColors:color11});
+                            boxC10F5.position.x = -1;
+                            boxC10F5.position.y = yC10F5/2;
+                            boxC10F5.position.z = -3;
+
+                            var rect105 = new BABYLON.GUI.Rectangle();
+                            rect105.width = 0.025;
+                            rect105.height = "0px";
+                            rect105.color = "black";
+                            rect105.thickness = 0;
+                            advancedTexture.addControl(rect105);
+
+                            var label105 = new BABYLON.GUI.TextBlock();
+                            label105.text = C10F5;
+                            rect105.addControl(label105);
+
+                            rect105.linkWithMesh(boxC10F5);
+
+                        }
+
+                        posicionGround-=0.20;
+
+                        var rectangle11 = new BABYLON.GUI.Rectangle('');
+                        rectangle11.width ="20px";
+                        rectangle11.height = "20px";
+                        rectangle11.background="rgb(65,181,162)";
+                        advancedTexture.addControl(rectangle11);
+                        rectangle11.moveToVector3(posrec11, scene);
+
+                        var text11 = new BABYLON.GUI.TextBlock();
+                        text11.text = nameC11;
+                        text11.color = "black";
+                        text11.fontSize = 12;
+                        text11.width ="100px";
+                        text11.height = "20px";
+                        advancedTexture.addControl(text11);
+                        text11.moveToVector3(postext11,scene);
+
+                        var mostrarValoresColumna11 = function(isChecked) {
+                            if (isChecked) {
+                                rect101.height = "20px";
+                                rect102.height = "20px";
+                                rect103.height = "20px";
+                                rect104.height = "20px";
+                                rect105.height = "20px";
+                            }
+                            else {
+                                rect101.height = "0px";
+                                rect102.height = "0px";
+                                rect103.height = "0px";
+                                rect104.height = "0px";
+                                rect105.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC11, mostrarValoresColumna11);
+
+                    }
+
+                    if (!Number.isNaN(column12)) {
+                        if(yC11F1 !==0){
+                            const boxC11F1 = BABYLON.MeshBuilder.CreateBox("boxC11F1", {height: yC11F1, width: 0.30, depth: 0.30, faceColors:color12});
+                            boxC11F1.position.x = -1.6;
+                            boxC11F1.position.y = yC11F1/2;
+                            boxC11F1.position.z = 1;
+
+                            var rect111 = new BABYLON.GUI.Rectangle();
+                            rect111.width = 0.025;
+                            rect111.height = "0px";
+                            rect111.color = "black";
+                            rect111.thickness = 0;
+                            advancedTexture.addControl(rect111);
+
+                            var label111 = new BABYLON.GUI.TextBlock();
+                            label111.text = C11F1;
+                            rect111.addControl(label111);
+
+                            rect111.linkWithMesh(boxC11F1);
+                        }
+                        if(yC11F2 !==0){
+                            const boxC11F2 = BABYLON.MeshBuilder.CreateBox("boxC11F2", {height: yC11F2, width: 0.30, depth: 0.30, faceColors:color12});
+                            boxC11F2.position.x = -1.6;
+                            boxC11F2.position.y = yC11F2/2;
+                            boxC11F2.position.z = 0;
+
+                            var rect112 = new BABYLON.GUI.Rectangle();
+                            rect112.width = 0.025;
+                            rect112.height = "0px";
+                            rect112.color = "black";
+                            rect112.thickness = 0;
+                            advancedTexture.addControl(rect112);
+
+                            var label112 = new BABYLON.GUI.TextBlock();
+                            label112.text = C11F2;
+                            rect112.addControl(label112);
+
+                            rect112.linkWithMesh(boxC11F2);
+
+                        }
+                        if(yC11F3 !==0){
+                            const boxC11F3 = BABYLON.MeshBuilder.CreateBox("boxC11F3", {height: yC11F3, width: 0.30, depth: 0.30, faceColors:color12});
+                            boxC11F3.position.x = -1.6;
+                            boxC11F3.position.y = yC11F3/2;
+                            boxC11F3.position.z = -1;
+
+                            var rect113 = new BABYLON.GUI.Rectangle();
+                            rect113.width = 0.025;
+                            rect113.height = "0px";
+                            rect113.color = "black";
+                            rect113.thickness = 0;
+                            advancedTexture.addControl(rect113);
+
+                            var label113 = new BABYLON.GUI.TextBlock();
+                            label113.text = C11F3;
+                            rect113.addControl(label113);
+
+                            rect113.linkWithMesh(boxC11F3);
+                        }
+                        if(yC11F4 !==0){
+                            const boxC11F4 = BABYLON.MeshBuilder.CreateBox("boxC11F4", {height: yC11F4, width: 0.30, depth: 0.30, faceColors:color12});
+                            boxC11F4.position.x = -1.6;
+                            boxC11F4.position.y = yC11F4/2;
+                            boxC11F4.position.z = -2;
+
+                            var rect114 = new BABYLON.GUI.Rectangle();
+                            rect114.width = 0.025;
+                            rect114.height = "0px";
+                            rect114.color = "black";
+                            rect114.thickness = 0;
+                            advancedTexture.addControl(rect114);
+
+                            var label114 = new BABYLON.GUI.TextBlock();
+                            label114.text = C11F4;
+                            rect114.addControl(label114);
+
+                            rect114.linkWithMesh(boxC11F4);
+                        }
+                        if(yC11F5 !==0){
+                            const boxC11F5 = BABYLON.MeshBuilder.CreateBox("boxC11F5", {height: yC11F5, width: 0.30, depth: 0.30, faceColors:color12});
+                            boxC11F5.position.x = -1.6;
+                            boxC11F5.position.y = yC11F5/2;
+                            boxC11F5.position.z = -3;
+
+                            var rect115 = new BABYLON.GUI.Rectangle();
+                            rect115.width = 0.025;
+                            rect115.height = "0px";
+                            rect115.color = "black";
+                            rect115.thickness = 0;
+                            advancedTexture.addControl(rect115);
+
+                            var label115 = new BABYLON.GUI.TextBlock();
+                            label115.text = C11F5;
+                            rect115.addControl(label115);
+
+                            rect115.linkWithMesh(boxC11F5);
+
+                        }
+
+                        posicionGround-=0.20;
+
+                        var rectangle12 = new BABYLON.GUI.Rectangle('');
+                        rectangle12.width ="20px";
+                        rectangle12.height = "20px";
+                        rectangle12.background="rgb(226,71,22)";
+                        advancedTexture.addControl(rectangle12);
+                        rectangle12.moveToVector3(posrec12, scene);
+
+                        var text12 = new BABYLON.GUI.TextBlock();
+                        text12.text = nameC12;
+                        text12.color = "black";
+                        text12.fontSize = 12;
+                        text12.width ="100px";
+                        text12.height = "20px";
+                        advancedTexture.addControl(text12);
+                        text12.moveToVector3(postext12,scene);
+
+                        var mostrarValoresColumna12 = function(isChecked) {
+                            if (isChecked) {
+                                rect111.height = "20px";
+                                rect112.height = "20px";
+                                rect113.height = "20px";
+                                rect114.height = "20px";
+                                rect115.height = "20px";
+                            }
+                            else {
+                                rect111.height = "0px";
+                                rect112.height = "0px";
+                                rect113.height = "0px";
+                                rect114.height = "0px";
+                                rect115.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC12, mostrarValoresColumna12);
+
+                    }
+
+                    if (!Number.isNaN(column13)) {
+                        if(yC12F1 !==0){
+                            const boxC12F1 = BABYLON.MeshBuilder.CreateBox("boxC12F1", {height: yC12F1, width: 0.30, depth: 0.30, faceColors:color13});
+                            boxC12F1.position.x = -2.2;
+                            boxC12F1.position.y = yC12F1/2;
+                            boxC12F1.position.z = 1;
+
+                            var rect121 = new BABYLON.GUI.Rectangle();
+                            rect121.width = 0.025;
+                            rect121.height = "0px";
+                            rect121.color = "black";
+                            rect121.thickness = 0;
+                            advancedTexture.addControl(rect121);
+
+                            var label121 = new BABYLON.GUI.TextBlock();
+                            label121.text = C12F1;
+                            rect121.addControl(label121);
+
+                            rect121.linkWithMesh(boxC12F1);
+                        }
+                        if(yC12F2 !==0){
+                            const boxC12F2 = BABYLON.MeshBuilder.CreateBox("boxC12F2", {height: yC12F2, width: 0.30, depth: 0.30, faceColors:color13});
+                            boxC12F2.position.x = -2.2;
+                            boxC12F2.position.y = yC12F2/2;
+                            boxC12F2.position.z = 0;
+
+                            var rect122 = new BABYLON.GUI.Rectangle();
+                            rect122.width = 0.025;
+                            rect122.height = "0px";
+                            rect122.color = "black";
+                            rect122.thickness = 0;
+                            advancedTexture.addControl(rect122);
+
+                            var label122 = new BABYLON.GUI.TextBlock();
+                            label122.text = C12F2;
+                            rect122.addControl(label122);
+
+                            rect122.linkWithMesh(boxC12F2);
+                        }
+                        if(yC12F3 !==0){
+                            const boxC12F3 = BABYLON.MeshBuilder.CreateBox("boxC12F3", {height: yC12F3, width: 0.30, depth: 0.30, faceColors:color13});
+                            boxC12F3.position.x = -2.2;
+                            boxC12F3.position.y = yC12F3/2;
+                            boxC12F3.position.z = -1;
+
+                            var rect123 = new BABYLON.GUI.Rectangle();
+                            rect123.width = 0.025;
+                            rect123.height = "0px";
+                            rect123.color = "black";
+                            rect123.thickness = 0;
+                            advancedTexture.addControl(rect123);
+
+                            var label123 = new BABYLON.GUI.TextBlock();
+                            label123.text = C12F3;
+                            rect123.addControl(label123);
+
+                            rect123.linkWithMesh(boxC12F3);
+
+                        }
+                        if(yC12F4 !==0){
+                            const boxC12F4 = BABYLON.MeshBuilder.CreateBox("boxC12F4", {height: yC12F4, width: 0.30, depth: 0.30, faceColors:color13});
+                            boxC12F4.position.x = -2.2;
+                            boxC12F4.position.y = yC12F4/2;
+                            boxC12F4.position.z = -2;
+
+                            var rect124 = new BABYLON.GUI.Rectangle();
+                            rect124.width = 0.025;
+                            rect124.height = "0px";
+                            rect124.color = "black";
+                            rect124.thickness = 0;
+                            advancedTexture.addControl(rect124);
+
+                            var label124 = new BABYLON.GUI.TextBlock();
+                            label124.text = C12F4;
+                            rect124.addControl(label124);
+
+                            rect124.linkWithMesh(boxC12F4);
+                        }
+                        if(yC12F5 !==0){
+                            const boxC12F5 = BABYLON.MeshBuilder.CreateBox("boxC12F5", {height: yC12F5, width: 0.30, depth: 0.30, faceColors:color13});
+                            boxC12F5.position.x = -2.2;
+                            boxC12F5.position.y = yC12F5/2;
+                            boxC12F5.position.z = -3;
+
+                            var rect125 = new BABYLON.GUI.Rectangle();
+                            rect125.width = 0.025;
+                            rect125.height = "0px";
+                            rect125.color = "black";
+                            rect125.thickness = 0;
+                            advancedTexture.addControl(rect125);
+
+                            var label125 = new BABYLON.GUI.TextBlock();
+                            label125.text = C12F5;
+                            rect125.addControl(label125);
+
+                            rect125.linkWithMesh(boxC12F5);
+                        }
+
+                        posicionGround-=0.20;
+
+                        var rectangle13 = new BABYLON.GUI.Rectangle('');
+                        rectangle13.width ="20px";
+                        rectangle13.height = "20px";
+                        rectangle13.background="rgb(123,187,79)";
+                        advancedTexture.addControl(rectangle13);
+                        rectangle13.moveToVector3(posrec13, scene);
+
+                        var text13 = new BABYLON.GUI.TextBlock();
+                        text13.text = nameC13;
+                        text13.color = "black";
+                        text13.fontSize = 12;
+                        text13.width ="100px";
+                        text13.height = "20px";
+                        advancedTexture.addControl(text13);
+                        text13.moveToVector3(postext13,scene);
+
+                        var mostrarValoresColumna13 = function(isChecked) {
+                            if (isChecked) {
+                                rect121.height = "20px";
+                                rect122.height = "20px";
+                                rect123.height = "20px";
+                                rect124.height = "20px";
+                                rect125.height = "20px";
+                            }
+                            else {
+                                rect121.height = "0px";
+                                rect122.height = "0px";
+                                rect123.height = "0px";
+                                rect124.height = "0px";
+                                rect125.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC13, mostrarValoresColumna13);
+                    }
+                    if (!Number.isNaN(column14)) {
+                        if(yC13F1 !==0){
+                            const boxC13F1 = BABYLON.MeshBuilder.CreateBox("boxC13F1", {height: yC13F1, width: 0.30, depth: 0.30, faceColors:color14});
+                            boxC13F1.position.x = -2.8;
+                            boxC13F1.position.y = yC13F1/2;
+                            boxC13F1.position.z = 1;
+
+                            var rect131 = new BABYLON.GUI.Rectangle();
+                            rect131.width = 0.025;
+                            rect131.height = "0px";
+                            rect131.color = "black";
+                            rect131.thickness = 0;
+                            advancedTexture.addControl(rect131);
+
+                            var label131 = new BABYLON.GUI.TextBlock();
+                            label131.text = C13F1;
+                            rect131.addControl(label131);
+
+                            rect131.linkWithMesh(boxC13F1);
+                        }
+                        if(yC13F2 !==0){
+                            const boxC13F2 = BABYLON.MeshBuilder.CreateBox("boxC13F2", {height: yC13F2, width: 0.30, depth: 0.30, faceColors:color14});
+                            boxC13F2.position.x = -2.8;
+                            boxC13F2.position.y = yC13F2/2;
+                            boxC13F2.position.z = 0;
+
+                            var rect132 = new BABYLON.GUI.Rectangle();
+                            rect132.width = 0.025;
+                            rect132.height = "0px";
+                            rect132.color = "black";
+                            rect132.thickness = 0;
+                            advancedTexture.addControl(rect132);
+
+                            var label132 = new BABYLON.GUI.TextBlock();
+                            label132.text = C13F2;
+                            rect132.addControl(label132);
+
+                            rect132.linkWithMesh(boxC13F2);
+                        }
+                        if(yC13F3 !==0){
+                            const boxC13F3 = BABYLON.MeshBuilder.CreateBox("boxC13F3", {height: yC13F3, width: 0.30, depth: 0.30, faceColors:color14});
+                            boxC13F3.position.x = -2.8;
+                            boxC13F3.position.y = yC13F3/2;
+                            boxC13F3.position.z = -1;
+
+                            var rect133 = new BABYLON.GUI.Rectangle();
+                            rect133.width = 0.025;
+                            rect133.height = "0px";
+                            rect133.color = "black";
+                            rect133.thickness = 0;
+                            advancedTexture.addControl(rect133);
+
+                            var label133 = new BABYLON.GUI.TextBlock();
+                            label133.text = C13F3;
+                            rect133.addControl(label133);
+
+                            rect133.linkWithMesh(boxC13F3);
+                        }
+                        if(yC13F4 !==0){
+                            const boxC13F4 = BABYLON.MeshBuilder.CreateBox("boxC13F4", {height: yC13F4, width: 0.30, depth: 0.30, faceColors:color14});
+                            boxC13F4.position.x = -2.8;
+                            boxC13F4.position.y = yC13F4/2;
+                            boxC13F4.position.z = -2;
+
+                            var rect134 = new BABYLON.GUI.Rectangle();
+                            rect134.width = 0.025;
+                            rect134.height = "0px";
+                            rect134.color = "black";
+                            rect134.thickness = 0;
+                            advancedTexture.addControl(rect134);
+
+                            var label134 = new BABYLON.GUI.TextBlock();
+                            label134.text = C13F4;
+                            rect134.addControl(label134);
+
+                            rect134.linkWithMesh(boxC13F4);
+                        }
+                        if(yC13F5 !==0){
+                            const boxC13F5 = BABYLON.MeshBuilder.CreateBox("boxC13F5", {height: yC13F5, width: 0.30, depth: 0.30, faceColors:color14});
+                            boxC13F5.position.x = -2.8;
+                            boxC13F5.position.y = yC13F5/2;
+                            boxC13F5.position.z = -3;
+
+                            var rect135 = new BABYLON.GUI.Rectangle();
+                            rect135.width = 0.025;
+                            rect135.height = "0px";
+                            rect135.color = "black";
+                            rect135.thickness = 0;
+                            advancedTexture.addControl(rect135);
+
+                            var label135 = new BABYLON.GUI.TextBlock();
+                            label135.text = C13F5;
+                            rect135.addControl(label135);
+
+                            rect135.linkWithMesh(boxC13F5);
+                        }
+
+                        posicionGround-=0.20;
+
+                        var rectangle14 = new BABYLON.GUI.Rectangle('');
+                        rectangle14.width ="20px";
+                        rectangle14.height = "20px";
+                        rectangle14.background="rgb(240,200,8)";
+                        advancedTexture.addControl(rectangle14);
+                        rectangle14.moveToVector3(posrec14, scene);
+
+                        var text14 = new BABYLON.GUI.TextBlock();
+                        text14.text = nameC14;
+                        text14.color = "black";
+                        text14.fontSize = 12;
+                        text14.width ="100px";
+                        text14.height = "20px";
+                        advancedTexture.addControl(text14);
+                        text14.moveToVector3(postext14,scene);
+
+                        var mostrarValoresColumna14 = function(isChecked) {
+                            if (isChecked) {
+                                rect131.height = "20px";
+                                rect132.height = "20px";
+                                rect133.height = "20px";
+                                rect134.height = "20px";
+                                rect135.height = "20px";
+                            }
+                            else {
+                                rect131.height = "0px";
+                                rect132.height = "0px";
+                                rect133.height = "0px";
+                                rect134.height = "0px";
+                                rect135.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC14, mostrarValoresColumna14);
+
+                    }
+
+                    if (!Number.isNaN(column15)) {
+                        if(yC14F1 !==0){
+                            const boxC14F1 = BABYLON.MeshBuilder.CreateBox("boxC14F1", {height: yC14F1, width: 0.30, depth: 0.30, faceColors:color15});
+                            boxC14F1.position.x = -3.4;
+                            boxC14F1.position.y = yC14F1/2;
+                            boxC14F1.position.z = 1;
+
+                            var rect141 = new BABYLON.GUI.Rectangle();
+                            rect141.width = 0.025;
+                            rect141.height = "0px";
+                            rect141.color = "black";
+                            rect141.thickness = 0;
+                            advancedTexture.addControl(rect141);
+
+                            var label141 = new BABYLON.GUI.TextBlock();
+                            label141.text = C14F1;
+                            rect141.addControl(label141);
+
+                            rect141.linkWithMesh(boxC14F1);
+                        }
+                        if(yC14F2 !==0){
+                            const boxC14F2 = BABYLON.MeshBuilder.CreateBox("boxC14F2", {height: yC14F2, width: 0.30, depth: 0.30, faceColors:color15});
+                            boxC14F2.position.x = -3.4;
+                            boxC14F2.position.y = yC14F2/2;
+                            boxC14F2.position.z = 0;
+
+                            var rect142 = new BABYLON.GUI.Rectangle();
+                            rect142.width = 0.025;
+                            rect142.height = "0px";
+                            rect142.color = "black";
+                            rect142.thickness = 0;
+                            advancedTexture.addControl(rect142);
+
+                            var label142 = new BABYLON.GUI.TextBlock();
+                            label142.text = C14F2;
+                            rect142.addControl(label142);
+
+                            rect142.linkWithMesh(boxC14F2);
+                        }
+                        if(yC14F3 !==0){
+                            const boxC14F3 = BABYLON.MeshBuilder.CreateBox("boxC14F3", {height: yC14F3, width: 0.30, depth: 0.30, faceColors:color15});
+                            boxC14F3.position.x = -3.4;
+                            boxC14F3.position.y = yC14F3/2;
+                            boxC14F3.position.z = -1;
+
+                            var rect143 = new BABYLON.GUI.Rectangle();
+                            rect143.width = 0.025;
+                            rect143.height = "0px";
+                            rect143.color = "black";
+                            rect143.thickness = 0;
+                            advancedTexture.addControl(rect143);
+
+                            var label143 = new BABYLON.GUI.TextBlock();
+                            label143.text = C14F3;
+                            rect143.addControl(label143);
+
+                            rect143.linkWithMesh(boxC14F3);
+                        }
+                        if(yC14F4 !==0){
+                            const boxC14F4 = BABYLON.MeshBuilder.CreateBox("boxC14F4", {height: yC14F4, width: 0.30, depth: 0.30, faceColors:color15});
+                            boxC14F4.position.x = -3.4;
+                            boxC14F4.position.y = yC14F4/2;
+                            boxC14F4.position.z = -2;
+
+                            var rect144 = new BABYLON.GUI.Rectangle();
+                            rect144.width = 0.025;
+                            rect144.height = "0px";
+                            rect144.color = "black";
+                            rect144.thickness = 0;
+                            advancedTexture.addControl(rect144);
+
+                            var label144 = new BABYLON.GUI.TextBlock();
+                            label144.text = C14F4;
+                            rect144.addControl(label144);
+
+                            rect144.linkWithMesh(boxC14F4);
+                        }
+                        if(yC14F5 !==0){
+                            const boxC14F5 = BABYLON.MeshBuilder.CreateBox("boxC14F5", {height: yC14F5, width: 0.30, depth: 0.30, faceColors:color15});
+                            boxC14F5.position.x = -3.4;
+                            boxC14F5.position.y = yC14F5/2;
+                            boxC14F5.position.z = -3;
+
+                            var rect145 = new BABYLON.GUI.Rectangle();
+                            rect145.width = 0.025;
+                            rect145.height = "0px";
+                            rect145.color = "black";
+                            rect145.thickness = 0;
+                            advancedTexture.addControl(rect145);
+
+                            var label145 = new BABYLON.GUI.TextBlock();
+                            label145.text = C14F5;
+                            rect145.addControl(label145);
+
+                            rect145.linkWithMesh(boxC14F5);
+                        }
+
+                        posicionGround-=0.30;
+
+                        var rectangle15 = new BABYLON.GUI.Rectangle('');
+                        rectangle15.width ="20px";
+                        rectangle15.height = "20px";
+                        rectangle15.background="rgb(65,151,213)";
+                        advancedTexture.addControl(rectangle15);
+                        rectangle15.moveToVector3(posrec15, scene);
+
+                        var text15 = new BABYLON.GUI.TextBlock();
+                        text15.text = nameC5;
+                        text15.color = "black";
+                        text15.fontSize = 12;
+                        text15.width ="100px";
+                        text15.height = "20px";
+                        advancedTexture.addControl(text15);
+                        text15.moveToVector3(postext15,scene);
+
+                        var mostrarValoresColumna15 = function(isChecked) {
+                            if (isChecked) {
+                                rect141.height = "20px";
+                                rect142.height = "20px";
+                                rect143.height = "20px";
+                                rect144.height = "20px";
+                                rect145.height = "20px";
+                            }
+                            else {
+                                rect141.height = "0px";
+                                rect142.height = "0px";
+                                rect143.height = "0px";
+                                rect144.height = "0px";
+                                rect145.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC15, mostrarValoresColumna15);
 
                     }
 
@@ -1066,6 +2724,51 @@
                             rect53.height = "20px";
                             rect54.height = "20px";
                             rect55.height = "20px";
+                            rect61.height = "20px";
+                            rect62.height = "20px";
+                            rect63.height = "20px";
+                            rect64.height = "20px";
+                            rect65.height = "20px";
+                            rect71.height = "20px";
+                            rect72.height = "20px";
+                            rect73.height = "20px";
+                            rect74.height = "20px";
+                            rect75.height = "20px";
+                            rect81.height = "20px";
+                            rect82.height = "20px";
+                            rect83.height = "20px";
+                            rect84.height = "20px";
+                            rect85.height = "20px";
+                            rect91.height = "20px";
+                            rect92.height = "20px";
+                            rect93.height = "20px";
+                            rect94.height = "20px";
+                            rect95.height = "20px";
+                            rect101.height = "20px";
+                            rect102.height = "20px";
+                            rect103.height = "20px";
+                            rect104.height = "20px";
+                            rect105.height = "20px";
+                            rect111.height = "20px";
+                            rect112.height = "20px";
+                            rect113.height = "20px";
+                            rect114.height = "20px";
+                            rect115.height = "20px";
+                            rect121.height = "20px";
+                            rect122.height = "20px";
+                            rect123.height = "20px";
+                            rect124.height = "20px";
+                            rect125.height = "20px";
+                            rect131.height = "20px";
+                            rect132.height = "20px";
+                            rect133.height = "20px";
+                            rect134.height = "20px";
+                            rect135.height = "20px";
+                            rect141.height = "20px";
+                            rect142.height = "20px";
+                            rect143.height = "20px";
+                            rect144.height = "20px";
+                            rect145.height = "20px";
                         }
                         else {
                             rect01.height = "0px";
@@ -1098,6 +2801,51 @@
                             rect53.height = "0px";
                             rect54.height = "0px";
                             rect55.height = "0px";
+                            rect61.height = "0px";
+                            rect62.height = "0px";
+                            rect63.height = "0px";
+                            rect64.height = "0px";
+                            rect65.height = "0px";
+                            rect71.height = "0px";
+                            rect72.height = "0px";
+                            rect73.height = "0px";
+                            rect74.height = "0px";
+                            rect75.height = "0px";
+                            rect81.height = "0px";
+                            rect82.height = "0px";
+                            rect83.height = "0px";
+                            rect84.height = "0px";
+                            rect85.height = "0px";
+                            rect91.height = "0px";
+                            rect92.height = "0px";
+                            rect93.height = "0px";
+                            rect94.height = "0px";
+                            rect95.height = "0px";
+                            rect101.height = "0px";
+                            rect102.height = "0px";
+                            rect103.height = "0px";
+                            rect104.height = "0px";
+                            rect105.height = "0px";
+                            rect111.height = "0px";
+                            rect112.height = "0px";
+                            rect113.height = "0px";
+                            rect114.height = "0px";
+                            rect115.height = "0px";
+                            rect121.height = "0px";
+                            rect122.height = "0px";
+                            rect123.height = "0px";
+                            rect124.height = "0px";
+                            rect125.height = "0px";
+                            rect131.height = "0px";
+                            rect132.height = "0px";
+                            rect133.height = "0px";
+                            rect134.height = "0px";
+                            rect135.height = "0px";
+                            rect141.height = "0px";
+                            rect142.height = "0px";
+                            rect143.height = "0px";
+                            rect144.height = "0px";
+                            rect145.height = "0px";
                         }
 	                }
 
@@ -1106,11 +2854,11 @@
 
 	                var selectBox = new BABYLON.GUI.SelectionPanel("sp", [transformGroup]);
                     selectBox.width = 0.10;
-                    selectBox.height = 0.80;
+                    selectBox.height = 1;
                     selectBox.color ="white";
                     selectBox.labelColor="black";
-                    selectBox.fontSize ="15px";
-                    selectBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+                    selectBox.fontSize ="12px";
+                    selectBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
                     selectBox.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
 
                     advancedTexture.addControl(selectBox);
@@ -1118,8 +2866,8 @@
                     <!--AÑADIMOS LA LUZ-->
                     const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0.5, 0.80, 1));
 
-                    const ground = BABYLON.MeshBuilder.CreateGround("ground", {height: 5, width: 5, subdivisions: 4},scene);
-                    ground.position = new BABYLON.Vector3(posicionGround,0,0);
+                    const ground = BABYLON.MeshBuilder.CreateGround("ground", {height: 5, width: 9.2, subdivisions: 4},scene);
+                    ground.position = new BABYLON.Vector3(posicionGround,0,-1);
 
 
                     return scene;
