@@ -108,49 +108,438 @@
                 }
             });
 
+            var C0F1 =0;
+            var C0F2 =0;
+            var C0F3 =0;
+            var C0F4 =0;
+            var C0F5 =0;
+            var C1F1 =0;
+            var C1F2 =0;
+            var C1F3 =0;
+            var C1F4 =0;
+            var C1F5 =0;
+            var C2F1 =0;
+            var C2F2 =0;
+            var C2F3 =0;
+            var C2F4 =0;
+            var C2F5 =0;
+            var C3F1 =0;
+            var C3F2 =0;
+            var C3F3 =0;
+            var C3F4 =0;
+            var C3F5 =0;
+            var C4F1 =0;
+            var C4F2 =0;
+            var C4F3 =0;
+            var C4F4 =0;
+            var C4F5 =0;
+            var C5F1 =0;
+            var C5F2 =0;
+            var C5F3 =0;
+            var C5F4 =0;
+            var C5F5 =0;
+            var C6F1 =0;
+            var C6F2 =0;
+            var C6F3 =0;
+            var C6F4 =0;
+            var C6F5 =0;
+            var C7F1 =0;
+            var C7F2 =0;
+            var C7F3 =0;
+            var C7F4 =0;
+            var C7F5 =0;
+            var C8F1 =0;
+            var C8F2 =0;
+            var C8F3 =0;
+            var C8F4 =0;
+            var C8F5 =0;
+            var C9F1 =0;
+            var C9F2 =0;
+            var C9F3 =0;
+            var C9F4 =0;
+            var C9F5 =0;
+            var C10F1 =0;
+            var C10F2 =0;
+            var C10F3 =0;
+            var C10F4 =0;
+            var C10F5 =0;
+            var C11F1 =0;
+            var C11F2 =0;
+            var C11F3 =0;
+            var C11F4 =0;
+            var C11F5 =0;
+            var C12F1 =0;
+            var C12F2 =0;
+            var C12F3 =0;
+            var C12F4 =0;
+            var C12F5 =0;
+            var C13F1 =0;
+            var C13F2 =0;
+            var C13F3 =0;
+            var C13F4 =0;
+            var C13F5 =0;
+            var C14F1 =0;
+            var C14F2 =0;
+            var C14F3 =0;
+            var C14F4 =0;
+            var C14F5 =0;
+
+            var total=0;
+
             function arrayToGraficos(datos){
+                var numTotal=datos[0].length;
+                for (i=1;i<datos.length;i=i+5){
 
-                yC0F1 = parseInt(datos[1][0]);
-                yC0F2 = (parseInt(datos[2][0]));
-                yC0F3 = (parseInt(datos[3][0]));
-                yC0F4 = (parseInt(datos[4][0]));
-                yC0F5 = (parseInt(datos[5][0]));
-                linea1 = yC0F1+yC0F2+yC0F3+yC0F4+yC0F5;
 
-                yC1F1 = parseInt(datos[1][1]);
-                yC1F2 = parseInt(datos[2][1]);
-                yC1F3 = parseInt(datos[3][1]);
-                yC1F4 = parseInt(datos[4][1]);
-                yC1F5 = parseInt(datos[5][1]);
-                linea2 = yC1F1+yC1F2+yC1F3+yC1F4+yC1F5;
+                    if(datos[i] !== undefined){
+                        for (j=0;j<datos[i].length;j++){
 
-                yC2F1 = parseInt(datos[1][2]);
-                yC2F2 = parseInt(datos[2][2]);
-                yC2F3 = parseInt(datos[3][2]);
-                yC2F4 = parseInt(datos[4][2]);
-                yC2F5 = parseInt(datos[5][2]);
-                linea3 = yC2F1+yC2F2+yC2F3+yC2F4+yC2F5;
+                            switch(j){
+                                case 1:
+                                    C1F1+=parseInt(datos[i][j]);
+                                    C0F1+=parseInt(datos[i][0]);
+                                    break;
+                                case 2:
+                                    C2F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 3:
+                                    C3F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 4:
+                                    C4F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 5:
+                                    C5F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 6:
+                                    C6F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 7:
+                                    C7F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 8:
+                                    C8F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 9:
+                                    C9F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 10:
+                                    C10F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 11:
+                                    C11F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 12:
+                                    C12F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 13:
+                                    C13F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 14:
+                                    C14F1+=parseInt(datos[i][j]);
+                                    break;
 
-                yC3F1 = parseInt(datos[1][3]);
-                yC3F2 = parseInt(datos[2][3]);
-                yC3F3 = parseInt(datos[3][3]);
-                yC3F4 = parseInt(datos[4][3]);
-                yC3F5 = parseInt(datos[5][3]);
-                linea4 = yC3F1+yC3F2+yC3F3+yC3F4+yC3F5;
+                            }
+                        }
+                    }
+                    if(datos[i+1] !== undefined){
+                        for (j=0;j<datos[i+1].length;j++){
 
-                yC4F1 = parseInt(datos[1][4]);
-                yC4F2 = parseInt(datos[2][4]);
-                yC4F3 = parseInt(datos[3][4]);
-                yC4F4 = parseInt(datos[4][4]);
-                yC4F5 = parseInt(datos[5][4]);
-                linea5 = yC4F1+yC4F2+yC4F3+yC4F4+yC4F5;
+                            switch(j){
+                                case 1:
+                                    C1F2+=parseInt(datos[i+1][j]);
+                                    C0F2+=parseInt(datos[i+1][0]);
+                                    break;
+                                case 2:
+                                    C2F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 3:
+                                    C3F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 4:
+                                    C4F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 5:
+                                    C5F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 6:
+                                    C6F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 7:
+                                    C7F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 8:
+                                    C8F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 9:
+                                    C9F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 10:
+                                    C10F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 11:
+                                    C11F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 12:
+                                    C12F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 13:
+                                    C13F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 14:
+                                    C14F2+=parseInt(datos[i+1][j]);
+                                    break;
+                            }
+                        }
+                    }
+                    if(datos[i+2] !== undefined){
+                        for (j=0;j<datos[i+2].length;j++){
 
-                yC5F1 = parseInt(datos[1][5]);
-                yC5F2 = parseInt(datos[2][5]);
-                yC5F3 = parseInt(datos[3][5]);
-                yC5F4 = parseInt(datos[4][5]);
-                yC5F5 = parseInt(datos[5][5]);
-                linea6 = yC5F1+yC5F2+yC5F3+yC5F4+yC5F5;
+                            switch(j){
+                                case 1:
+                                    C1F3+=parseInt(datos[i+2][j]);
+                                    C0F3+=parseInt(datos[i+2][0]);
+                                    break;
+                                case 2:
+                                    C2F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 3:
+                                    C3F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 4:
+                                    C4F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 5:
+                                    C5F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 6:
+                                    C6F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 7:
+                                    C7F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 8:
+                                    C8F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 9:
+                                    C9F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 10:
+                                    C10F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 11:
+                                    C11F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 12:
+                                    C12F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 13:
+                                    C13F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 14:
+                                    C14F3+=parseInt(datos[i+2][j]);
+                                    break;
+                            }
+                        }
+                    }
+                    if(datos[i+3] !== undefined){
+                        for (j=0;j<datos[i+3].length;j++){
+
+                            switch(j){
+                                case 1:
+                                    C1F4+=parseInt(datos[i+3][j]);
+                                    C0F4+=parseInt(datos[i+3][0]);
+                                    break;
+                                case 2:
+                                    C2F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 3:
+                                    C3F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 4:
+                                    C4F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 5:
+                                    C5F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 6:
+                                    C6F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 7:
+                                    C7F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 8:
+                                    C8F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 9:
+                                    C9F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 10:
+                                    C10F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 11:
+                                    C11F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 12:
+                                    C12F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 13:
+                                    C13F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 14:
+                                    C14F4+=parseInt(datos[i+3][j]);
+                                    break;
+                            }
+                        }
+                    }
+                    if(datos[i+4] !== undefined){
+                        for (j=0;j<datos[i+4].length;j++){
+
+                            switch(j){
+                                case 1:
+                                    C1F5+=parseInt(datos[i+4][j]);
+                                    C0F5+=parseInt(datos[i+4][0]);
+                                    break;
+                                case 2:
+                                    C2F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 3:
+                                    C3F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 4:
+                                    C4F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 5:
+                                    C5F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 6:
+                                    C6F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 7:
+                                    C7F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 8:
+                                    C8F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 9:
+                                    C9F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 10:
+                                    C10F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 11:
+                                    C11F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 12:
+                                    C12F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 13:
+                                    C13F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 14:
+                                    C14F5+=parseInt(datos[i+4][j]);
+                                    break;
+                            }
+                        }
+                    }
+
+                }
+
+                linea1 = C0F1+C0F2+C0F3+C0F4+C0F5;
+                console.log(linea1);
+                linea2 = C1F1+C1F2+C1F3+C1F4+C1F5;
+                linea3 = C2F1+C2F2+C2F3+C2F4+C2F5;
+                linea4 = C3F1+C3F2+C3F3+C3F4+C3F5;
+                linea5 = C4F1+C4F2+C4F3+C4F4+C4F5;
+                linea6 = C5F1+C5F2+C5F3+C5F4+C5F5;
+                linea7 = C6F1+C6F2+C6F3+C6F4+C6F5;
+                linea8 = C7F1+C7F2+C7F3+C7F4+C7F5;
+                linea9 = C8F1+C8F2+C8F3+C8F4+C8F5;
+                linea10 = C9F1+C9F2+C9F3+C9F4+C9F5;
+                linea11 = C10F1+C10F2+C10F3+C10F4+C10F5;
+                linea12 = C11F1+C11F2+C11F3+C11F4+C11F5;
+                linea13 = C12F1+C12F2+C12F3+C12F4+C12F5;
+                linea14 = C13F1+C13F2+C13F3+C13F4+C13F5;
+                linea15 = C14F1+C14F2+C14F3+C14F4+C14F5;
+
+                total = (linea1 + linea2 + linea3 + linea4 + linea5 + linea6 + linea7 + linea8 + linea9 + linea10 + linea11 + linea12 + linea13 + linea14 + linea15)/(numTotal);
+
+                yC0F1 = C0F1 * 100 / total /10 /2;
+                yC0F2 = C0F2 * 100 / total /10 /2;
+                yC0F3 = C0F3 * 100 / total /10 /2;
+                yC0F4 = C0F4 * 100 / total /10 /2;
+                yC0F5 = C0F5 * 100 / total /10 /2;
+                yC1F1 = C1F1 * 100 / total /10 /2;
+                yC1F2 = C1F2 * 100 / total /10 /2;
+                yC1F3 = C1F3 * 100 / total /10 /2;
+                yC1F4 = C1F4 * 100 / total /10 /2;
+                yC1F5 = C1F5 * 100 / total /10 /2;
+                yC2F1 = C2F1 * 100 / total /10 /2;
+                yC2F2 = C2F2 * 100 / total /10 /2;
+                yC2F3 = C2F3 * 100 / total /10 /2;
+                yC2F4 = C2F4 * 100 / total /10 /2;
+                yC2F5 = C2F5 * 100 / total /10 /2;
+                yC3F1 = C3F1 * 100 / total /10 /2;
+                yC3F2 = C3F2 * 100 / total /10 /2;
+                yC3F3 = C3F3 * 100 / total /10 /2;
+                yC3F4 = C3F4 * 100 / total /10 /2;
+                yC3F5 = C3F5 * 100 / total /10 /2;
+                yC4F1 = C4F1 * 100 / total /10 /2;
+                yC4F2 = C4F2 * 100 / total /10 /2;
+                yC4F3 = C4F3 * 100 / total /10 /2;
+                yC4F4 = C4F4 * 100 / total /10 /2;
+                yC4F5 = C4F5 * 100 / total /10 /2;
+                yC5F1 = C5F1 * 100 / total /10 /2;
+                yC5F2 = C5F2 * 100 / total /10 /2;
+                yC5F3 = C5F3 * 100 / total /10 /2;
+                yC5F4 = C5F4 * 100 / total /10 /2;
+                yC5F5 = C5F5 * 100 / total /10 /2;
+                yC6F1 = C6F1 * 100 / total /10 /2;
+                yC6F2 = C6F2 * 100 / total /10 /2;
+                yC6F3 = C6F3 * 100 / total /10 /2;
+                yC6F4 = C6F4 * 100 / total /10 /2;
+                yC6F5 = C6F5 * 100 / total /10 /2;
+                yC7F1 = C7F1 * 100 / total /10 /2;
+                yC7F2 = C7F2 * 100 / total /10 /2;
+                yC7F3 = C7F3 * 100 / total /10 /2;
+                yC7F4 = C7F4 * 100 / total /10 /2;
+                yC7F5 = C7F5 * 100 / total /10 /2;
+                yC8F1 = C8F1 * 100 / total /10 /2;
+                yC8F2 = C8F2 * 100 / total /10 /2;
+                yC8F3 = C8F3 * 100 / total /10 /2;
+                yC8F4 = C8F4 * 100 / total /10 /2;
+                yC8F5 = C8F5 * 100 / total /10 /2;
+                yC9F1 = C9F1 * 100 / total /10 /2;
+                yC9F2 = C9F2 * 100 / total /10 /2;
+                yC9F3 = C9F3 * 100 / total /10 /2;
+                yC9F4 = C9F4 * 100 / total /10 /2;
+                yC9F5 = C9F5 * 100 / total /10 /2;
+                yC10F1 = C10F1 * 100 / total /10 /2;
+                yC10F2 = C10F2 * 100 / total /10 /2;
+                yC10F3 = C10F3 * 100 / total /10 /2;
+                yC10F4 = C10F4 * 100 / total /10 /2;
+                yC10F5 = C10F5 * 100 / total /10 /2;
+                yC11F1 = C11F1 * 100 / total /10 /2;
+                yC11F2 = C11F2 * 100 / total /10 /2;
+                yC11F3 = C11F3 * 100 / total /10 /2;
+                yC11F4 = C11F4 * 100 / total /10 /2;
+                yC11F5 = C11F5 * 100 / total /10 /2;
+                yC12F1 = C12F1 * 100 / total /10 /2;
+                yC12F2 = C12F2 * 100 / total /10 /2;
+                yC12F3 = C12F3 * 100 / total /10 /2;
+                yC12F4 = C12F4 * 100 / total /10 /2;
+                yC12F5 = C12F5 * 100 / total /10 /2;
+                yC13F1 = C13F1 * 100 / total /10 /2;
+                yC13F2 = C13F2 * 100 / total /10 /2;
+                yC13F3 = C13F3 * 100 / total /10 /2;
+                yC13F4 = C13F4 * 100 / total /10 /2;
+                yC13F5 = C13F5 * 100 / total /10 /2;
+                yC14F1 = C14F1 * 100 / total /10 /2;
+                yC14F2 = C14F2 * 100 / total /10 /2;
+                yC14F3 = C14F3 * 100 / total /10 /2;
+                yC14F4 = C14F4 * 100 / total /10 /2;
+                yC14F5 = C14F5 * 100 / total /10 /2;
+
 
                 nameC1 = datos[0][0];
                 nameC2 = datos[0][1];
@@ -158,6 +547,15 @@
                 nameC4 = datos[0][3];
                 nameC5 = datos[0][4];
                 nameC6 = datos[0][5];
+                nameC7 = datos[0][6];
+                nameC8 = datos[0][7];
+                nameC9 = datos[0][8];
+                nameC10 = datos[0][9];
+                nameC11 = datos[0][10];
+                nameC12 = datos[0][11];
+                nameC13 = datos[0][12];
+                nameC14 = datos[0][13];
+                nameC15 = datos[0][14];
 
             }
 
@@ -182,29 +580,56 @@
 
                     var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
 
+                    const color1 = new BABYLON.Color4(0.25, 0.50, 0.55);
+                    const color2 = new BABYLON.Color4(1.00, 0.74, 0.26);
+                    const color3 = new BABYLON.Color4(0.96, 0.57, 0.28);
+                    const color4 = new BABYLON.Color4(0.43, 0.28, 0.51);
+                    const color5 = new BABYLON.Color4(0.68, 0.35, 0.41);
+                    const color6 = new BABYLON.Color4(0.63, 0.72, 0.41);
+                    const color7 = new BABYLON.Color4(0.43, 0.33, 0.67);
+                    const color8 = new BABYLON.Color4(0.93, 0.32, 0.31);
+                    const color9 = new BABYLON.Color4(0.19, 0.57, 0.67);
+                    const color10 = new BABYLON.Color4(0.56, 0.18, 0.34);
+                    const color11 = new BABYLON.Color4(0.25, 0.71, 0.64);
+                    const color12 = new BABYLON.Color4(0.89, 0.28, 0.09);
+                    const color13 = new BABYLON.Color4(0.48, 0.73, 0.31);
+                    const color14 = new BABYLON.Color4(0.94, 0.78, 0.03);
+                    const color15 = new BABYLON.Color4(0.25, 0.59, 0.84);
 
-                    const color1 = new BABYLON.Color4(1.00, 0.74, 0.26);
-                    const color2 = new BABYLON.Color4(0.96, 0.57, 0.28);
-                    const color3 = new BABYLON.Color4(0.68, 0.35, 0.41);
-                    const color4 = new BABYLON.Color4(0.63, 0.72, 0.41);
-                    const color5 = new BABYLON.Color4(0.93, 0.32, 0.31);
-                    const color6 = new BABYLON.Color4(0.19, 0.57, 0.67);
+                    var posicionGround = 2.85;
+                    var widthGround=2.5;
 
-                    var posicionGround = 2.00;
+                    var posrec1 = new BABYLON.Vector3(4.5,3,0);
+                    var posrec2 = new BABYLON.Vector3(4,3,0);
+                    var posrec3 = new BABYLON.Vector3(3.5,3,0);
+                    var posrec4 = new BABYLON.Vector3(3,3,0);
+                    var posrec5 = new BABYLON.Vector3(2.5,3,0);
+                    var posrec6 = new BABYLON.Vector3(2,3,0);
+                    var posrec7 = new BABYLON.Vector3(1.5,3,0);
+                    var posrec8 = new BABYLON.Vector3(1,3,0);
+                    var posrec9 = new BABYLON.Vector3(0.5,3,0);
+                    var posrec10 = new BABYLON.Vector3(0,3,0);
+                    var posrec11 = new BABYLON.Vector3(-0.5,3,0);
+                    var posrec12 = new BABYLON.Vector3(-1,3,0);
+                    var posrec13 = new BABYLON.Vector3(-1.5,3,0);
+                    var posrec14 = new BABYLON.Vector3(-2,3,0);
+                    var posrec15 = new BABYLON.Vector3(-2.5,3,0);
 
-                    var posrec1 = new BABYLON.Vector3(3.5,3,0);
-                    var posrec2 = new BABYLON.Vector3(2.5,3,0);
-                    var posrec3 = new BABYLON.Vector3(1.5,3,0);
-                    var posrec4 = new BABYLON.Vector3(0.5,3,0);
-                    var posrec5 = new BABYLON.Vector3(-0.5,3,0);
-                    var posrec6 = new BABYLON.Vector3(-1.5,3,0);
-
-                    var postext1 = new BABYLON.Vector3(3.5,2.85,0.05);
-                    var postext2 = new BABYLON.Vector3(2.5,2.85,0.05);
-                    var postext3 = new BABYLON.Vector3(1.5,2.85,0.05);
-                    var postext4 = new BABYLON.Vector3(0.5,2.85,0.05);
-                    var postext5 = new BABYLON.Vector3(-0.5,2.85,0.05);
-                    var postext6 = new BABYLON.Vector3(-1.5,2.85,0.05);
+                    var postext1 = new BABYLON.Vector3(4.5,2.85,0.05);
+                    var postext2 = new BABYLON.Vector3(4,2.85,0.05);
+                    var postext3 = new BABYLON.Vector3(3.5,2.85,0.05);
+                    var postext4 = new BABYLON.Vector3(3,2.85,0.05);
+                    var postext5 = new BABYLON.Vector3(2.5,2.85,0.05);
+                    var postext6 = new BABYLON.Vector3(2,2.85,0.05);
+                    var postext7 = new BABYLON.Vector3(1.5,2.85,0.05);
+                    var postext8 = new BABYLON.Vector3(1,2.85,0.05);
+                    var postext9 = new BABYLON.Vector3(0.5,2.85,0.05);
+                    var postext10 = new BABYLON.Vector3(0,2.85,0.05);
+                    var postext11 = new BABYLON.Vector3(-0.5,2.85,0.05);
+                    var postext12 = new BABYLON.Vector3(-1,2.85,0.05);
+                    var postext13 = new BABYLON.Vector3(-1.5,2.85,0.05);
+                    var postext14 = new BABYLON.Vector3(-2,2.85,0.05);
+                    var postext15 = new BABYLON.Vector3(-2.5,2.85,0.05);
 
 
                     scene.updateTransformMatrix(true);
@@ -212,13 +637,13 @@
 
                     <!--CREAMOS LAS FIGURAS-->
 
-                    if (!Number.isNaN(linea1)) {
+                    if (nameC1 !== undefined) {
                         const plinea1 = [
-                            new BABYLON.Vector3(2.6, yC0F1/5, 2.4),
-                            new BABYLON.Vector3(1.6, yC0F2/5, 2.4),
-                            new BABYLON.Vector3(0.6, yC0F3/5, 2.4),
-                            new BABYLON.Vector3(-0.6, yC0F4/5, 2.4),
-                            new BABYLON.Vector3(-1.6, yC0F5/5, 2.4),
+                            new BABYLON.Vector3(4, yC0F1, -2),
+                            new BABYLON.Vector3(4, yC0F2, -1),
+                            new BABYLON.Vector3(4, yC0F3, 0),
+                            new BABYLON.Vector3(4, yC0F4, 1),
+                            new BABYLON.Vector3(4, yC0F5, 2),
                         ];
                         const tube1 = BABYLON.MeshBuilder.CreateTube("tube1", {path: plinea1, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
 
@@ -232,19 +657,19 @@
                         }
                         tube1.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors1);
 
-                        posicionGround-=0.20;
+                        posicionGround-=0.15;
 
                         var rectangle1 = new BABYLON.GUI.Rectangle('');
                         rectangle1.width ="20px";
                         rectangle1.height = "20px";
-                        rectangle1.background="rgb(255,188,66)";
+                        rectangle1.background="rgb(64,128,141)";
                         advancedTexture.addControl(rectangle1);
                         rectangle1.moveToVector3(posrec1, scene);
 
                         var text1 = new BABYLON.GUI.TextBlock();
                         text1.text = nameC1;
                         text1.color = "black";
-                        text1.fontSize = 15;
+                        text1.fontSize = 12;
                         text1.width ="100px";
                         text1.height = "20px";
                         advancedTexture.addControl(text1);
@@ -258,14 +683,15 @@
                         advancedTexture.addControl(rect1);
 
                         var label1 = new BABYLON.GUI.TextBlock();
-                        label1.text = "( "+yC0F1+" , "+yC0F2+" , "+yC0F3+" , "+yC0F4+" , "+yC0F5+" )";
+                        label1.text = "( "+C0F1+" , "+C0F2+" , "+C0F3+" , "+C0F4+" , "+C0F5+" )";
+                        label1.fontSize =12;
                         rect1.addControl(label1);
 
                         rect1.linkWithMesh(tube1);
 
                         var mostrarValoresLinea1 = function(isChecked) {
                             if (isChecked) {
-                                rect1.height = "20px";
+                                rect1.height = "50px";
                             }
                             else {
                                 rect1.height = "0px";
@@ -274,13 +700,13 @@
 	                    transformGroup.addCheckbox(nameC1, mostrarValoresLinea1);
 
                     }
-                    if (!Number.isNaN(linea2)) {
+                    if (nameC2 !== undefined) {
                         const plinea2 = [
-                            new BABYLON.Vector3(2.6, yC1F1/5, 1.4),
-                            new BABYLON.Vector3(1.6, yC1F2/5, 1.4),
-                            new BABYLON.Vector3(0.6, yC1F3/5, 1.4),
-                            new BABYLON.Vector3(-0.6, yC1F4/5, 1.4),
-                            new BABYLON.Vector3(-1.6, yC1F5/5, 1.4),
+                            new BABYLON.Vector3(3.5, yC1F1, -2),
+                            new BABYLON.Vector3(3.5, yC1F2, -1),
+                            new BABYLON.Vector3(3.5, yC1F3, 0),
+                            new BABYLON.Vector3(3.5, yC1F4, 1),
+                            new BABYLON.Vector3(3.5, yC1F5, 2),
                         ];
                         const tube2 = BABYLON.MeshBuilder.CreateTube("tube2", {path: plinea2, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
 
@@ -294,19 +720,18 @@
                         }
                         tube2.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors2);
 
-                        posicionGround-=0.20;
-
+                        posicionGround-=0.15;
                         var rectangle2 = new BABYLON.GUI.Rectangle('');
                         rectangle2.width ="20px";
                         rectangle2.height = "20px";
-                        rectangle2.background="rgb(246,146,72)";
+                        rectangle2.background="rgb(255,188,66)";
                         advancedTexture.addControl(rectangle2);
                         rectangle2.moveToVector3(posrec2, scene);
 
                         var text2 = new BABYLON.GUI.TextBlock();
                         text2.text = nameC2;
                         text2.color = "black";
-                        text2.fontSize = 15;
+                        text2.fontSize = 12;
                         text2.width ="100px";
                         text2.height = "20px";
                         advancedTexture.addControl(text2);
@@ -320,14 +745,15 @@
                         advancedTexture.addControl(rect2);
 
                         var label2 = new BABYLON.GUI.TextBlock();
-                        label2.text = "( "+yC1F1+" , "+yC1F2+" , "+yC1F3+" , "+yC1F4+" , "+yC1F5+" )";
+                        label2.text = "( "+C1F1+" , "+C1F2+" , "+C1F3+" , "+C1F4+" , "+C1F5+" )";
+                        label2.fontSize =12;
                         rect2.addControl(label2);
 
                         rect2.linkWithMesh(tube2);
 
                         var mostrarValoresLinea2 = function(isChecked) {
                             if (isChecked) {
-                                rect2.height = "20px";
+                                rect2.height = "50px";
                             }
                             else {
                                 rect2.height = "0px";
@@ -336,13 +762,13 @@
 	                    transformGroup.addCheckbox(nameC2, mostrarValoresLinea2);
 
                     }
-                    if (!Number.isNaN(linea3)) {
+                    if (nameC3 !== undefined) {
                         const plinea3 = [
-                            new BABYLON.Vector3(2.6, yC2F1/5, 0.5),
-                            new BABYLON.Vector3(1.6, yC2F2/5, 0.5),
-                            new BABYLON.Vector3(0.6, yC2F3/5, 0.5),
-                            new BABYLON.Vector3(-0.6, yC2F4/5, 0.5),
-                            new BABYLON.Vector3(-1.6, yC2F5/5, 0.5),
+                            new BABYLON.Vector3(3, yC2F1, -2),
+                            new BABYLON.Vector3(3, yC2F2, -1),
+                            new BABYLON.Vector3(3, yC2F3, 0),
+                            new BABYLON.Vector3(3, yC2F4, 1),
+                            new BABYLON.Vector3(3, yC2F5, 2),
                         ];
                         const tube3 = BABYLON.MeshBuilder.CreateTube("tube3", {path: plinea3, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
 
@@ -356,19 +782,20 @@
                         }
                         tube3.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors3);
 
-                        posicionGround-=0.20;
+                        posicionGround-=0.15;
+                        widthGround+=0.5;
 
                         var rectangle3 = new BABYLON.GUI.Rectangle('');
                         rectangle3.width ="20px";
                         rectangle3.height = "20px";
-                        rectangle3.background="rgb(173,88,104)";
+                        rectangle3.background="rgb(246,146,72)";
                         advancedTexture.addControl(rectangle3);
                         rectangle3.moveToVector3(posrec3, scene);
 
                         var text3 = new BABYLON.GUI.TextBlock();
                         text3.text = nameC3;
                         text3.color = "black";
-                        text3.fontSize = 15;
+                        text3.fontSize = 12;
                         text3.width ="100px";
                         text3.height = "20px";
                         advancedTexture.addControl(text3);
@@ -382,14 +809,15 @@
                         advancedTexture.addControl(rect3);
 
                         var label3 = new BABYLON.GUI.TextBlock();
-                        label3.text = "( "+yC2F1+" , "+yC2F2+" , "+yC2F3+" , "+yC2F4+" , "+yC2F5+" )";
+                        label3.text = "( "+C2F1+" , "+C2F2+" , "+C2F3+" , "+C2F4+" , "+C2F5+" )";
+                        label3.fontSize =12;
                         rect3.addControl(label3);
 
                         rect3.linkWithMesh(tube3);
 
                         var mostrarValoresLinea3 = function(isChecked) {
                             if (isChecked) {
-                                rect3.height = "20px";
+                                rect3.height = "50px";
                             }
                             else {
                                 rect3.height = "0px";
@@ -398,13 +826,13 @@
 	                    transformGroup.addCheckbox(nameC3, mostrarValoresLinea3);
 
                     }
-                    if (!Number.isNaN(linea4)) {
+                    if (nameC4 !== undefined) {
                         const plinea4 = [
-                            new BABYLON.Vector3(2.6, yC3F1/5, -0.5),
-                            new BABYLON.Vector3(1.6, yC3F2/5, -0.5),
-                            new BABYLON.Vector3(0.6, yC3F3/5, -0.5),
-                            new BABYLON.Vector3(-0.6, yC3F4/5, -0.5),
-                            new BABYLON.Vector3(-1.6, yC3F5/5, -0.5),
+                            new BABYLON.Vector3(2.5, yC3F1, -2),
+                            new BABYLON.Vector3(2.5, yC3F2, -1),
+                            new BABYLON.Vector3(2.5, yC3F3, 0),
+                            new BABYLON.Vector3(2.5, yC3F4, 1),
+                            new BABYLON.Vector3(2.5, yC3F5, 2),
                         ];
                         const tube4 = BABYLON.MeshBuilder.CreateTube("tube4", {path: plinea4, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
 
@@ -417,20 +845,19 @@
                             colors4[i * 4 + 3] = 1;
                         }
                         tube4.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors4);
-
-                        posicionGround-=0.20;
-
+                        posicionGround-=0.15;
+                        widthGround+=0.5;
                         var rectangle4 = new BABYLON.GUI.Rectangle('');
                         rectangle4.width ="20px";
                         rectangle4.height = "20px";
-                        rectangle4.background="rgb(160,184,104)";
+                        rectangle4.background="rgb(109,72,129)";
                         advancedTexture.addControl(rectangle4);
                         rectangle4.moveToVector3(posrec4, scene);
 
                         var text4 = new BABYLON.GUI.TextBlock();
                         text4.text = nameC4;
                         text4.color = "black";
-                        text4.fontSize = 15;
+                        text4.fontSize = 12;
                         text4.width ="100px";
                         text4.height = "20px";
                         advancedTexture.addControl(text4);
@@ -444,14 +871,15 @@
                         advancedTexture.addControl(rect4);
 
                         var label4 = new BABYLON.GUI.TextBlock();
-                        label4.text = "( "+yC3F1+" , "+yC3F2+" , "+yC3F3+" , "+yC3F4+" , "+yC3F5+" )";
+                        label4.text = "( "+C3F1+" , "+C3F2+" , "+C3F3+" , "+C3F4+" , "+C3F5+" )";
+                        label4.fontSize =12;
                         rect4.addControl(label4);
 
                         rect4.linkWithMesh(tube4);
 
                         var mostrarValoresLinea4 = function(isChecked) {
                             if (isChecked) {
-                                rect4.height = "20px";
+                                rect4.height = "50px";
                             }
                             else {
                                 rect4.height = "0px";
@@ -460,13 +888,13 @@
 	                    transformGroup.addCheckbox(nameC4, mostrarValoresLinea4);
 
                     }
-                    if (!Number.isNaN(linea5)) {
+                    if (nameC5 !== undefined) {
                         const plinea5 = [
-                            new BABYLON.Vector3(2.6, yC4F1/5, -1.4),
-                            new BABYLON.Vector3(1.6, yC4F2/5, -1.4),
-                            new BABYLON.Vector3(0.6, yC4F3/5, -1.4),
-                            new BABYLON.Vector3(-0.6, yC4F4/5, -1.4),
-                            new BABYLON.Vector3(-1.6, yC4F5/5, -1.4),
+                            new BABYLON.Vector3(2, yC4F1, -2),
+                            new BABYLON.Vector3(2, yC4F2, -1),
+                            new BABYLON.Vector3(2, yC4F3, 0),
+                            new BABYLON.Vector3(2, yC4F4, 1),
+                            new BABYLON.Vector3(2, yC4F5, 2),
                         ];
                         const tube5 = BABYLON.MeshBuilder.CreateTube("tube5", {path: plinea5, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
 
@@ -480,19 +908,20 @@
                         }
                         tube5.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors5);
 
-                        posicionGround-=0.20;
+                        posicionGround-=0.15;
+                        widthGround+=0.5;
 
                         var rectangle5 = new BABYLON.GUI.Rectangle('');
                         rectangle5.width ="20px";
                         rectangle5.height = "20px";
-                        rectangle5.background="rgb(236,82,78)";
+                        rectangle5.background="rgb(173,88,104)";
                         advancedTexture.addControl(rectangle5);
                         rectangle5.moveToVector3(posrec5, scene);
 
                         var text5 = new BABYLON.GUI.TextBlock();
                         text5.text = nameC5;
                         text5.color = "black";
-                        text5.fontSize = 15;
+                        text5.fontSize = 12;
                         text5.width ="100px";
                         text5.height = "20px";
                         advancedTexture.addControl(text5);
@@ -506,14 +935,15 @@
                         advancedTexture.addControl(rect5);
 
                         var label5= new BABYLON.GUI.TextBlock();
-                        label5.text = "( "+yC4F1+" , "+yC4F2+" , "+yC4F3+" , "+yC4F4+" , "+yC4F5+" )";
+                        label5.text = "( "+C4F1+" , "+C4F2+" , "+C4F3+" , "+C4F4+" , "+C4F5+" )";
+                        label5.fontSize =12;
                         rect5.addControl(label5);
 
                         rect5.linkWithMesh(tube5);
 
                         var mostrarValoresLinea5 = function(isChecked) {
                             if (isChecked) {
-                                rect5.height = "20px";
+                                rect5.height = "50px";
                             }
                             else {
                                 rect5.height = "0px";
@@ -522,13 +952,13 @@
 	                    transformGroup.addCheckbox(nameC5, mostrarValoresLinea5);
 
                     }
-                    if (!Number.isNaN(linea6)) {
+                    if (nameC6 !== undefined) {
                         const plinea6 = [
-                            new BABYLON.Vector3(2.6, yC5F1/5, -2.4),
-                            new BABYLON.Vector3(1.6, yC5F2/5, -2.4),
-                            new BABYLON.Vector3(0.6, yC5F3/5, -2.4),
-                            new BABYLON.Vector3(-0.6, yC5F4/5, -2.4),
-                            new BABYLON.Vector3(-1.6, yC5F5/5, -2.4),
+                            new BABYLON.Vector3(1.5, yC5F1, -2),
+                            new BABYLON.Vector3(1.5, yC5F2, -1),
+                            new BABYLON.Vector3(1.5, yC5F3, 0),
+                            new BABYLON.Vector3(1.5, yC5F4, 1),
+                            new BABYLON.Vector3(1.5, yC5F5, 2),
                         ];
                         const tube6 = BABYLON.MeshBuilder.CreateTube("tube6", {path: plinea6, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
 
@@ -542,19 +972,20 @@
                         }
                         tube6.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors6);
 
-                        posicionGround-=0.20;
+                        posicionGround-=0.15;
+                        widthGround+=0.5;
 
                         var rectangle6 = new BABYLON.GUI.Rectangle('');
                         rectangle6.width ="20px";
                         rectangle6.height = "20px";
-                        rectangle6.background="rgb(49,145,171)";
+                        rectangle6.background="rgb(160,184,104)";
                         advancedTexture.addControl(rectangle6);
                         rectangle6.moveToVector3(posrec6, scene);
 
                         var text6 = new BABYLON.GUI.TextBlock();
                         text6.text = nameC6;
                         text6.color = "black";
-                        text6.fontSize = 15;
+                        text6.fontSize = 12;
                         text6.width ="100px";
                         text6.height = "20px";
                         advancedTexture.addControl(text6);
@@ -568,14 +999,15 @@
                         advancedTexture.addControl(rect6);
 
                         var label6 = new BABYLON.GUI.TextBlock();
-                        label6.text = "( "+yC5F1+" , "+yC5F2+" , "+yC5F3+" , "+yC5F4+" , "+yC5F5+" )";
+                        label6.text = "( "+C5F1+" , "+C5F2+" , "+C5F3+" , "+C5F4+" , "+C5F5+" )";
+                        label6.fontSize=12;
                         rect6.addControl(label6);
 
                         rect6.linkWithMesh(tube6);
 
                         var mostrarValoresLinea6 = function(isChecked) {
                             if (isChecked) {
-                                rect6.height = "20px";
+                                rect6.height = "50px";
                             }
                             else {
                                 rect6.height = "0px";
@@ -584,14 +1016,604 @@
 	                    transformGroup.addCheckbox(nameC6, mostrarValoresLinea6);
 
                     }
+
+                    if (nameC7 !== undefined) {
+                        const plinea7 = [
+                            new BABYLON.Vector3(1, yC6F1, -2),
+                            new BABYLON.Vector3(1, yC6F2, -1),
+                            new BABYLON.Vector3(1, yC6F3, 0),
+                            new BABYLON.Vector3(1, yC6F4, 1),
+                            new BABYLON.Vector3(1, yC6F5, 2),
+                        ];
+                        const tube7 = BABYLON.MeshBuilder.CreateTube("tube1", {path: plinea7, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions7= tube7.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors7 = new Array(positions7.length * 4);
+                        for(let i=0; i<positions7.length; i++){
+                            colors7[i * 4 + 0] = color7.r;
+                            colors7[i * 4 + 1] = color7.g;
+                            colors7[i * 4 + 2] = color7.b;
+                            colors7[i * 4 + 3] = 1;
+                        }
+                        tube7.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors7);
+
+                        posicionGround-=0.15;
+                        widthGround+=0.5;
+
+                        var rectangle7 = new BABYLON.GUI.Rectangle('');
+                        rectangle7.width ="20px";
+                        rectangle7.height = "20px";
+                        rectangle7.background="rgb(110,84,172)";
+                        advancedTexture.addControl(rectangle7);
+                        rectangle7.moveToVector3(posrec7, scene);
+
+                        var text7 = new BABYLON.GUI.TextBlock();
+                        text7.text = nameC7;
+                        text7.color = "black";
+                        text7.fontSize = 12;
+                        text7.width ="100px";
+                        text7.height = "20px";
+                        advancedTexture.addControl(text7);
+                        text7.moveToVector3(postext7,scene);
+
+                        var rect7 = new BABYLON.GUI.Rectangle();
+                        rect7.width = 0.1;
+                        rect7.height = "0px";
+                        rect7.color = "black";
+                        rect7.thickness = 0;
+                        advancedTexture.addControl(rect7);
+
+                        var label7 = new BABYLON.GUI.TextBlock();
+                        label7.text = "( "+C6F1+" , "+C6F2+" , "+C6F3+" , "+C6F4+" , "+C6F5+" )";
+                        label7.fontSize =12;
+                        rect7.addControl(label7);
+
+                        rect7.linkWithMesh(tube7);
+
+                        var mostrarValoresLinea7 = function(isChecked) {
+                            if (isChecked) {
+                                rect7.height = "50px";
+                            }
+                            else {
+                                rect7.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC7, mostrarValoresLinea7);
+
+                    }
+
+                    if (nameC8 !== undefined) {
+                        const plinea8 = [
+                            new BABYLON.Vector3(0.5, yC7F1, -2),
+                            new BABYLON.Vector3(0.5, yC7F2, -1),
+                            new BABYLON.Vector3(0.5, yC7F3, 0),
+                            new BABYLON.Vector3(0.5, yC7F4, 1),
+                            new BABYLON.Vector3(0.5, yC7F5, 2),
+                        ];
+                        const tube8 = BABYLON.MeshBuilder.CreateTube("tube8", {path: plinea8, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions8 = tube8.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors8 = new Array(positions8.length * 4);
+                        for(let i=0; i<positions8.length; i++){
+                            colors8[i * 4 + 0] = color8.r;
+                            colors8[i * 4 + 1] = color8.g;
+                            colors8[i * 4 + 2] = color8.b;
+                            colors8[i * 4 + 3] = 1;
+                        }
+                        tube8.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors8);
+
+                        posicionGround-=0.15;
+                        widthGround+=0.5;
+
+                        var rectangle8 = new BABYLON.GUI.Rectangle('');
+                        rectangle8.width ="20px";
+                        rectangle8.height = "20px";
+                        rectangle8.background="rgb(236,82,78)";
+                        advancedTexture.addControl(rectangle8);
+                        rectangle8.moveToVector3(posrec8, scene);
+
+                        var text8 = new BABYLON.GUI.TextBlock();
+                        text8.text = nameC8;
+                        text8.color = "black";
+                        text8.fontSize = 12;
+                        text8.width ="100px";
+                        text8.height = "20px";
+                        advancedTexture.addControl(text8);
+                        text8.moveToVector3(postext8,scene);
+
+                        var rect8 = new BABYLON.GUI.Rectangle();
+                        rect8.width = 0.1;
+                        rect8.height = "0px";
+                        rect8.color = "black";
+                        rect8.thickness = 0;
+                        advancedTexture.addControl(rect8);
+
+                        var label8 = new BABYLON.GUI.TextBlock();
+                        label8.text = "( "+C7F1+" , "+C7F2+" , "+C7F3+" , "+C7F4+" , "+C7F5+" )";
+                        label8.fontSize =12;
+                        rect8.addControl(label8);
+
+                        rect8.linkWithMesh(tube8);
+
+                        var mostrarValoresLinea8 = function(isChecked) {
+                            if (isChecked) {
+                                rect8.height = "50px";
+                            }
+                            else {
+                                rect8.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC8, mostrarValoresLinea8);
+
+                    }
+                    if (nameC9 !== undefined) {
+                        const plinea9 = [
+                            new BABYLON.Vector3(0, yC8F1, -2),
+                            new BABYLON.Vector3(0, yC8F2, -1),
+                            new BABYLON.Vector3(0, yC8F3, 0),
+                            new BABYLON.Vector3(0, yC8F4, 1),
+                            new BABYLON.Vector3(0, yC8F5, 2),
+                        ];
+                        const tube9 = BABYLON.MeshBuilder.CreateTube("tube9", {path: plinea9, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions9 = tube9.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors9 = new Array(positions9.length * 4);
+                        for(let i=0; i<positions9.length; i++){
+                            colors9[i * 4 + 0] = color9.r;
+                            colors9[i * 4 + 1] = color9.g;
+                            colors9[i * 4 + 2] = color9.b;
+                            colors9[i * 4 + 3] = 1;
+                        }
+                        tube9.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors9);
+
+                        posicionGround-=0.15;
+                        widthGround+=0.5;
+
+                        var rectangle9 = new BABYLON.GUI.Rectangle('');
+                        rectangle9.width ="20px";
+                        rectangle9.height = "20px";
+                        rectangle9.background="rgb(49,145,171)";
+                        advancedTexture.addControl(rectangle9);
+                        rectangle9.moveToVector3(posrec9, scene);
+
+                        var text9 = new BABYLON.GUI.TextBlock();
+                        text9.text = nameC9;
+                        text9.color = "black";
+                        text9.fontSize = 12;
+                        text9.width ="100px";
+                        text9.height = "20px";
+                        advancedTexture.addControl(text9);
+                        text9.moveToVector3(postext9,scene);
+
+                        var rect9 = new BABYLON.GUI.Rectangle();
+                        rect9.width = 0.1;
+                        rect9.height = "0px";
+                        rect9.color = "black";
+                        rect9.thickness = 0;
+                        advancedTexture.addControl(rect9);
+
+                        var label9 = new BABYLON.GUI.TextBlock();
+                        label9.text = "( "+C8F1+" , "+C8F2+" , "+C8F3+" , "+C8F4+" , "+C8F5+" )";
+                        label9.fontSize =12;
+                        rect9.addControl(label9);
+
+                        rect9.linkWithMesh(tube9);
+
+                        var mostrarValoresLinea9 = function(isChecked) {
+                            if (isChecked) {
+                                rect9.height = "50px";
+                            }
+                            else {
+                                rect9.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC9, mostrarValoresLinea9);
+
+                    }
+                    if (nameC10 !== undefined) {
+                        const plinea10 = [
+                            new BABYLON.Vector3(-0.5, yC9F1, -2),
+                            new BABYLON.Vector3(-0.5, yC9F2, -1),
+                            new BABYLON.Vector3(-0.5, yC9F3, 0),
+                            new BABYLON.Vector3(-0.5, yC9F4, 1),
+                            new BABYLON.Vector3(-0.5, yC9F5, 2),
+                        ];
+                        const tube10 = BABYLON.MeshBuilder.CreateTube("tube10", {path: plinea10, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions10 = tube10.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors10 = new Array(positions10.length * 4);
+                        for(let i=0; i<positions10.length; i++){
+                            colors10[i * 4 + 0] = color10.r;
+                            colors10[i * 4 + 1] = color10.g;
+                            colors10[i * 4 + 2] = color10.b;
+                            colors10[i * 4 + 3] = 1;
+                        }
+                        tube10.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors10);
+
+                        posicionGround-=0.15;
+                        widthGround+=0.5;
+
+                        var rectangle10 = new BABYLON.GUI.Rectangle('');
+                        rectangle10.width ="20px";
+                        rectangle10.height = "20px";
+                        rectangle10.background="rgb(143,45,86)";
+                        advancedTexture.addControl(rectangle10);
+                        rectangle10.moveToVector3(posrec10, scene);
+
+                        var text10 = new BABYLON.GUI.TextBlock();
+                        text10.text = nameC10;
+                        text10.color = "black";
+                        text10.fontSize = 12;
+                        text10.width ="100px";
+                        text10.height = "20px";
+                        advancedTexture.addControl(text10);
+                        text10.moveToVector3(postext10,scene);
+
+                        var rect10 = new BABYLON.GUI.Rectangle();
+                        rect10.width = 0.1;
+                        rect10.height = "0px";
+                        rect10.color = "black";
+                        rect10.thickness = 0;
+                        advancedTexture.addControl(rect10);
+
+                        var label10 = new BABYLON.GUI.TextBlock();
+                        label10.text = "( "+C9F1+" , "+C9F2+" , "+C9F3+" , "+C9F4+" , "+C9F5+" )";
+                        label10.fontSize =12;
+                        rect10.addControl(label10);
+
+                        rect10.linkWithMesh(tube10);
+
+                        var mostrarValoresLinea10 = function(isChecked) {
+                            if (isChecked) {
+                                rect10.height = "50px";
+                            }
+                            else {
+                                rect10.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC10, mostrarValoresLinea10);
+
+                    }
+                    if (nameC11 !== undefined) {
+                        const plinea11 = [
+                            new BABYLON.Vector3(-1, yC10F1, -2),
+                            new BABYLON.Vector3(-1, yC10F2, -1),
+                            new BABYLON.Vector3(-1, yC10F3, 0),
+                            new BABYLON.Vector3(-1, yC10F4, 1),
+                            new BABYLON.Vector3(-1, yC10F5, 2),
+                        ];
+                        const tube11 = BABYLON.MeshBuilder.CreateTube("tube11", {path: plinea11, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions11 = tube11.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors11 = new Array(positions11.length * 4);
+                        for(let i=0; i<positions11.length; i++){
+                            colors11[i * 4 + 0] = color11.r;
+                            colors11[i * 4 + 1] = color11.g;
+                            colors11[i * 4 + 2] = color11.b;
+                            colors11[i * 4 + 3] = 1;
+                        }
+                        tube11.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors11);
+
+                        posicionGround-=0.15;
+                        widthGround+=0.5;
+
+                        var rectangle11 = new BABYLON.GUI.Rectangle('');
+                        rectangle11.width ="20px";
+                        rectangle11.height = "20px";
+                        rectangle11.background="rgb(65,181,162)";
+                        advancedTexture.addControl(rectangle11);
+                        rectangle11.moveToVector3(posrec11, scene);
+
+                        var text11 = new BABYLON.GUI.TextBlock();
+                        text11.text = nameC11;
+                        text11.color = "black";
+                        text11.fontSize = 12;
+                        text11.width ="100px";
+                        text11.height = "20px";
+                        advancedTexture.addControl(text11);
+                        text11.moveToVector3(postext11,scene);
+
+                        var rect11 = new BABYLON.GUI.Rectangle();
+                        rect11.width = 0.1;
+                        rect11.height = "0px";
+                        rect11.color = "black";
+                        rect11.thickness = 0;
+                        advancedTexture.addControl(rect11);
+
+                        var label11 = new BABYLON.GUI.TextBlock();
+                        label11.text = "( "+C10F1+" , "+C10F2+" , "+C10F3+" , "+C10F4+" , "+C10F5+" )";
+                        label11.fontSize =12;
+                        rect11.addControl(label11);
+
+                        rect11.linkWithMesh(tube11);
+
+                        var mostrarValoresLinea11 = function(isChecked) {
+                            if (isChecked) {
+                                rect11.height = "50px";
+                            }
+                            else {
+                                rect11.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC11, mostrarValoresLinea11);
+
+                    }
+                    if (nameC12 !== undefined) {
+                        const plinea12 = [
+                            new BABYLON.Vector3(-1.5, yC11F1, -2),
+                            new BABYLON.Vector3(-1.5, yC11F2, -1),
+                            new BABYLON.Vector3(-1.5, yC11F3, 0),
+                            new BABYLON.Vector3(-1.5, yC11F4, 1),
+                            new BABYLON.Vector3(-1.5, yC11F5, 2),
+                        ];
+                        const tube12 = BABYLON.MeshBuilder.CreateTube("tube12", {path: plinea12, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions12 = tube12.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors12 = new Array(positions12.length * 4);
+                        for(let i=0; i<positions12.length; i++){
+                            colors12[i * 4 + 0] = color12.r;
+                            colors12[i * 4 + 1] = color12.g;
+                            colors12[i * 4 + 2] = color12.b;
+                            colors12[i * 4 + 3] = 1;
+                        }
+                        tube12.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors12);
+
+                        posicionGround-=0.15;
+                        widthGround+=0.5;
+
+                        var rectangle12 = new BABYLON.GUI.Rectangle('');
+                        rectangle12.width ="20px";
+                        rectangle12.height = "20px";
+                        rectangle12.background="rgb(226,71,22)";
+                        advancedTexture.addControl(rectangle12);
+                        rectangle12.moveToVector3(posrec12, scene);
+
+                        var text12 = new BABYLON.GUI.TextBlock();
+                        text12.text = nameC12;
+                        text12.color = "black";
+                        text12.fontSize = 12;
+                        text12.width ="100px";
+                        text12.height = "20px";
+                        advancedTexture.addControl(text12);
+                        text12.moveToVector3(postext12,scene);
+
+                        var rect12 = new BABYLON.GUI.Rectangle();
+                        rect12.width = 0.1;
+                        rect12.height = "0px";
+                        rect12.color = "black";
+                        rect12.thickness = 0;
+                        advancedTexture.addControl(rect12);
+
+                        var label12 = new BABYLON.GUI.TextBlock();
+                        label12.text = "( "+C11F1+" , "+C11F2+" , "+C11F3+" , "+C11F4+" , "+C11F5+" )";
+                        label12.fontSize =12;
+                        rect12.addControl(label12);
+
+                        rect12.linkWithMesh(tube12);
+
+                        var mostrarValoresLinea12 = function(isChecked) {
+                            if (isChecked) {
+                                rect12.height = "50px";
+                            }
+                            else {
+                                rect12.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC12, mostrarValoresLinea12);
+
+                    }
+                    if (nameC13 !== undefined) {
+                        const plinea13 = [
+                            new BABYLON.Vector3(-2, yC12F1, -2),
+                            new BABYLON.Vector3(-2, yC12F2, -1),
+                            new BABYLON.Vector3(-2, yC12F3, 0),
+                            new BABYLON.Vector3(-2, yC12F4, 1),
+                            new BABYLON.Vector3(-2, yC12F5, 2),
+                        ];
+                        const tube13 = BABYLON.MeshBuilder.CreateTube("tube13", {path: plinea13, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions13 = tube13.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors13 = new Array(positions13.length * 4);
+                        for(let i=0; i<positions13.length; i++){
+                            colors13[i * 4 + 0] = color13.r;
+                            colors13[i * 4 + 1] = color13.g;
+                            colors13[i * 4 + 2] = color13.b;
+                            colors13[i * 4 + 3] = 1;
+                        }
+                        tube13.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors13);
+
+                        posicionGround-=0.15;
+                        widthGround+=0.5;
+
+                        var rectangle13 = new BABYLON.GUI.Rectangle('');
+                        rectangle13.width ="20px";
+                        rectangle13.height = "20px";
+                        rectangle13.background="rgb(123,187,79)";
+                        advancedTexture.addControl(rectangle13);
+                        rectangle13.moveToVector3(posrec13, scene);
+
+                        var text13 = new BABYLON.GUI.TextBlock();
+                        text13.text = nameC13;
+                        text13.color = "black";
+                        text13.fontSize = 12;
+                        text13.width ="100px";
+                        text13.height = "20px";
+                        advancedTexture.addControl(text13);
+                        text13.moveToVector3(postext13,scene);
+
+                        var rect13 = new BABYLON.GUI.Rectangle();
+                        rect13.width = 0.1;
+                        rect13.height = "0px";
+                        rect13.color = "black";
+                        rect13.thickness = 0;
+                        advancedTexture.addControl(rect13);
+
+                        var label13 = new BABYLON.GUI.TextBlock();
+                        label13.text = "( "+C12F1+" , "+C12F2+" , "+C12F3+" , "+C12F4+" , "+C12F5+" )";
+                        label13.fontSize =12;
+                        rect13.addControl(label13);
+
+                        rect13.linkWithMesh(tube13);
+
+                        var mostrarValoresLinea13 = function(isChecked) {
+                            if (isChecked) {
+                                rect13.height = "50px";
+                            }
+                            else {
+                                rect13.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC13, mostrarValoresLinea13);
+
+                    }
+                    if (nameC14 !== undefined) {
+                        const plinea14 = [
+                            new BABYLON.Vector3(-2.5, yC13F1, -2),
+                            new BABYLON.Vector3(-2.5, yC13F2, -1),
+                            new BABYLON.Vector3(-2.5, yC13F3, 0),
+                            new BABYLON.Vector3(-2.5, yC13F4, 1),
+                            new BABYLON.Vector3(-2.5, yC13F5, 2),
+                        ];
+                        const tube14 = BABYLON.MeshBuilder.CreateTube("tube14", {path: plinea14, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions14 = tube14.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors14 = new Array(positions14.length * 4);
+                        for(let i=0; i<positions14.length; i++){
+                            colors14[i * 4 + 0] = color14.r;
+                            colors14[i * 4 + 1] = color14.g;
+                            colors14[i * 4 + 2] = color14.b;
+                            colors14[i * 4 + 3] = 1;
+                        }
+                        tube14.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors14);
+
+                        posicionGround-=0.15;
+                        widthGround+=0.5;
+
+                        var rectangle14 = new BABYLON.GUI.Rectangle('');
+                        rectangle14.width ="20px";
+                        rectangle14.height = "20px";
+                        rectangle14.background="rgb(240,200,8)";
+                        advancedTexture.addControl(rectangle14);
+                        rectangle14.moveToVector3(posrec14, scene);
+
+                        var text14 = new BABYLON.GUI.TextBlock();
+                        text14.text = nameC14;
+                        text14.color = "black";
+                        text14.fontSize = 12;
+                        text14.width ="100px";
+                        text14.height = "20px";
+                        advancedTexture.addControl(text14);
+                        text14.moveToVector3(postext14,scene);
+
+                        var rect14 = new BABYLON.GUI.Rectangle();
+                        rect14.width = 0.1;
+                        rect14.height = "0px";
+                        rect14.color = "black";
+                        rect14.thickness = 0;
+                        advancedTexture.addControl(rect14);
+
+                        var label14 = new BABYLON.GUI.TextBlock();
+                        label14.text = "( "+C13F1+" , "+C13F2+" , "+C13F3+" , "+C13F4+" , "+C13F5+" )";
+                        label14.fontSize =12;
+                        rect14.addControl(label14);
+
+                        rect14.linkWithMesh(tube14);
+
+                        var mostrarValoresLinea14 = function(isChecked) {
+                            if (isChecked) {
+                                rect14.height = "50px";
+                            }
+                            else {
+                                rect14.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC14, mostrarValoresLinea14);
+
+                    }
+                    console.log(linea15);
+                    console.log(nameC15);
+                    if (nameC15 !== undefined) {
+                        const plinea15 = [
+                            new BABYLON.Vector3(-3, yC14F1, -2),
+                            new BABYLON.Vector3(-3, yC14F2, -1),
+                            new BABYLON.Vector3(-3, yC14F3, 0),
+                            new BABYLON.Vector3(-3, yC14F4, 1),
+                            new BABYLON.Vector3(-3, yC14F5, 2),
+                        ];
+                        const tube15 = BABYLON.MeshBuilder.CreateTube("tube15", {path: plinea15, radius: 0.05, sideOrientation: BABYLON.Mesh.DOUBLESIDE,cap:3}, scene);
+
+                        let positions15 = tube15.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                        let colors15 = new Array(positions15.length * 4);
+                        for(let i=0; i<positions15.length; i++){
+                            colors15[i * 4 + 0] = color15.r;
+                            colors15[i * 4 + 1] = color15.g;
+                            colors15[i * 4 + 2] = color15.b;
+                            colors15[i * 4 + 3] = 1;
+                        }
+                        tube15.setVerticesData(BABYLON.VertexBuffer.ColorKind, colors15);
+
+                        var rectangle15 = new BABYLON.GUI.Rectangle('');
+                        rectangle15.width ="20px";
+                        rectangle15.height = "20px";
+                        rectangle15.background="rgb(65,151,213)";
+                        advancedTexture.addControl(rectangle15);
+                        rectangle15.moveToVector3(posrec15, scene);
+
+                        posicionGround-=0.15;
+                        widthGround+=0.5;
+
+                        var text15 = new BABYLON.GUI.TextBlock();
+                        text15.text = nameC15;
+                        text15.color = "black";
+                        text15.fontSize = 12;
+                        text15.width ="100px";
+                        text15.height = "20px";
+                        advancedTexture.addControl(text15);
+                        text15.moveToVector3(postext15,scene);
+
+                        var rect15 = new BABYLON.GUI.Rectangle();
+                        rect15.width = 0.1;
+                        rect15.height = "0px";
+                        rect15.color = "black";
+                        rect15.thickness = 0;
+                        advancedTexture.addControl(rect15);
+
+                        var label15= new BABYLON.GUI.TextBlock();
+                        label15.text = "( "+C14F1+" , "+C14F2+" , "+C14F3+" , "+C14F4+" , "+C14F5+" )";
+                        label15.fontSize =12;
+                        rect15.addControl(label15);
+
+                        rect15.linkWithMesh(tube15);
+
+                        var mostrarValoresLinea15 = function(isChecked) {
+                            if (isChecked) {
+                                rect15.height = "50px";
+                            }
+                            else {
+                                rect15.height = "0px";
+                            }
+	                    }
+	                    transformGroup.addCheckbox(nameC15, mostrarValoresLinea15);
+
+                    }
+
                     var mostrarValores = function(isChecked) {
                         if (isChecked) {
-                            rect1.height = "20px";
-                            rect2.height = "20px";
-                            rect3.height = "20px";
-                            rect4.height = "20px";
-                            rect5.height = "20px";
-                            rect6.height = "20px";
+                            rect1.height = "50px";
+                            rect2.height = "50px";
+                            rect3.height = "50px";
+                            rect4.height = "50px";
+                            rect5.height = "50px";
+                            rect6.height = "50px";
+                            rect7.height = "50px";
+                            rect8.height = "50px";
+                            rect9.height = "50px";
+                            rect10.height = "50px";
+                            rect11.height = "50px";
+                            rect12.height = "50px";
+                            rect13.height = "50px";
+                            rect14.height = "50px";
+                            rect15.height = "50px";
                         }
                         else {
                             rect1.height = "0px";
@@ -600,6 +1622,15 @@
                             rect4.height = "0px";
                             rect5.height = "0px";
                             rect6.height = "0px";
+                            rect7.height = "0px";
+                            rect8.height = "0px";
+                            rect9.height = "0px";
+                            rect10.height = "0px";
+                            rect11.height = "0px";
+                            rect12.height = "0px";
+                            rect13.height = "0px";
+                            rect14.height = "0px";
+                            rect15.height = "0px";
                         }
 	                }
 
@@ -607,11 +1638,11 @@
 
 	                var selectBox = new BABYLON.GUI.SelectionPanel("sp", [transformGroup]);
                     selectBox.width = 0.10;
-                    selectBox.height = 0.80;
+                    selectBox.height = 1;
                     selectBox.color ="white";
-                    selectBox.fontSize ="15px";
+                    selectBox.fontSize ="12px";
                     selectBox.labelColor="black";
-                    selectBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+                    selectBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
                     selectBox.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
 
                     advancedTexture.addControl(selectBox);
@@ -619,10 +1650,10 @@
 
 
                     <!--AÑADIMOS LA LUZ-->
-                    const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0.5, 0.80, 1));
+                    const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0.50, 0.80, 1));
 
-                    const ground = BABYLON.MeshBuilder.CreateGround("ground", {height: 5.5, width: 5, subdivisions: 4},scene);
-                    ground.position = new BABYLON.Vector3(0.6,0,0);
+                    const ground = BABYLON.MeshBuilder.CreateGround("ground", {height: 5, width: widthGround, subdivisions: 4},scene);
+                    ground.position = new BABYLON.Vector3(posicionGround,0,0);
 
 
                     return scene;
