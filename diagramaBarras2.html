@@ -188,251 +188,261 @@
 
 
             function arrayToGraficos(datos){
-
+                var numTotal=datos[0].length;
                 for (i=1;i<datos.length;i=i+5){
 
-                    for (j=0;j<datos[i].length;j++){
+                    <!--Si los datos no estan definidos al hacer datos[i].length nos daria un error y no podriamos cargar los datos-->
+                    if(datos[i] !== undefined){
+                        for (j=0;j<datos[i].length;j++){
 
-                        switch(j){
-                            case 1:
-                                C1F1+=parseInt(datos[i][j]);
-                                C0F1+=parseInt(datos[i][0]);
-                                break;
-                            case 2:
-                                C2F1+=parseInt(datos[i][j]);
-                                break;
-                            case 3:
-                                C3F1+=parseInt(datos[i][j]);
-                                break;
-                            case 4:
-                                C4F1+=parseInt(datos[i][j]);
-                                break;
-                            case 5:
-                                C5F1+=parseInt(datos[i][j]);
-                                break;
-                            case 6:
-                                C6F1+=parseInt(datos[i][j]);
-                                break;
-                            case 7:
-                                C7F1+=parseInt(datos[i][j]);
-                                break;
-                            case 8:
-                                C8F1+=parseInt(datos[i][j]);
-                                break;
-                            case 9:
-                                C9F1+=parseInt(datos[i][j]);
-                                break;
-                            case 10:
-                                C10F1+=parseInt(datos[i][j]);
-                                break;
-                            case 11:
-                                C11F1+=parseInt(datos[i][j]);
-                                break;
-                            case 12:
-                                C12F1+=parseInt(datos[i][j]);
-                                break;
-                            case 13:
-                                C13F1+=parseInt(datos[i][j]);
-                                break;
-                            case 14:
-                                C14F1+=parseInt(datos[i][j]);
-                                break;
+                            switch(j){
+                                case 1:
+                                    C1F1+=parseInt(datos[i][j]);
+                                    C0F1+=parseInt(datos[i][0]);
+                                    break;
+                                case 2:
+                                    C2F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 3:
+                                    C3F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 4:
+                                    C4F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 5:
+                                    C5F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 6:
+                                    C6F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 7:
+                                    C7F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 8:
+                                    C8F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 9:
+                                    C9F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 10:
+                                    C10F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 11:
+                                    C11F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 12:
+                                    C12F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 13:
+                                    C13F1+=parseInt(datos[i][j]);
+                                    break;
+                                case 14:
+                                    C14F1+=parseInt(datos[i][j]);
+                                    break;
 
+                            }
                         }
                     }
-                    for (j=0;j<datos[i+1].length;j++){
+                    if(datos[i+1] !== undefined){
+                        for (j=0;j<datos[i+1].length;j++){
 
-                        switch(j){
-                            case 1:
-                                C1F2+=parseInt(datos[i+1][j]);
-                                C0F2+=parseInt(datos[i+1][0]);
-                                break;
-                            case 2:
-                                C2F2+=parseInt(datos[i+1][j]);
-                                break;
-                            case 3:
-                                C3F2+=parseInt(datos[i+1][j]);
-                                break;
-                            case 4:
-                                C4F2+=parseInt(datos[i+1][j]);
-                                break;
-                            case 5:
-                                C5F2+=parseInt(datos[i+1][j]);
-                                break;
-                            case 6:
-                                C6F2+=parseInt(datos[i+1][j]);
-                                break;
-                            case 7:
-                                C7F2+=parseInt(datos[i+1][j]);
-                                break;
-                            case 8:
-                                C8F2+=parseInt(datos[i+1][j]);
-                                break;
-                            case 9:
-                                C9F2+=parseInt(datos[i+1][j]);
-                                break;
-                            case 10:
-                                C10F2+=parseInt(datos[i+1][j]);
-                                break;
-                            case 11:
-                                C11F2+=parseInt(datos[i+1][j]);
-                                break;
-                            case 12:
-                                C12F2+=parseInt(datos[i+1][j]);
-                                break;
-                            case 13:
-                                C13F2+=parseInt(datos[i+1][j]);
-                                break;
-                            case 14:
-                                C14F2+=parseInt(datos[i+1][j]);
-                                break;
+                            switch(j){
+                                case 1:
+                                    C1F2+=parseInt(datos[i+1][j]);
+                                    C0F2+=parseInt(datos[i+1][0]);
+                                    break;
+                                case 2:
+                                    C2F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 3:
+                                    C3F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 4:
+                                    C4F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 5:
+                                    C5F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 6:
+                                    C6F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 7:
+                                    C7F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 8:
+                                    C8F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 9:
+                                    C9F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 10:
+                                    C10F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 11:
+                                    C11F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 12:
+                                    C12F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 13:
+                                    C13F2+=parseInt(datos[i+1][j]);
+                                    break;
+                                case 14:
+                                    C14F2+=parseInt(datos[i+1][j]);
+                                    break;
+                            }
                         }
                     }
-                    for (j=0;j<datos[i+2].length;j++){
+                    if(datos[i+2] !== undefined){
+                        for (j=0;j<datos[i+2].length;j++){
 
-                        switch(j){
-                            case 1:
-                                C1F3+=parseInt(datos[i+2][j]);
-                                C0F3+=parseInt(datos[i+2][0]);
-                                break;
-                            case 2:
-                                C2F3+=parseInt(datos[i+2][j]);
-                                break;
-                            case 3:
-                                C3F3+=parseInt(datos[i+2][j]);
-                                break;
-                            case 4:
-                                C4F3+=parseInt(datos[i+2][j]);
-                                break;
-                            case 5:
-                                C5F3+=parseInt(datos[i+2][j]);
-                                break;
-                            case 6:
-                                C6F3+=parseInt(datos[i+2][j]);
-                                break;
-                            case 7:
-                                C7F3+=parseInt(datos[i+2][j]);
-                                break;
-                            case 8:
-                                C8F3+=parseInt(datos[i+2][j]);
-                                break;
-                            case 9:
-                                C9F3+=parseInt(datos[i+2][j]);
-                                break;
-                            case 10:
-                                C10F3+=parseInt(datos[i+2][j]);
-                                break;
-                            case 11:
-                                C11F3+=parseInt(datos[i+2][j]);
-                                break;
-                            case 12:
-                                C12F3+=parseInt(datos[i+2][j]);
-                                break;
-                            case 13:
-                                C13F3+=parseInt(datos[i+2][j]);
-                                break;
-                            case 14:
-                                C14F3+=parseInt(datos[i+2][j]);
-                                break;
+                            switch(j){
+                                case 1:
+                                    C1F3+=parseInt(datos[i+2][j]);
+                                    C0F3+=parseInt(datos[i+2][0]);
+                                    break;
+                                case 2:
+                                    C2F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 3:
+                                    C3F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 4:
+                                    C4F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 5:
+                                    C5F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 6:
+                                    C6F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 7:
+                                    C7F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 8:
+                                    C8F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 9:
+                                    C9F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 10:
+                                    C10F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 11:
+                                    C11F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 12:
+                                    C12F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 13:
+                                    C13F3+=parseInt(datos[i+2][j]);
+                                    break;
+                                case 14:
+                                    C14F3+=parseInt(datos[i+2][j]);
+                                    break;
+                            }
                         }
                     }
-                    for (j=0;j<datos[i+3].length;j++){
+                    if(datos[i+3] !== undefined){
+                        for (j=0;j<datos[i+3].length;j++){
 
-                        switch(j){
-                            case 1:
-                                C1F4+=parseInt(datos[i+3][j]);
-                                C0F4+=parseInt(datos[i+3][0]);
-                                break;
-                            case 2:
-                                C2F4+=parseInt(datos[i+3][j]);
-                                break;
-                            case 3:
-                                C3F4+=parseInt(datos[i+3][j]);
-                                break;
-                            case 4:
-                                C4F4+=parseInt(datos[i+3][j]);
-                                break;
-                            case 5:
-                                C5F4+=parseInt(datos[i+3][j]);
-                                break;
-                            case 6:
-                                C6F4+=parseInt(datos[i+3][j]);
-                                break;
-                            case 7:
-                                C7F4+=parseInt(datos[i+3][j]);
-                                break;
-                            case 8:
-                                C8F4+=parseInt(datos[i+3][j]);
-                                break;
-                            case 9:
-                                C9F4+=parseInt(datos[i+3][j]);
-                                break;
-                            case 10:
-                                C10F4+=parseInt(datos[i+3][j]);
-                                break;
-                            case 11:
-                                C11F4+=parseInt(datos[i+3][j]);
-                                break;
-                            case 12:
-                                C12F4+=parseInt(datos[i+3][j]);
-                                break;
-                            case 13:
-                                C13F4+=parseInt(datos[i+3][j]);
-                                break;
-                            case 14:
-                                C14F4+=parseInt(datos[i+3][j]);
-                                break;
+                            switch(j){
+                                case 1:
+                                    C1F4+=parseInt(datos[i+3][j]);
+                                    C0F4+=parseInt(datos[i+3][0]);
+                                    break;
+                                case 2:
+                                    C2F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 3:
+                                    C3F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 4:
+                                    C4F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 5:
+                                    C5F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 6:
+                                    C6F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 7:
+                                    C7F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 8:
+                                    C8F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 9:
+                                    C9F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 10:
+                                    C10F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 11:
+                                    C11F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 12:
+                                    C12F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 13:
+                                    C13F4+=parseInt(datos[i+3][j]);
+                                    break;
+                                case 14:
+                                    C14F4+=parseInt(datos[i+3][j]);
+                                    break;
+                            }
                         }
                     }
-                    for (j=0;j<datos[i+4].length;j++){
+                    if(datos[i+4] !== undefined){
+                        for (j=0;j<datos[i+4].length;j++){
 
-                        switch(j){
-                            case 1:
-                                C1F5+=parseInt(datos[i+4][j]);
-                                C0F5+=parseInt(datos[i+4][0]);
-                                break;
-                            case 2:
-                                C2F5+=parseInt(datos[i+4][j]);
-                                break;
-                            case 3:
-                                C3F5+=parseInt(datos[i+4][j]);
-                                break;
-                            case 4:
-                                C4F5+=parseInt(datos[i+4][j]);
-                                break;
-                            case 5:
-                                C5F5+=parseInt(datos[i+4][j]);
-                                break;
-                            case 6:
-                                C6F5+=parseInt(datos[i+4][j]);
-                                break;
-                            case 7:
-                                C7F5+=parseInt(datos[i+4][j]);
-                                break;
-                            case 8:
-                                C8F5+=parseInt(datos[i+4][j]);
-                                break;
-                            case 9:
-                                C9F5+=parseInt(datos[i+4][j]);
-                                break;
-                            case 10:
-                                C10F5+=parseInt(datos[i+4][j]);
-                                break;
-                            case 11:
-                                C11F5+=parseInt(datos[i+4][j]);
-                                break;
-                            case 12:
-                                C12F5+=parseInt(datos[i+4][j]);
-                                break;
-                            case 13:
-                                C13F5+=parseInt(datos[i+4][j]);
-                                break;
-                            case 14:
-                                C14F5+=parseInt(datos[i+4][j]);
-                                break;
+                            switch(j){
+                                case 1:
+                                    C1F5+=parseInt(datos[i+4][j]);
+                                    C0F5+=parseInt(datos[i+4][0]);
+                                    break;
+                                case 2:
+                                    C2F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 3:
+                                    C3F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 4:
+                                    C4F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 5:
+                                    C5F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 6:
+                                    C6F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 7:
+                                    C7F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 8:
+                                    C8F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 9:
+                                    C9F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 10:
+                                    C10F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 11:
+                                    C11F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 12:
+                                    C12F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 13:
+                                    C13F5+=parseInt(datos[i+4][j]);
+                                    break;
+                                case 14:
+                                    C14F5+=parseInt(datos[i+4][j]);
+                                    break;
+                            }
                         }
                     }
-
                 }
 
 
@@ -452,83 +462,83 @@
                 column14 = C13F1+C13F2+C13F3+C13F4+C13F5;
                 column15 = C14F1+C14F2+C14F3+C14F4+C14F5;
 
-                total = (column1 + column2 + column3 + column4 + column5 + column6 + column7 + column8 + column9 + column10 + column11 + column12 + column13 + column14 + column15)/15;
-                console.log(total);
-                yC0F1 = C0F1 / total;
-                yC0F2 = C0F2 / total;
-                yC0F3 = C0F3 / total;
-                yC0F4 = C0F4 / total;
-                yC0F5 = C0F5 / total;
-                yC1F1 = C1F1 / total;
-                yC1F2 = C1F2 / total;
-                yC1F3 = C1F3 / total;
-                yC1F4 = C1F4 / total;
-                yC1F5 = C1F5 / total;
-                yC2F1 = C2F1 / total;
-                yC2F2 = C2F2 / total;
-                yC2F3 = C2F3 / total;
-                yC2F4 = C2F4 / total;
-                yC2F5 = C2F5 / total;
-                yC3F1 = C3F1 / total;
-                yC3F2 = C3F2 / total;
-                yC3F3 = C3F3 / total;
-                yC3F4 = C3F4  / total;
-                yC3F5 = C3F5  / total;
-                yC4F1 = C4F1  / total;
-                yC4F2 = C4F2  / total;
-                yC4F3 = C4F3  / total;
-                yC4F4 = C4F4  / total;
-                yC4F5 = C4F5  / total;
-                yC5F1 = C5F1  / total;
-                yC5F2 = C5F2  / total;
-                yC5F3 = C5F3  / total;
-                yC5F4 = C5F4  / total;
-                yC5F5 = C5F5  / total;
-                yC6F1 = C6F1  / total;
-                yC6F2 = C6F2  / total;
-                yC6F3 = C6F3  / total;
-                yC6F4 = C6F4  / total;
-                yC6F5 = C6F5  / total;
-                yC7F1 = C7F1  / total;
-                yC7F2 = C7F2  / total;
-                yC7F3 = C7F3  / total;
-                yC7F4 = C7F4  / total;
-                yC7F5 = C7F5  / total;
-                yC8F1 = C8F1  / total;
-                yC8F2 = C8F2  / total;
-                yC8F3 = C8F3  / total;
-                yC8F4 = C8F4  / total;
-                yC8F5 = C8F5  / total;
-                yC9F1 = C9F1  / total;
-                yC9F2 = C9F2  / total;
-                yC9F3 = C9F3  / total;
-                yC9F4 = C9F4  / total;
-                yC9F5 = C9F5  / total;
-                yC10F1 = C10F1  / total;
-                yC10F2 = C10F2  / total;
-                yC10F3 = C10F3  / total;
-                yC10F4 = C10F4  / total;
-                yC10F5 = C10F5  / total;
-                yC11F1 = C11F1  / total;
-                yC11F2 = C11F2  / total;
-                yC11F3 = C11F3  / total;
-                yC11F4 = C11F4  / total;
-                yC11F5 = C11F5  / total;
-                yC12F1 = C12F1  / total;
-                yC12F2 = C12F2  / total;
-                yC12F3 = C12F3  / total;
-                yC12F4 = C12F4  / total;
-                yC12F5 = C12F5  / total;
-                yC13F1 = C13F1  / total;
-                yC13F2 = C13F2  / total;
-                yC13F3 = C13F3  / total;
-                yC13F4 = C13F4  / total;
-                yC13F5 = C13F5  / total;
-                yC14F1 = C14F1  / total;
-                yC14F2 = C14F2  / total;
-                yC14F3 = C14F3  / total;
-                yC14F4 = C14F4  / total;
-                yC14F5 = C14F5  / total;
+                total = (column1 + column2 + column3 + column4 + column5 + column6 + column7 + column8 + column9 + column10 + column11 + column12 + column13 + column14 + column15)/numTotal;
+
+                yC0F1 = C0F1 * 100 / total /10 /5;
+                yC0F2 = C0F2 * 100 / total /10 /5;
+                yC0F3 = C0F3 * 100 / total /10 /5;
+                yC0F4 = C0F4 * 100 / total /10 /5;
+                yC0F5 = C0F5 * 100 / total /10 /5;
+                yC1F1 = C1F1 * 100 / total /10 /5;
+                yC1F2 = C1F2 * 100 / total /10 /5;
+                yC1F3 = C1F3 * 100 / total /10 /5;
+                yC1F4 = C1F4 * 100 / total /10 /5;
+                yC1F5 = C1F5 * 100 / total /10 /5;
+                yC2F1 = C2F1 * 100 / total /10 /5;
+                yC2F2 = C2F2 * 100 / total /10 /5;
+                yC2F3 = C2F3 * 100 / total /10 /5;
+                yC2F4 = C2F4 * 100 / total /10 /5;
+                yC2F5 = C2F5 * 100 / total /10 /5;
+                yC3F1 = C3F1 * 100 / total /10 /5;
+                yC3F2 = C3F2 * 100 / total /10 /5;
+                yC3F3 = C3F3 * 100 / total /10 /5;
+                yC3F4 = C3F4 * 100 / total /10 /5;
+                yC3F5 = C3F5 * 100 / total /10 /5;
+                yC4F1 = C4F1 * 100 / total /10 /5;
+                yC4F2 = C4F2 * 100 / total /10 /5;
+                yC4F3 = C4F3 * 100 / total /10 /5;
+                yC4F4 = C4F4 * 100 / total /10 /5;
+                yC4F5 = C4F5 * 100 / total /10 /5;
+                yC5F1 = C5F1 * 100 / total /10 /5;
+                yC5F2 = C5F2 * 100 / total /10 /5;
+                yC5F3 = C5F3 * 100 / total /10 /5;
+                yC5F4 = C5F4 * 100 / total /10 /5;
+                yC5F5 = C5F5 * 100 / total /10 /5;
+                yC6F1 = C6F1 * 100 / total /10 /5;
+                yC6F2 = C6F2 * 100 / total /10 /5;
+                yC6F3 = C6F3 * 100 / total /10 /5;
+                yC6F4 = C6F4 * 100 / total /10 /5;
+                yC6F5 = C6F5 * 100 / total /10 /5;
+                yC7F1 = C7F1 * 100 / total /10 /5;
+                yC7F2 = C7F2 * 100 / total /10 /5;
+                yC7F3 = C7F3 * 100 / total /10 /5;
+                yC7F4 = C7F4 * 100 / total /10 /5;
+                yC7F5 = C7F5 * 100 / total /10 /5;
+                yC8F1 = C8F1 * 100 / total /10 /5;
+                yC8F2 = C8F2 * 100 / total /10 /5;
+                yC8F3 = C8F3 * 100 / total /10 /5;
+                yC8F4 = C8F4 * 100 / total /10 /5;
+                yC8F5 = C8F5 * 100 / total /10 /5;
+                yC9F1 = C9F1 * 100 / total /10 /5;
+                yC9F2 = C9F2 * 100 / total /10 /5;
+                yC9F3 = C9F3 * 100 / total /10 /5;
+                yC9F4 = C9F4 * 100 / total /10 /5;
+                yC9F5 = C9F5 * 100 / total /10 /5;
+                yC10F1 = C10F1 * 100 / total /10 /5;
+                yC10F2 = C10F2 * 100 / total /10 /5;
+                yC10F3 = C10F3 * 100 / total /10 /5;
+                yC10F4 = C10F4 * 100 / total /10 /5;
+                yC10F5 = C10F5 * 100 / total /10 /5;
+                yC11F1 = C11F1 * 100 / total /10 /5;
+                yC11F2 = C11F2 * 100 / total /10 /5;
+                yC11F3 = C11F3 * 100 / total /10 /5;
+                yC11F4 = C11F4 * 100 / total /10 /5;
+                yC11F5 = C11F5 * 100 / total /10 /5;
+                yC12F1 = C12F1 * 100 / total /10 /5;
+                yC12F2 = C12F2 * 100 / total /10 /5;
+                yC12F3 = C12F3 * 100 / total /10 /5;
+                yC12F4 = C12F4 * 100 / total /10 /5;
+                yC12F5 = C12F5 * 100 / total /10 /5;
+                yC13F1 = C13F1 * 100 / total /10 /5;
+                yC13F2 = C13F2 * 100 / total /10 /5;
+                yC13F3 = C13F3 * 100 / total /10 /5;
+                yC13F4 = C13F4 * 100 / total /10 /5;
+                yC13F5 = C13F5 * 100 / total /10 /5;
+                yC14F1 = C14F1 * 100 / total /10 /5;
+                yC14F2 = C14F2 * 100 / total /10 /5;
+                yC14F3 = C14F3 * 100 / total /10 /5;
+                yC14F4 = C14F4 * 100 / total /10 /5;
+                yC14F5 = C14F5 * 100 / total /10 /5;
 
                 nameC1 = datos[0][0];
                 nameC2 = datos[0][1];
@@ -545,11 +555,6 @@
                 nameC13 = datos[0][12];
                 nameC14 = datos[0][13];
                 nameC15 = datos[0][14];
-                nameC16 = datos[0][15];
-                nameC17 = datos[0][16];
-                nameC18 = datos[0][17];
-                nameC19 = datos[0][18];
-                nameC20 = datos[0][19];
 
             }
 
@@ -590,12 +595,6 @@
                     const color13 = new Array(6);
                     const color14 = new Array(6);
                     const color15 = new Array(6);
-                    const color16 = new Array(6);
-                    const color17 = new Array(6);
-                    const color18 = new Array(6);
-                    const color19 = new Array(6);
-                    const color20 = new Array(6);
-
 
                     for ( var i=0; i<6;i++){
                         color1[i] = new BABYLON.Color4(0.25, 0.50, 0.55);
@@ -613,13 +612,9 @@
                         color13[i] = new BABYLON.Color4(0.48, 0.73, 0.31);
                         color14[i] = new BABYLON.Color4(0.94, 0.78, 0.03);
                         color15[i] = new BABYLON.Color4(0.25, 0.59, 0.84);
-                        color16[i] = new BABYLON.Color4(0.93, 0.62, 0.05);
-                        color17[i] = new BABYLON.Color4(0.71, 0.41, 0.57);
-                        color18[i] = new BABYLON.Color4(0.97, 0.39, 0.01);
-                        color19[i] = new BABYLON.Color4(0.48, 0.37, 0.50);
-                        color20[i] = new BABYLON.Color4(0.02, 0.68, 0.78);
                     }
                     var posicionGround = 4.00;
+                    var widthGround =3.5;
 
                     var posrec1 = new BABYLON.Vector3(4.5,3,0);
                     var posrec2 = new BABYLON.Vector3(4,3,0);
@@ -631,16 +626,11 @@
                     var posrec8 = new BABYLON.Vector3(1,3,0);
                     var posrec9 = new BABYLON.Vector3(0.5,3,0);
                     var posrec10 = new BABYLON.Vector3(0,3,0);
-                    var posrec11 = new BABYLON.Vector3(4.65,2.60,0);
-                    var posrec12 = new BABYLON.Vector3(4.10,2.60,0);
-                    var posrec13 = new BABYLON.Vector3(3.60,2.60,0);
-                    var posrec14 = new BABYLON.Vector3(3.10,2.60,0);
-                    var posrec15 = new BABYLON.Vector3(2.55,2.60,0);
-                    var posrec16 = new BABYLON.Vector3(2.05,2.60,0);
-                    var posrec17 = new BABYLON.Vector3(1.52,2.60,0);
-                    var posrec18 = new BABYLON.Vector3(1,2.60,0);
-                    var posrec19 = new BABYLON.Vector3(0.48,2.60,0);
-                    var posrec20 = new BABYLON.Vector3(-0.03,2.60,0);
+                    var posrec11 = new BABYLON.Vector3(-0.5,3,0);
+                    var posrec12 = new BABYLON.Vector3(-1,3,0);
+                    var posrec13 = new BABYLON.Vector3(-1.5,3,0);
+                    var posrec14 = new BABYLON.Vector3(-2,3,0);
+                    var posrec15 = new BABYLON.Vector3(-2.5,3,0);
 
                     var postext1 = new BABYLON.Vector3(4.5,2.85,0.05);
                     var postext2 = new BABYLON.Vector3(4,2.85,0.05);
@@ -652,16 +642,11 @@
                     var postext8 = new BABYLON.Vector3(1,2.85,0.05);
                     var postext9 = new BABYLON.Vector3(0.5,2.85,0.05);
                     var postext10 = new BABYLON.Vector3(0,2.85,0.05);
-                    var postext11 = new BABYLON.Vector3(4.65,2.45,0.05);
-                    var postext12 = new BABYLON.Vector3(4.1,2.45,0.05);
-                    var postext13 = new BABYLON.Vector3(3.6,2.45,0.05);
-                    var postext14 = new BABYLON.Vector3(3.1,2.45,0.05);
-                    var postext15 = new BABYLON.Vector3(2.55,2.45,0.05);
-                    var postext16 = new BABYLON.Vector3(2.05,2.45,0.05);
-                    var postext17 = new BABYLON.Vector3(1.52,2.45,0.05);
-                    var postext18 = new BABYLON.Vector3(1,2.45,0.05);
-                    var postext19 = new BABYLON.Vector3(0.48,2.45,0.05);
-                    var postext20 = new BABYLON.Vector3(-0.03,2.45,0.05);
+                    var postext11 = new BABYLON.Vector3(-0.5,2.85,0.05);
+                    var postext12 = new BABYLON.Vector3(-1,2.85,0.05);
+                    var postext13 = new BABYLON.Vector3(-1.5,2.85,0.05);
+                    var postext14 = new BABYLON.Vector3(-2,2.85,0.05);
+                    var postext15 = new BABYLON.Vector3(-2.5,2.85,0.05);
 
 
                     scene.updateTransformMatrix(true);
@@ -669,7 +654,7 @@
 
                     <!--CREAMOS LAS FIGURAS-->
 
-                    if (!Number.isNaN(column1)) {
+                    if (nameC1 !== undefined) {
                         if(yC0F1 !== 0){
                             const boxC0F1 = BABYLON.MeshBuilder.CreateBox("boxC0F1", {height: yC0F1, width: 0.30, depth: 0.30, faceColors:color1});
                             boxC0F1.position.x = 5;
@@ -769,7 +754,7 @@
 
                         }
 
-                        posicionGround-=0.20;
+                        posicionGround-=0.2;
 
                         var rectangle1 = new BABYLON.GUI.Rectangle('');
                         rectangle1.width ="20px";
@@ -807,7 +792,7 @@
 
                     }
 
-                    if (!Number.isNaN(column2)) {
+                    if (nameC2 !== undefined) {
                         if(yC1F1 !==0){
                             const boxC1F1 = BABYLON.MeshBuilder.CreateBox("boxC1F1", {height: yC1F1, width: 0.30, depth: 0.30, faceColors:color2});
                             boxC1F1.position.x = 4.40;
@@ -906,7 +891,7 @@
 
                         }
 
-                        posicionGround-=0.20;
+                        posicionGround-=0.2;
 
                         var rectangle2 = new BABYLON.GUI.Rectangle('');
                         rectangle2.width ="20px";
@@ -944,7 +929,7 @@
 
                     }
 
-                    if (!Number.isNaN(column3)) {
+                    if (nameC3 !== undefined) {
                         if(yC2F1 !==0){
                             const boxC2F1 = BABYLON.MeshBuilder.CreateBox("boxC2F1", {height: yC2F1, width: 0.30, depth: 0.30, faceColors:color3});
                             boxC2F1.position.x = 3.80;
@@ -1042,7 +1027,8 @@
                             rect25.linkWithMesh(boxC2F5);
                         }
 
-                        posicionGround-=0.20;
+                        posicionGround-=0.2;
+                        widthGround+=0.5;
 
                         var rectangle3 = new BABYLON.GUI.Rectangle('');
                         rectangle3.width ="20px";
@@ -1078,7 +1064,7 @@
 	                    }
 	                    transformGroup.addCheckbox(nameC3, mostrarValoresColumna3);
                     }
-                    if (!Number.isNaN(column4)) {
+                    if (nameC4 !== undefined) {
                         if(yC3F1 !==0){
                             const boxC3F1 = BABYLON.MeshBuilder.CreateBox("boxC3F1", {height: yC3F1, width: 0.30, depth: 0.30, faceColors:color4});
                             boxC3F1.position.x = 3.2;
@@ -1175,7 +1161,8 @@
                             rect35.linkWithMesh(boxC3F5);
                         }
 
-                        posicionGround-=0.20;
+                        posicionGround-=0.2;
+                        widthGround+=0.5;
 
                         var rectangle4 = new BABYLON.GUI.Rectangle('');
                         rectangle4.width ="20px";
@@ -1213,7 +1200,7 @@
 
                     }
 
-                    if (!Number.isNaN(column5)) {
+                    if (nameC5 !== undefined) {
                         if(yC4F1 !==0){
                             const boxC4F1 = BABYLON.MeshBuilder.CreateBox("boxC4F1", {height: yC4F1, width: 0.30, depth: 0.30, faceColors:color5});
                             boxC4F1.position.x = 2.60;
@@ -1310,7 +1297,8 @@
                             rect45.linkWithMesh(boxC4F5);
                         }
 
-                        posicionGround-=0.20;
+                        posicionGround-=0.2;
+                        widthGround+=0.5;
 
                         var rectangle5 = new BABYLON.GUI.Rectangle('');
                         rectangle5.width ="20px";
@@ -1348,7 +1336,7 @@
 
                     }
 
-                    if (!Number.isNaN(column6)) {
+                    if (nameC6 !== undefined) {
                         if(yC5F1 !==0){
                             const boxC5F1 = BABYLON.MeshBuilder.CreateBox("boxC5F1", {height: yC5F1, width: 0.30, depth: 0.30, faceColors:color6});
                             boxC5F1.position.x = 2;
@@ -1444,7 +1432,8 @@
 
                             rect55.linkWithMesh(boxC5F5);
                         }
-                        posicionGround-=0.20;
+                        posicionGround-=0.2;
+                        widthGround+=0.5;
 
                         var rectangle6 = new BABYLON.GUI.Rectangle('');
                         rectangle6.width ="20px";
@@ -1481,7 +1470,7 @@
 	                    transformGroup.addCheckbox(nameC6, mostrarValoresColumna6);
 
                     }
-                    if (!Number.isNaN(column7)) {
+                    if (nameC7 !== undefined) {
                         if(yC6F1 !==0){
                             const boxC6F1 = BABYLON.MeshBuilder.CreateBox("boxC6F1", {height: yC6F1, width: 0.30, depth: 0.30, faceColors:color7});
                             boxC6F1.position.x = 1.4;
@@ -1577,7 +1566,8 @@
 
                             rect65.linkWithMesh(boxC6F5);
                         }
-                        posicionGround-=0.20;
+                        posicionGround-=0.2;
+                        widthGround+=0.5;
 
                         var rectangle7 = new BABYLON.GUI.Rectangle('');
                         rectangle7.width ="20px";
@@ -1614,7 +1604,7 @@
 	                    transformGroup.addCheckbox(nameC7, mostrarValoresColumna7);
 
                     }
-                    if (!Number.isNaN(column8)) {
+                    if (nameC8 !== undefined) {
                         if(yC7F1 !==0){
                             const boxC7F1 = BABYLON.MeshBuilder.CreateBox("boxC7F1", {height: yC7F1, width: 0.30, depth: 0.30, faceColors:color8});
                             boxC7F1.position.x = 0.80;
@@ -1710,7 +1700,8 @@
 
                             rect75.linkWithMesh(boxC7F5);
                         }
-                        posicionGround-=0.20;
+                        posicionGround-=0.2;
+                        widthGround+=0.5;
 
                         var rectangle8 = new BABYLON.GUI.Rectangle('');
                         rectangle8.width ="20px";
@@ -1747,7 +1738,7 @@
 	                    transformGroup.addCheckbox(nameC8, mostrarValoresColumna8);
 
                     }
-                    if (!Number.isNaN(column9)) {
+                    if (nameC9 !== undefined) {
                         if(yC8F1 !==0){
                             const boxC8F1 = BABYLON.MeshBuilder.CreateBox("boxC8F1", {height: yC8F1, width: 0.30, depth: 0.30, faceColors:color9});
                             boxC8F1.position.x = 0.20;
@@ -1843,7 +1834,8 @@
 
                             rect85.linkWithMesh(boxC8F5);
                         }
-                        posicionGround-=0.20;
+                        posicionGround-=0.2;
+                        widthGround+=0.5;
 
                         var rectangle9 = new BABYLON.GUI.Rectangle('');
                         rectangle9.width ="20px";
@@ -1880,7 +1872,7 @@
 	                    transformGroup.addCheckbox(nameC9, mostrarValoresColumna9);
 
                     }
-                    if (!Number.isNaN(column10)) {
+                    if (nameC10 !== undefined) {
                         if(yC9F1 !==0){
                             const boxC9F1 = BABYLON.MeshBuilder.CreateBox("boxC9F1", {height: yC9F1, width: 0.30, depth: 0.30, faceColors:color10});
                             boxC9F1.position.x = -0.4;
@@ -1976,7 +1968,8 @@
 
                             rect95.linkWithMesh(boxC9F5);
                         }
-                        posicionGround-=0.20;
+                        posicionGround-=0.25;
+                        widthGround+=0.5;
 
                         var rectangle10 = new BABYLON.GUI.Rectangle('');
                         rectangle10.width ="20px";
@@ -2013,7 +2006,7 @@
 	                    transformGroup.addCheckbox(nameC10, mostrarValoresColumna10);
 
                     }
-                    if (!Number.isNaN(column11)) {
+                    if (nameC11 !== undefined) {
                         if(yC10F1 !== 0){
                             const boxC10F1 = BABYLON.MeshBuilder.CreateBox("boxC10F1", {height: yC10F1, width: 0.30, depth: 0.30, faceColors:color11});
                             boxC10F1.position.x = -1;
@@ -2113,7 +2106,8 @@
 
                         }
 
-                        posicionGround-=0.20;
+                        posicionGround-=0.25;
+                        widthGround+=0.5;
 
                         var rectangle11 = new BABYLON.GUI.Rectangle('');
                         rectangle11.width ="20px";
@@ -2151,7 +2145,7 @@
 
                     }
 
-                    if (!Number.isNaN(column12)) {
+                    if (nameC12 !== undefined) {
                         if(yC11F1 !==0){
                             const boxC11F1 = BABYLON.MeshBuilder.CreateBox("boxC11F1", {height: yC11F1, width: 0.30, depth: 0.30, faceColors:color12});
                             boxC11F1.position.x = -1.6;
@@ -2250,7 +2244,8 @@
 
                         }
 
-                        posicionGround-=0.20;
+                        posicionGround-=0.25;
+                        widthGround+=1;
 
                         var rectangle12 = new BABYLON.GUI.Rectangle('');
                         rectangle12.width ="20px";
@@ -2288,7 +2283,7 @@
 
                     }
 
-                    if (!Number.isNaN(column13)) {
+                    if (nameC13 !== undefined) {
                         if(yC12F1 !==0){
                             const boxC12F1 = BABYLON.MeshBuilder.CreateBox("boxC12F1", {height: yC12F1, width: 0.30, depth: 0.30, faceColors:color13});
                             boxC12F1.position.x = -2.2;
@@ -2387,6 +2382,7 @@
                         }
 
                         posicionGround-=0.20;
+                        widthGround+=0.2;
 
                         var rectangle13 = new BABYLON.GUI.Rectangle('');
                         rectangle13.width ="20px";
@@ -2422,7 +2418,7 @@
 	                    }
 	                    transformGroup.addCheckbox(nameC13, mostrarValoresColumna13);
                     }
-                    if (!Number.isNaN(column14)) {
+                    if (nameC14 !== undefined) {
                         if(yC13F1 !==0){
                             const boxC13F1 = BABYLON.MeshBuilder.CreateBox("boxC13F1", {height: yC13F1, width: 0.30, depth: 0.30, faceColors:color14});
                             boxC13F1.position.x = -2.8;
@@ -2557,7 +2553,7 @@
 
                     }
 
-                    if (!Number.isNaN(column15)) {
+                    if (nameC15 !== undefined) {
                         if(yC14F1 !==0){
                             const boxC14F1 = BABYLON.MeshBuilder.CreateBox("boxC14F1", {height: yC14F1, width: 0.30, depth: 0.30, faceColors:color15});
                             boxC14F1.position.x = -3.4;
@@ -2654,7 +2650,7 @@
                             rect145.linkWithMesh(boxC14F5);
                         }
 
-                        posicionGround-=0.30;
+                        posicionGround-=0.20;
 
                         var rectangle15 = new BABYLON.GUI.Rectangle('');
                         rectangle15.width ="20px";
@@ -2664,7 +2660,7 @@
                         rectangle15.moveToVector3(posrec15, scene);
 
                         var text15 = new BABYLON.GUI.TextBlock();
-                        text15.text = nameC5;
+                        text15.text = nameC15;
                         text15.color = "black";
                         text15.fontSize = 12;
                         text15.width ="100px";
@@ -2866,7 +2862,7 @@
                     <!--AÑADIMOS LA LUZ-->
                     const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0.5, 0.80, 1));
 
-                    const ground = BABYLON.MeshBuilder.CreateGround("ground", {height: 5, width: 9.2, subdivisions: 4},scene);
+                    const ground = BABYLON.MeshBuilder.CreateGround("ground", {height: 5, width: widthGround, subdivisions: 4},scene);
                     ground.position = new BABYLON.Vector3(posicionGround,0,-1);
 
 
