@@ -360,6 +360,7 @@
                         color20[i] = new BABYLON.Color4(0.02, 0.68, 0.78);
                     }
                     var posicionGround = 4.00;
+                    var widthGround =3.5;
 
                     var posrec1 = new BABYLON.Vector3(4.5,3,0);
                     var posrec2 = new BABYLON.Vector3(4,3,0);
@@ -511,6 +512,7 @@
                         box2.position.y = yColumn3/2;
                         box2.position.z = 0;
                         posicionGround-=0.20;
+                        widthGround+=0.5;
 
                         var rectangle3 = new BABYLON.GUI.Rectangle('');
                         rectangle3.width ="20px";
@@ -605,6 +607,7 @@
                         box4.position.y = yColumn5/2;
                         box4.position.z = 0;
                         posicionGround-=0.20;
+                        widthGround+=0.5;
 
                         var rectangle5 = new BABYLON.GUI.Rectangle('');
                         rectangle5.width ="20px";
@@ -701,6 +704,7 @@
                         box6.position.y = yColumn7/2;
                         box6.position.z = 0;
                         posicionGround-=0.20;
+                        widthGround+=0.5;
 
                         var rectangle7 = new BABYLON.GUI.Rectangle('');
                         rectangle7.width ="20px";
@@ -796,6 +800,7 @@
                         box8.position.y = yColumn9/2;
                         box8.position.z = 0;
                         posicionGround-=0.20;
+                        widthGround+=0.5;
 
                         var rectangle9 = new BABYLON.GUI.Rectangle('');
                         rectangle9.width ="20px";
@@ -892,6 +897,7 @@
                         box10.position.y = yColumn11/2;
                         box10.position.z = 0;
                         posicionGround-=0.20;
+                        widthGround+=0.5;
 
                         var rectangle11 = new BABYLON.GUI.Rectangle('');
                         rectangle11.width ="20px";
@@ -940,6 +946,7 @@
                         box11.position.y = yColumn12/2;
                         box11.position.z = 0;
                         posicionGround-=0.20;
+                        widthGround+=0.5;
 
                         var rectangle12 = new BABYLON.GUI.Rectangle('');
                         rectangle12.width ="20px";
@@ -988,6 +995,7 @@
                         box12.position.y = yColumn13/2;
                         box12.position.z = 0;
                         posicionGround-=0.20;
+                        widthGround+=0.5;
 
                         var rectangle13 = new BABYLON.GUI.Rectangle('');
                         rectangle13.width ="20px";
@@ -1036,6 +1044,7 @@
                         box13.position.y = yColumn14/2;
                         box13.position.z = 0;
                         posicionGround-=0.20;
+                        widthGround+=0.5;
 
                         var rectangle14 = new BABYLON.GUI.Rectangle('');
                         rectangle14.width ="20px";
@@ -1084,6 +1093,7 @@
                         box14.position.y = yColumn15/2;
                         box14.position.z = 0;
                         posicionGround-=0.20;
+                        widthGround+=0.5;
 
                         var rectangle15 = new BABYLON.GUI.Rectangle('');
                         rectangle15.width ="20px";
@@ -1132,6 +1142,7 @@
                         box15.position.y = yColumn16/2;
                         box15.position.z = 0;
                         posicionGround-=0.20;
+                        widthGround+=0.5;
 
                         var rectangle16 = new BABYLON.GUI.Rectangle('');
                         rectangle16.width ="20px";
@@ -1324,6 +1335,8 @@
                         box19.position.x = -3.60;
                         box19.position.y = yColumn20/2;
                         box19.position.z = 0;
+                        posicionGround-=0.10;
+                        widthGround+=0.5;
 
                         var rectangle20 = new BABYLON.GUI.Rectangle('');
                         rectangle20.width ="20px";
@@ -1431,7 +1444,7 @@
                     <!--AÑADIMOS LA LUZ-->
                     const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0.5, 0.80, 1));
 
-                    const ground = BABYLON.MeshBuilder.CreateGround("ground", {height: 3, width: 8.5, subdivisions: 4},scene);
+                    const ground = BABYLON.MeshBuilder.CreateGround("ground", {height: 3, width: widthGround, subdivisions: 4},scene);
                     ground.position = new BABYLON.Vector3(posicionGround,0,0);
 
 
