@@ -27,8 +27,11 @@ Un diagrama de líneas es la representación de una serie de puntos ( datos ) co
 ## Manual de usuario
 
 El usuario va a poder visualizar sus datos en 3D a través de una página web. El usuario puede utilizar tres opciones diferentes de diagramas: 
+
 •	Diagrama de barras: https://albaruizh.github.io/tfg3D/diagramaBarras.html
+
 •	Diagrama de barras por series: https://albaruizh.github.io/tfg3D/diagramaBarras2.html
+
 •	Diagrama de líneas: https://albaruizh.github.io/tfg3D/diagramaLineas.html
 
 Para poder visualizar nuestros datos tendremos que tenerlos en un fichero .csv con un aspecto similar al fichero que tiene el nombre de datos.csv.
