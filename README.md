@@ -16,15 +16,12 @@ una de ellas.
 Los diagramas que hemos creados son tres: un diagrama de barras, un diagrama de barras por series y diagrama de lineas.
 
 ## Diagrama de Barras
-### diagramaBarras.html
 Un diagrama de columnas representa una única serie de datos, de manera que cada columna tiene una altura equivalente a la frecuencia de cada valor. Por lo que necesitaremos crear una función donde recoja los nombres de las columnas y el número total de cada columna.
 
 ## Diagrama de Barras por serie
-### diagramaBarras2.html
 Un diagrama de columnas por serie es igual a un diagrama de columnas normal pero este representa cada uno de los valores de cada columna. En este diagrama necesitaremos saber el nombre de cada columna y almacenar cada uno de los valores que tenemos en nuestro csv.
 
 ## Diagrama de Lineas
-### diagramaLineas.html
 Un diagrama de líneas es la representación de una serie de puntos ( datos ) conectados por líneas. Par poder realizar nuestro diagramas de líneas en 3D necesitaremos los nombres de las diferentes líneas para representar la leyenda y también necesitaremos cada uno de los datos de cada una de las líneas para poder representar los diferentes puntos en nuestro diagrama.
 
 ## Manual de usuario
