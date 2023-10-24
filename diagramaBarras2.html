@@ -78,11 +78,12 @@
         <canvas id="renderCanvas"></canvas>
         <script type="text/javascript">
 
-<!--            CODIGO DEL HTML-->
+            <!--CODIGO DEL HTML-->
+
             const myForm = document.getElementById("form");
             const csvFile = document.getElementById("file");
 
-
+             <!-- Codigo para añadir nuestro CSV y poder leerlo -->
             myForm.addEventListener("submit", function (e) {
                 e.preventDefault();
                 const input = csvFile.files[0];
@@ -108,6 +109,9 @@
                 }
             });
 
+            <!-- Incializamos las variables de las que vamos a necesitar mas adelante -->
+
+            <!-- Variables para todos los datos que obtendremos de nuestro csv separados en columnas y filas -->
             var C0F1 =0;
             var C0F2 =0;
             var C0F3 =0;
@@ -186,13 +190,17 @@
 
             var total=0;
 
-
+            <!-- Obtenemos los datos de nuestro CSV -->
             function arrayToGraficos(datos){
+
                 var numTotal=datos[0].length;
+
                 for (i=1;i<datos.length;i=i+5){
 
                     <!--Si los datos no estan definidos al hacer datos[i].length nos daria un error y no podriamos cargar los datos-->
                     if(datos[i] !== undefined){
+
+                        <!--Añadiremos los datos correspondientes por cada una de las filas de cinco en cinco-->
                         for (j=0;j<datos[i].length;j++){
 
                             switch(j){
@@ -244,6 +252,7 @@
                         }
                     }
                     if(datos[i+1] !== undefined){
+
                         for (j=0;j<datos[i+1].length;j++){
 
                             switch(j){
@@ -294,6 +303,7 @@
                         }
                     }
                     if(datos[i+2] !== undefined){
+
                         for (j=0;j<datos[i+2].length;j++){
 
                             switch(j){
@@ -344,6 +354,7 @@
                         }
                     }
                     if(datos[i+3] !== undefined){
+
                         for (j=0;j<datos[i+3].length;j++){
 
                             switch(j){
@@ -394,6 +405,7 @@
                         }
                     }
                     if(datos[i+4] !== undefined){
+
                         for (j=0;j<datos[i+4].length;j++){
 
                             switch(j){
@@ -464,6 +476,7 @@
 
                 total = (column1 + column2 + column3 + column4 + column5 + column6 + column7 + column8 + column9 + column10 + column11 + column12 + column13 + column14 + column15)/numTotal;
 
+                <!-- Hacemos el siguiente calculo para que la altura de cada una de las columnas quede proporcional y por pantalla se puedan visualizar correctamente -->
                 yC0F1 = C0F1 * 100 / total /10 /5;
                 yC0F2 = C0F2 * 100 / total /10 /5;
                 yC0F3 = C0F3 * 100 / total /10 /5;
@@ -559,6 +572,7 @@
             }
 
             function creamosGrafico(){
+
                 <!--AÑADIMOS LA ESCENA-->
                 const canvas = document.getElementById("renderCanvas");
                 const engine = new BABYLON.Engine(canvas, true);
@@ -576,10 +590,10 @@
                     const camera = new BABYLON.ArcRotateCamera("Camera", alpha, beta, radius, target, scene);
                     camera.attachControl(canvas, true);
 
-
+                    <!-- Esta variable es necesaria para poder crear la leyenda y los textos en nuestro diagrama -->
                     var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
 
-
+                    <!-- Creamos un array de 6 ya que las columnas tienen seis caras -->
                     const color1 = new Array(6);
                     const color2 = new Array(6);
                     const color3 = new Array(6);
@@ -596,6 +610,7 @@
                     const color14 = new Array(6);
                     const color15 = new Array(6);
 
+                    <!-- Añadimos los colores a cada una de las caras -->
                     for ( var i=0; i<6;i++){
                         color1[i] = new BABYLON.Color4(0.25, 0.50, 0.55);
                         color2[i] = new BABYLON.Color4(1.00, 0.74, 0.26);
@@ -613,9 +628,13 @@
                         color14[i] = new BABYLON.Color4(0.94, 0.78, 0.03);
                         color15[i] = new BABYLON.Color4(0.25, 0.59, 0.84);
                     }
+
+                    <!-- Posicion inicial del suelo de nuestro diagrama -->
                     var posicionGround = 4.00;
+                    <!-- Anchura inicial del suelo de nuestro diagrama -->
                     var widthGround =3.5;
 
+                    <!-- Posiciones de los cuadrados con los colores de cada una de las columnas -->
                     var posrec1 = new BABYLON.Vector3(4.5,3,0);
                     var posrec2 = new BABYLON.Vector3(4,3,0);
                     var posrec3 = new BABYLON.Vector3(3.5,3,0);
@@ -632,6 +651,7 @@
                     var posrec14 = new BABYLON.Vector3(-2,3,0);
                     var posrec15 = new BABYLON.Vector3(-2.5,3,0);
 
+                    <!-- Posicion del nombre de cada una de las columnas -->
                     var postext1 = new BABYLON.Vector3(4.5,2.85,0.05);
                     var postext2 = new BABYLON.Vector3(4,2.85,0.05);
                     var postext3 = new BABYLON.Vector3(3.5,2.85,0.05);
@@ -648,8 +668,9 @@
                     var postext14 = new BABYLON.Vector3(-2,2.85,0.05);
                     var postext15 = new BABYLON.Vector3(-2.5,2.85,0.05);
 
-
                     scene.updateTransformMatrix(true);
+
+                    <!-- Creacion de un grupo para añadir los valores de cada una de las columnas -->
                     var transformGroup = new BABYLON.GUI.CheckboxGroup("VALORES");
 
                     <!--CREAMOS LAS FIGURAS-->
@@ -661,6 +682,7 @@
                             boxC0F1.position.y = yC0F1/2;
                             boxC0F1.position.z = 1;
 
+                            <!-- Añadimos el valor de la columna -->
                             var rect01 = new BABYLON.GUI.Rectangle();
                             rect01.width = 0.025;
                             rect01.height = "0px";
@@ -756,6 +778,7 @@
 
                         posicionGround-=0.2;
 
+                        <!-- Añadimos el cuadrado con el color de la columna -->
                         var rectangle1 = new BABYLON.GUI.Rectangle('');
                         rectangle1.width ="20px";
                         rectangle1.height = "20px";
@@ -763,6 +786,7 @@
                         advancedTexture.addControl(rectangle1);
                         rectangle1.moveToVector3(posrec1, scene);
 
+                        <!-- Añadimos el nombre de la columna en la leyenda -->
                         var text1 = new BABYLON.GUI.TextBlock();
                         text1.text = nameC1;
                         text1.color = "black";
@@ -772,6 +796,7 @@
                         advancedTexture.addControl(text1);
                         text1.moveToVector3(postext1,scene);
 
+                        <!-- Creamos la opccion de hacer check en estas columnas para ver su valor -->
                         var mostrarValoresColumna1 = function(isChecked) {
                             if (isChecked) {
                                 rect01.height = "20px";
@@ -788,6 +813,7 @@
                                 rect05.height = "0px";
                             }
 	                    }
+	                    <!-- Añadimos la funcion al grupo -->
 	                    transformGroup.addCheckbox(nameC1, mostrarValoresColumna1);
 
                     }
@@ -2688,6 +2714,7 @@
 
                     }
 
+                    <!-- Creamos esta funcion para poder ver todos los valores de todas las columnas a la vez -->
                     var mostrarValores = function(isChecked) {
                         if (isChecked) {
                             rect01.height = "20px";
@@ -2847,7 +2874,7 @@
 
 	                transformGroup.addCheckbox("All", mostrarValores);
 
-
+	                <!-- Añadimos un panel donde veremos el grupo que hemos creado -->
 	                var selectBox = new BABYLON.GUI.SelectionPanel("sp", [transformGroup]);
                     selectBox.width = 0.10;
                     selectBox.height = 1;
@@ -2859,12 +2886,12 @@
 
                     advancedTexture.addControl(selectBox);
 
-                    <!--AÑADIMOS LA LUZ-->
+                    <!--AÑADIMOS LA LUZ -->
                     const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0.5, 0.80, 1));
 
+                    <!--AÑADIMOS EL SUELO-->
                     const ground = BABYLON.MeshBuilder.CreateGround("ground", {height: 5, width: widthGround, subdivisions: 4},scene);
                     ground.position = new BABYLON.Vector3(posicionGround,0,-1);
-
 
                     return scene;
                 }
