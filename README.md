@@ -29,9 +29,13 @@ Un diagrama de líneas es la representación de una serie de puntos ( datos ) co
 El usuario va a poder visualizar sus datos en 3D a través de una página web. Para poder utilizar este servicio el usuario deberá tener guardados los datos que quiere visualizar en un fichero .csv. El usuario podrá entrar en nuestro repositorio de GitHub ya que es público. En este repositorio encontrará tres html, que cada uno de ellos será para poder crear un diagrama diferente, y también podrá ver diferentes ficheros .csv que serán compatibles con nuestro proyecto. Esto sería el repositorio y la url de los diagramas que puede utilizar el usuario: 
 
 •	Repositorio de GitHub: https://github.com/albaruizh/tfg3D
+
 •	Diagrama de barras: https://albaruizh.github.io/tfg3D/diagramaBarras.html
+
 •	Diagrama de barras por series: https://albaruizh.github.io/tfg3D/diagramaBarras2.html
+
 •	Diagrama de líneas: https://albaruizh.github.io/tfg3D/diagramaLineas.html
+
 
 En los ficheros .csv la primera fila serían los nombres de las columnas o rectas que vamos a configurar, las siguientes filas serán destinadas para los diferentes valores de cada una de las columnas y estos serán separados por comas (,). Podemos elegir cualquier fichero .csv que tenemos en el repositorio de Github.
 Ya tenemos nuestro fichero .csv listo con los datos que queremos visualizar, ahora el usuario podrá elegir cualquiera de los diagramas para visualizar sus datos. La primera interacción con cada uno de los diagramas será la misma, lo primero que tendrán que hacer nuestros usuarios es cargar su fichero .csv para poder crear su diagrama. Lo primero que verán serán dos botones uno para seleccionar nuestro fichero (Seleccionar archivo) y el otro botón lo seleccionaremos cuando nuestro fichero este cargado y entonces obtendremos nuestro diagrama con nuestros datos (Submit).
