@@ -630,7 +630,7 @@
                     }
 
                     <!-- Posicion inicial del suelo de nuestro diagrama -->
-                    var posicionGround = 4.00;
+                    var posicionGround = 5.00;
                     <!-- Anchura inicial del suelo de nuestro diagrama -->
                     var widthGround =3.5;
 
@@ -684,7 +684,7 @@
 
                             <!-- Añadimos el valor de la columna -->
                             var rect01 = new BABYLON.GUI.Rectangle();
-                            rect01.width = 0.025;
+                            rect01.width = 1;
                             rect01.height = "0px";
                             rect01.color = "black";
                             rect01.thickness = 0;
@@ -692,6 +692,7 @@
 
                             var label01 = new BABYLON.GUI.TextBlock();
                             label01.text = C0F1;
+                            label01.fontSize = 12;
                             rect01.addControl(label01);
 
                             rect01.linkWithMesh(boxC0F1);
@@ -704,7 +705,7 @@
                             boxC0F2.position.z = 0;
 
                             var rect02 = new BABYLON.GUI.Rectangle();
-                            rect02.width = 0.025;
+                            rect02.width = 1;
                             rect02.height = "0px";
                             rect02.color = "black";
                             rect02.thickness = 0;
@@ -712,6 +713,7 @@
 
                             var label02 = new BABYLON.GUI.TextBlock();
                             label02.text = C0F2;
+                            label02.fontSize = 12;
                             rect02.addControl(label02);
 
                             rect02.linkWithMesh(boxC0F2);
@@ -724,7 +726,7 @@
                             boxC0F3.position.z = -1;
 
                             var rect03 = new BABYLON.GUI.Rectangle();
-                            rect03.width = 0.025;
+                            rect03.width = 1;
                             rect03.height = "0px";
                             rect03.color = "black";
                             rect03.thickness = 0;
@@ -732,6 +734,7 @@
 
                             var label03 = new BABYLON.GUI.TextBlock();
                             label03.text = C0F3;
+                            label03.fontSize = 12;
                             rect03.addControl(label03);
 
                             rect03.linkWithMesh(boxC0F3);
@@ -743,7 +746,7 @@
                             boxC0F4.position.z = -2;
 
                             var rect04 = new BABYLON.GUI.Rectangle();
-                            rect04.width = 0.025;
+                            rect04.width = 1;
                             rect04.height = "0px";
                             rect04.color = "black";
                             rect04.thickness = 0;
@@ -751,6 +754,7 @@
 
                             var label04 = new BABYLON.GUI.TextBlock();
                             label04.text = C0F4;
+                            label04.fontSize = 12;
                             rect04.addControl(label04);
 
                             rect04.linkWithMesh(boxC0F4);
@@ -762,7 +766,7 @@
                             boxC0F5.position.z = -3;
 
                             var rect05 = new BABYLON.GUI.Rectangle();
-                            rect05.width = 0.025;
+                            rect05.width = 1;
                             rect05.height = "0px";
                             rect05.color = "black";
                             rect05.thickness = 0;
@@ -770,13 +774,14 @@
 
                             var label05 = new BABYLON.GUI.TextBlock();
                             label05.text = C0F5;
+                            label05.fontSize = 12;
                             rect05.addControl(label05);
 
                             rect05.linkWithMesh(boxC0F5);
 
                         }
 
-                        posicionGround-=0.2;
+                        posicionGround-=0.20;
 
                         <!-- Añadimos el cuadrado con el color de la columna -->
                         var rectangle1 = new BABYLON.GUI.Rectangle('');
@@ -799,11 +804,11 @@
                         <!-- Creamos la opccion de hacer check en estas columnas para ver su valor -->
                         var mostrarValoresColumna1 = function(isChecked) {
                             if (isChecked) {
-                                rect01.height = "20px";
-                                rect02.height = "20px";
-                                rect03.height = "20px";
-                                rect04.height = "20px";
-                                rect05.height = "20px";
+                                rect01.height = "200px";
+                                rect02.height = "200px";
+                                rect03.height = "200px";
+                                rect04.height = "200px";
+                                rect05.height = "200px";
                             }
                             else {
                                 rect01.height = "0px";
@@ -826,7 +831,7 @@
                             boxC1F1.position.z = 1;
 
                             var rect11 = new BABYLON.GUI.Rectangle();
-                            rect11.width = 0.025;
+                            rect11.width = 1;
                             rect11.height = "0px";
                             rect11.color = "black";
                             rect11.thickness = 0;
@@ -834,6 +839,7 @@
 
                             var label11 = new BABYLON.GUI.TextBlock();
                             label11.text = C1F1;
+                            label11.fontSize = 12;
                             rect11.addControl(label11);
 
                             rect11.linkWithMesh(boxC1F1);
@@ -845,7 +851,7 @@
                             boxC1F2.position.z = 0;
 
                             var rect12 = new BABYLON.GUI.Rectangle();
-                            rect12.width = 0.025;
+                            rect12.width = 1;
                             rect12.height = "0px";
                             rect12.color = "black";
                             rect12.thickness = 0;
@@ -853,6 +859,7 @@
 
                             var label12 = new BABYLON.GUI.TextBlock();
                             label12.text = C1F2;
+                            label12.fontSize = 12;
                             rect12.addControl(label12);
 
                             rect12.linkWithMesh(boxC1F2);
@@ -865,7 +872,7 @@
                             boxC1F3.position.z = -1;
 
                             var rect13 = new BABYLON.GUI.Rectangle();
-                            rect13.width = 0.025;
+                            rect13.width = 1;
                             rect13.height = "0px";
                             rect13.color = "black";
                             rect13.thickness = 0;
@@ -873,6 +880,7 @@
 
                             var label13 = new BABYLON.GUI.TextBlock();
                             label13.text = C1F3;
+                            label13.fontSize = 12;
                             rect13.addControl(label13);
 
                             rect13.linkWithMesh(boxC1F3);
@@ -884,7 +892,7 @@
                             boxC1F4.position.z = -2;
 
                             var rect14 = new BABYLON.GUI.Rectangle();
-                            rect14.width = 0.025;
+                            rect14.width = 1;
                             rect14.height = "0px";
                             rect14.color = "black";
                             rect14.thickness = 0;
@@ -892,6 +900,7 @@
 
                             var label14 = new BABYLON.GUI.TextBlock();
                             label14.text = C1F4;
+                            label14.fontSize = 12;
                             rect14.addControl(label14);
 
                             rect14.linkWithMesh(boxC1F4);
@@ -903,7 +912,7 @@
                             boxC1F5.position.z = -3;
 
                             var rect15 = new BABYLON.GUI.Rectangle();
-                            rect15.width = 0.025;
+                            rect15.width = 1;
                             rect15.height = "0px";
                             rect15.color = "black";
                             rect15.thickness = 0;
@@ -911,13 +920,14 @@
 
                             var label15 = new BABYLON.GUI.TextBlock();
                             label15.text = C1F5;
+                            label15.fontSize = 12;
                             rect15.addControl(label15);
 
                             rect15.linkWithMesh(boxC1F5);
 
                         }
 
-                        posicionGround-=0.2;
+                        posicionGround-=0.20;
 
                         var rectangle2 = new BABYLON.GUI.Rectangle('');
                         rectangle2.width ="20px";
@@ -937,11 +947,11 @@
 
                         var mostrarValoresColumna2 = function(isChecked) {
                             if (isChecked) {
-                                rect11.height = "20px";
-                                rect12.height = "20px";
-                                rect13.height = "20px";
-                                rect14.height = "20px";
-                                rect15.height = "20px";
+                                rect11.height = "200px";
+                                rect12.height = "200px";
+                                rect13.height = "200px";
+                                rect14.height = "200px";
+                                rect15.height = "200px";
                             }
                             else {
                                 rect11.height = "0px";
@@ -963,7 +973,7 @@
                             boxC2F1.position.z = 1;
 
                             var rect21 = new BABYLON.GUI.Rectangle();
-                            rect21.width = 0.025;
+                            rect21.width = 1;
                             rect21.height = "0px";
                             rect21.color = "black";
                             rect21.thickness = 0;
@@ -971,6 +981,7 @@
 
                             var label21 = new BABYLON.GUI.TextBlock();
                             label21.text = C2F1;
+                            label21.fontSize = 12;
                             rect21.addControl(label21);
 
                             rect21.linkWithMesh(boxC2F1);
@@ -982,7 +993,7 @@
                             boxC2F2.position.z = 0;
 
                             var rect22 = new BABYLON.GUI.Rectangle();
-                            rect22.width = 0.025;
+                            rect22.width = 1;
                             rect22.height = "0px";
                             rect22.color = "black";
                             rect22.thickness = 0;
@@ -990,6 +1001,7 @@
 
                             var label22 = new BABYLON.GUI.TextBlock();
                             label22.text = C2F2;
+                            label22.fontSize = 12;
                             rect22.addControl(label22);
 
                             rect22.linkWithMesh(boxC2F2);
@@ -1001,7 +1013,7 @@
                             boxC2F3.position.z = -1;
 
                             var rect23 = new BABYLON.GUI.Rectangle();
-                            rect23.width = 0.025;
+                            rect23.width = 1;
                             rect23.height = "0px";
                             rect23.color = "black";
                             rect23.thickness = 0;
@@ -1009,6 +1021,7 @@
 
                             var label23 = new BABYLON.GUI.TextBlock();
                             label23.text = C2F3;
+                            label23.fontSize = 12;
                             rect23.addControl(label23);
 
                             rect23.linkWithMesh(boxC2F3);
@@ -1021,7 +1034,7 @@
                             boxC2F4.position.z = -2;
 
                             var rect24 = new BABYLON.GUI.Rectangle();
-                            rect24.width = 0.025;
+                            rect24.width = 1;
                             rect24.height = "0px";
                             rect24.color = "black";
                             rect24.thickness = 0;
@@ -1029,6 +1042,7 @@
 
                             var label24 = new BABYLON.GUI.TextBlock();
                             label24.text = C2F4;
+                            label24.fontSize = 12;
                             rect24.addControl(label24);
 
                             rect24.linkWithMesh(boxC2F4);
@@ -1040,7 +1054,7 @@
                             boxC2F5.position.z = -3;
 
                             var rect25 = new BABYLON.GUI.Rectangle();
-                            rect25.width = 0.025;
+                            rect25.width = 1;
                             rect25.height = "0px";
                             rect25.color = "black";
                             rect25.thickness = 0;
@@ -1048,13 +1062,14 @@
 
                             var label25 = new BABYLON.GUI.TextBlock();
                             label25.text = C2F5;
+                            label25.fontSize = 12;
                             rect25.addControl(label25);
 
                             rect25.linkWithMesh(boxC2F5);
                         }
 
-                        posicionGround-=0.2;
-                        widthGround+=0.5;
+                        posicionGround-=0.20;
+                        widthGround+=0.25;
 
                         var rectangle3 = new BABYLON.GUI.Rectangle('');
                         rectangle3.width ="20px";
@@ -1074,11 +1089,11 @@
 
                         var mostrarValoresColumna3 = function(isChecked) {
                             if (isChecked) {
-                                rect21.height = "20px";
-                                rect22.height = "20px";
-                                rect23.height = "20px";
-                                rect24.height = "20px";
-                                rect25.height = "20px";
+                                rect21.height = "200px";
+                                rect22.height = "200px";
+                                rect23.height = "200px";
+                                rect24.height = "200px";
+                                rect25.height = "200px";
                             }
                             else {
                                 rect21.height = "0px";
@@ -1098,7 +1113,7 @@
                             boxC3F1.position.z = 1;
 
                             var rect31 = new BABYLON.GUI.Rectangle();
-                            rect31.width = 0.025;
+                            rect31.width = 1;
                             rect31.height = "0px";
                             rect31.color = "black";
                             rect31.thickness = 0;
@@ -1106,6 +1121,7 @@
 
                             var label31 = new BABYLON.GUI.TextBlock();
                             label31.text = C3F1;
+                            label31.fontSize = 12;
                             rect31.addControl(label31);
 
                             rect31.linkWithMesh(boxC3F1);
@@ -1117,7 +1133,7 @@
                             boxC3F2.position.z = 0;
 
                             var rect32 = new BABYLON.GUI.Rectangle();
-                            rect32.width = 0.025;
+                            rect32.width = 1;
                             rect32.height = "0px";
                             rect32.color = "black";
                             rect32.thickness = 0;
@@ -1125,6 +1141,7 @@
 
                             var label32 = new BABYLON.GUI.TextBlock();
                             label32.text = C3F2;
+                            label32.fontSize = 12;
                             rect32.addControl(label32);
 
                             rect32.linkWithMesh(boxC3F2);
@@ -1136,7 +1153,7 @@
                             boxC3F3.position.z = -1;
 
                             var rect33 = new BABYLON.GUI.Rectangle();
-                            rect33.width = 0.025;
+                            rect33.width = 1;
                             rect33.height = "0px";
                             rect33.color = "black";
                             rect33.thickness = 0;
@@ -1144,6 +1161,7 @@
 
                             var label33 = new BABYLON.GUI.TextBlock();
                             label33.text = C3F3;
+                            label33.fontSize = 12;
                             rect33.addControl(label33);
 
                             rect33.linkWithMesh(boxC3F3);
@@ -1155,7 +1173,7 @@
                             boxC3F4.position.z = -2;
 
                             var rect34 = new BABYLON.GUI.Rectangle();
-                            rect34.width = 0.025;
+                            rect34.width = 1;
                             rect34.height = "0px";
                             rect34.color = "black";
                             rect34.thickness = 0;
@@ -1163,6 +1181,7 @@
 
                             var label34 = new BABYLON.GUI.TextBlock();
                             label34.text = C3F4;
+                            label34.fontSize = 12;
                             rect34.addControl(label34);
 
                             rect34.linkWithMesh(boxC3F4);
@@ -1174,7 +1193,7 @@
                             boxC3F5.position.z = -3;
 
                             var rect35 = new BABYLON.GUI.Rectangle();
-                            rect35.width = 0.025;
+                            rect35.width = 1;
                             rect35.height = "0px";
                             rect35.color = "black";
                             rect35.thickness = 0;
@@ -1182,13 +1201,14 @@
 
                             var label35 = new BABYLON.GUI.TextBlock();
                             label35.text = C3F5;
+                            label35.fontSize = 12;
                             rect35.addControl(label35);
 
                             rect35.linkWithMesh(boxC3F5);
                         }
 
-                        posicionGround-=0.2;
-                        widthGround+=0.5;
+                        posicionGround-=0.20;
+                        widthGround+=0.25;
 
                         var rectangle4 = new BABYLON.GUI.Rectangle('');
                         rectangle4.width ="20px";
@@ -1208,11 +1228,11 @@
 
                         var mostrarValoresColumna4 = function(isChecked) {
                             if (isChecked) {
-                                rect31.height = "20px";
-                                rect32.height = "20px";
-                                rect33.height = "20px";
-                                rect34.height = "20px";
-                                rect35.height = "20px";
+                                rect31.height = "200px";
+                                rect32.height = "200px";
+                                rect33.height = "200px";
+                                rect34.height = "200px";
+                                rect35.height = "200px";
                             }
                             else {
                                 rect31.height = "0px";
@@ -1234,7 +1254,7 @@
                             boxC4F1.position.z = 1;
 
                             var rect41 = new BABYLON.GUI.Rectangle();
-                            rect41.width = 0.025;
+                            rect41.width = 1;
                             rect41.height = "0px";
                             rect41.color = "black";
                             rect41.thickness = 0;
@@ -1242,6 +1262,7 @@
 
                             var label41 = new BABYLON.GUI.TextBlock();
                             label41.text = C4F1;
+                            label41.fontSize = 12;
                             rect41.addControl(label41);
 
                             rect41.linkWithMesh(boxC4F1);
@@ -1253,7 +1274,7 @@
                             boxC4F2.position.z = 0;
 
                             var rect42 = new BABYLON.GUI.Rectangle();
-                            rect42.width = 0.025;
+                            rect42.width = 1;
                             rect42.height = "0px";
                             rect42.color = "black";
                             rect42.thickness = 0;
@@ -1261,6 +1282,7 @@
 
                             var label42 = new BABYLON.GUI.TextBlock();
                             label42.text = C4F2;
+                            label42.fontSize = 12;
                             rect42.addControl(label42);
 
                             rect42.linkWithMesh(boxC4F2);
@@ -1272,7 +1294,7 @@
                             boxC4F3.position.z = -1;
 
                             var rect43 = new BABYLON.GUI.Rectangle();
-                            rect43.width = 0.025;
+                            rect43.width = 1;
                             rect43.height = "0px";
                             rect43.color = "black";
                             rect43.thickness = 0;
@@ -1280,6 +1302,7 @@
 
                             var label43 = new BABYLON.GUI.TextBlock();
                             label43.text = C4F3;
+                            label43.fontSize = 12;
                             rect43.addControl(label43);
 
                             rect43.linkWithMesh(boxC4F3);
@@ -1291,7 +1314,7 @@
                             boxC4F4.position.z = -2;
 
                             var rect44 = new BABYLON.GUI.Rectangle();
-                            rect44.width = 0.025;
+                            rect44.width = 1;
                             rect44.height = "0px";
                             rect44.color = "black";
                             rect44.thickness = 0;
@@ -1299,6 +1322,7 @@
 
                             var label44 = new BABYLON.GUI.TextBlock();
                             label44.text = C4F4;
+                            label44.fontSize = 12;
                             rect44.addControl(label44);
 
                             rect44.linkWithMesh(boxC4F4);
@@ -1310,7 +1334,7 @@
                             boxC4F5.position.z = -3;
 
                             var rect45 = new BABYLON.GUI.Rectangle();
-                            rect45.width = 0.025;
+                            rect45.width = 1;
                             rect45.height = "0px";
                             rect45.color = "black";
                             rect45.thickness = 0;
@@ -1318,13 +1342,14 @@
 
                             var label45 = new BABYLON.GUI.TextBlock();
                             label45.text = C4F5;
+                            label45.fontSize = 12;
                             rect45.addControl(label45);
 
                             rect45.linkWithMesh(boxC4F5);
                         }
 
-                        posicionGround-=0.2;
-                        widthGround+=0.5;
+                        posicionGround-=0.35;
+                        widthGround+=0.25;
 
                         var rectangle5 = new BABYLON.GUI.Rectangle('');
                         rectangle5.width ="20px";
@@ -1344,11 +1369,11 @@
 
                         var mostrarValoresColumna5 = function(isChecked) {
                             if (isChecked) {
-                                rect41.height = "20px";
-                                rect42.height = "20px";
-                                rect43.height = "20px";
-                                rect44.height = "20px";
-                                rect45.height = "20px";
+                                rect41.height = "200px";
+                                rect42.height = "200px";
+                                rect43.height = "200px";
+                                rect44.height = "200px";
+                                rect45.height = "200px";
                             }
                             else {
                                 rect41.height = "0px";
@@ -1370,7 +1395,7 @@
                             boxC5F1.position.z = 1;
 
                             var rect51 = new BABYLON.GUI.Rectangle();
-                            rect51.width = 0.025;
+                            rect51.width = 1;
                             rect51.height = "0px";
                             rect51.color = "black";
                             rect51.thickness = 0;
@@ -1378,6 +1403,7 @@
 
                             var label51 = new BABYLON.GUI.TextBlock();
                             label51.text = C5F1;
+                            label51.fontSize = 12;
                             rect51.addControl(label51);
 
                             rect51.linkWithMesh(boxC5F1);
@@ -1389,7 +1415,7 @@
                             boxC5F2.position.z = 0;
 
                             var rect52 = new BABYLON.GUI.Rectangle();
-                            rect52.width = 0.025;
+                            rect52.width = 1;
                             rect52.height = "0px";
                             rect52.color = "black";
                             rect52.thickness = 0;
@@ -1397,6 +1423,7 @@
 
                             var label52 = new BABYLON.GUI.TextBlock();
                             label52.text = C5F2;
+                            label52.fontSize = 12;
                             rect52.addControl(label52);
 
                             rect52.linkWithMesh(boxC5F2);
@@ -1408,7 +1435,7 @@
                             boxC5F3.position.z = -1;
 
                             var rect53 = new BABYLON.GUI.Rectangle();
-                            rect53.width = 0.025;
+                            rect53.width = 1;
                             rect53.height = "0px";
                             rect53.color = "black";
                             rect53.thickness = 0;
@@ -1416,6 +1443,7 @@
 
                             var label53 = new BABYLON.GUI.TextBlock();
                             label53.text = C5F3;
+                            label53.fontSize = 12;
                             rect53.addControl(label53);
 
                             rect53.linkWithMesh(boxC5F3);
@@ -1427,7 +1455,7 @@
                             boxC5F4.position.z = -2;
 
                             var rect54 = new BABYLON.GUI.Rectangle();
-                            rect54.width = 0.025;
+                            rect54.width = 1;
                             rect54.height = "0px";
                             rect54.color = "black";
                             rect54.thickness = 0;
@@ -1435,6 +1463,7 @@
 
                             var label54 = new BABYLON.GUI.TextBlock();
                             label54.text = C5F4;
+                            label54.fontSize = 12;
                             rect54.addControl(label54);
 
                             rect54.linkWithMesh(boxC5F4);
@@ -1446,7 +1475,7 @@
                             boxC5F5.position.z = -3;
 
                             var rect55 = new BABYLON.GUI.Rectangle();
-                            rect55.width = 0.025;
+                            rect55.width = 1;
                             rect55.height = "0px";
                             rect55.color = "black";
                             rect55.thickness = 0;
@@ -1454,12 +1483,13 @@
 
                             var label55 = new BABYLON.GUI.TextBlock();
                             label55.text = C5F5;
+                            label55.fontSize = 12;
                             rect55.addControl(label55);
 
                             rect55.linkWithMesh(boxC5F5);
                         }
-                        posicionGround-=0.2;
-                        widthGround+=0.5;
+                        posicionGround-=0.30;
+                        widthGround+=0.25;
 
                         var rectangle6 = new BABYLON.GUI.Rectangle('');
                         rectangle6.width ="20px";
@@ -1479,11 +1509,11 @@
 
                         var mostrarValoresColumna6 = function(isChecked) {
                             if (isChecked) {
-                                rect51.height = "20px";
-                                rect52.height = "20px";
-                                rect53.height = "20px";
-                                rect54.height = "20px";
-                                rect55.height = "20px";
+                                rect51.height = "200px";
+                                rect52.height = "200px";
+                                rect53.height = "200px";
+                                rect54.height = "200px";
+                                rect55.height = "200px";
                             }
                             else {
                                 rect51.height = "0px";
@@ -1504,7 +1534,7 @@
                             boxC6F1.position.z = 1;
 
                             var rect61 = new BABYLON.GUI.Rectangle();
-                            rect61.width = 0.025;
+                            rect61.width = 1;
                             rect61.height = "0px";
                             rect61.color = "black";
                             rect61.thickness = 0;
@@ -1512,6 +1542,7 @@
 
                             var label61 = new BABYLON.GUI.TextBlock();
                             label61.text = C6F1;
+                            label61.fontSize = 12;
                             rect61.addControl(label61);
 
                             rect61.linkWithMesh(boxC6F1);
@@ -1523,7 +1554,7 @@
                             boxC6F2.position.z = 0;
 
                             var rect62 = new BABYLON.GUI.Rectangle();
-                            rect62.width = 0.025;
+                            rect62.width = 1;
                             rect62.height = "0px";
                             rect62.color = "black";
                             rect62.thickness = 0;
@@ -1531,6 +1562,7 @@
 
                             var label62 = new BABYLON.GUI.TextBlock();
                             label62.text = C6F2;
+                            label62.fontSize = 12;
                             rect62.addControl(label62);
 
                             rect62.linkWithMesh(boxC6F2);
@@ -1542,7 +1574,7 @@
                             boxC6F3.position.z = -1;
 
                             var rect63 = new BABYLON.GUI.Rectangle();
-                            rect63.width = 0.025;
+                            rect63.width = 1;
                             rect63.height = "0px";
                             rect63.color = "black";
                             rect63.thickness = 0;
@@ -1550,6 +1582,7 @@
 
                             var label63 = new BABYLON.GUI.TextBlock();
                             label63.text = C6F3;
+                            label63.fontSize = 12;
                             rect63.addControl(label63);
 
                             rect63.linkWithMesh(boxC6F3);
@@ -1561,7 +1594,7 @@
                             boxC6F4.position.z = -2;
 
                             var rect64 = new BABYLON.GUI.Rectangle();
-                            rect64.width = 0.025;
+                            rect64.width = 1;
                             rect64.height = "0px";
                             rect64.color = "black";
                             rect64.thickness = 0;
@@ -1569,6 +1602,7 @@
 
                             var label64 = new BABYLON.GUI.TextBlock();
                             label64.text = C6F4;
+                            label64.fontSize = 12;
                             rect64.addControl(label64);
 
                             rect64.linkWithMesh(boxC6F4);
@@ -1580,7 +1614,7 @@
                             boxC6F5.position.z = -3;
 
                             var rect65 = new BABYLON.GUI.Rectangle();
-                            rect65.width = 0.025;
+                            rect65.width = 1;
                             rect65.height = "0px";
                             rect65.color = "black";
                             rect65.thickness = 0;
@@ -1588,12 +1622,13 @@
 
                             var label65 = new BABYLON.GUI.TextBlock();
                             label65.text = C6F5;
+                            label65.fontSize = 12;
                             rect65.addControl(label65);
 
                             rect65.linkWithMesh(boxC6F5);
                         }
-                        posicionGround-=0.2;
-                        widthGround+=0.5;
+                        posicionGround-=0.30;
+                        widthGround+=0.25;
 
                         var rectangle7 = new BABYLON.GUI.Rectangle('');
                         rectangle7.width ="20px";
@@ -1613,11 +1648,11 @@
 
                         var mostrarValoresColumna7 = function(isChecked) {
                             if (isChecked) {
-                                rect61.height = "20px";
-                                rect62.height = "20px";
-                                rect63.height = "20px";
-                                rect64.height = "20px";
-                                rect65.height = "20px";
+                                rect61.height = "200px";
+                                rect62.height = "200px";
+                                rect63.height = "200px";
+                                rect64.height = "200px";
+                                rect65.height = "200px";
                             }
                             else {
                                 rect61.height = "0px";
@@ -1638,7 +1673,7 @@
                             boxC7F1.position.z = 1;
 
                             var rect71 = new BABYLON.GUI.Rectangle();
-                            rect71.width = 0.025;
+                            rect71.width = 1;
                             rect71.height = "0px";
                             rect71.color = "black";
                             rect71.thickness = 0;
@@ -1646,6 +1681,7 @@
 
                             var label71 = new BABYLON.GUI.TextBlock();
                             label71.text = C7F1;
+                            label71.fontSize = 12;
                             rect71.addControl(label71);
 
                             rect71.linkWithMesh(boxC7F1);
@@ -1657,7 +1693,7 @@
                             boxC7F2.position.z = 0;
 
                             var rect72 = new BABYLON.GUI.Rectangle();
-                            rect72.width = 0.025;
+                            rect72.width = 1;
                             rect72.height = "0px";
                             rect72.color = "black";
                             rect72.thickness = 0;
@@ -1665,6 +1701,7 @@
 
                             var label72 = new BABYLON.GUI.TextBlock();
                             label72.text = C7F2;
+                            label72.fontSize = 12;
                             rect72.addControl(label72);
 
                             rect72.linkWithMesh(boxC7F2);
@@ -1676,7 +1713,7 @@
                             boxC7F3.position.z = -1;
 
                             var rect73 = new BABYLON.GUI.Rectangle();
-                            rect73.width = 0.025;
+                            rect73.width = 1;
                             rect73.height = "0px";
                             rect73.color = "black";
                             rect73.thickness = 0;
@@ -1684,6 +1721,7 @@
 
                             var label73 = new BABYLON.GUI.TextBlock();
                             label73.text = C7F3;
+                            label73.fontSize = 12;
                             rect73.addControl(label73);
 
                             rect73.linkWithMesh(boxC7F3);
@@ -1695,7 +1733,7 @@
                             boxC7F4.position.z = -2;
 
                             var rect74 = new BABYLON.GUI.Rectangle();
-                            rect74.width = 0.025;
+                            rect74.width = 1;
                             rect74.height = "0px";
                             rect74.color = "black";
                             rect74.thickness = 0;
@@ -1703,6 +1741,7 @@
 
                             var label74 = new BABYLON.GUI.TextBlock();
                             label74.text = C7F4;
+                            label74.fontSize = 12;
                             rect74.addControl(label74);
 
                             rect74.linkWithMesh(boxC7F4);
@@ -1714,7 +1753,7 @@
                             boxC7F5.position.z = -3;
 
                             var rect75 = new BABYLON.GUI.Rectangle();
-                            rect75.width = 0.025;
+                            rect75.width = 1;
                             rect75.height = "0px";
                             rect75.color = "black";
                             rect75.thickness = 0;
@@ -1722,12 +1761,13 @@
 
                             var label75 = new BABYLON.GUI.TextBlock();
                             label75.text = C7F5;
+                            label75.fontSize = 12;
                             rect75.addControl(label75);
 
                             rect75.linkWithMesh(boxC7F5);
                         }
-                        posicionGround-=0.2;
-                        widthGround+=0.5;
+                        posicionGround-=0.30;
+                        widthGround+=0.25;
 
                         var rectangle8 = new BABYLON.GUI.Rectangle('');
                         rectangle8.width ="20px";
@@ -1747,11 +1787,11 @@
 
                         var mostrarValoresColumna8 = function(isChecked) {
                             if (isChecked) {
-                                rect71.height = "20px";
-                                rect72.height = "20px";
-                                rect73.height = "20px";
-                                rect74.height = "20px";
-                                rect75.height = "20px";
+                                rect71.height = "200px";
+                                rect72.height = "200px";
+                                rect73.height = "200px";
+                                rect74.height = "200px";
+                                rect75.height = "200px";
                             }
                             else {
                                 rect71.height = "0px";
@@ -1772,7 +1812,7 @@
                             boxC8F1.position.z = 1;
 
                             var rect81 = new BABYLON.GUI.Rectangle();
-                            rect81.width = 0.025;
+                            rect81.width = 1;
                             rect81.height = "0px";
                             rect81.color = "black";
                             rect81.thickness = 0;
@@ -1780,6 +1820,7 @@
 
                             var label81 = new BABYLON.GUI.TextBlock();
                             label81.text = C8F1;
+                            label81.fontSize = 12;
                             rect81.addControl(label81);
 
                             rect81.linkWithMesh(boxC8F1);
@@ -1791,7 +1832,7 @@
                             boxC8F2.position.z = 0;
 
                             var rect82 = new BABYLON.GUI.Rectangle();
-                            rect82.width = 0.025;
+                            rect82.width = 1;
                             rect82.height = "0px";
                             rect82.color = "black";
                             rect82.thickness = 0;
@@ -1799,6 +1840,7 @@
 
                             var label82 = new BABYLON.GUI.TextBlock();
                             label82.text = C8F2;
+                            label82.fontSize = 12;
                             rect82.addControl(label82);
 
                             rect82.linkWithMesh(boxC8F2);
@@ -1810,7 +1852,7 @@
                             boxC8F3.position.z = -1;
 
                             var rect83 = new BABYLON.GUI.Rectangle();
-                            rect83.width = 0.025;
+                            rect83.width = 1;
                             rect83.height = "0px";
                             rect83.color = "black";
                             rect83.thickness = 0;
@@ -1818,6 +1860,7 @@
 
                             var label83 = new BABYLON.GUI.TextBlock();
                             label83.text = C8F3;
+                            label83.fontSize = 12;
                             rect83.addControl(label83);
 
                             rect83.linkWithMesh(boxC8F3);
@@ -1829,7 +1872,7 @@
                             boxC8F4.position.z = -2;
 
                             var rect84 = new BABYLON.GUI.Rectangle();
-                            rect84.width = 0.025;
+                            rect84.width = 1;
                             rect84.height = "0px";
                             rect84.color = "black";
                             rect84.thickness = 0;
@@ -1837,6 +1880,7 @@
 
                             var label84 = new BABYLON.GUI.TextBlock();
                             label84.text = C8F4;
+                            label84.fontSize = 12;
                             rect84.addControl(label84);
 
                             rect84.linkWithMesh(boxC8F4);
@@ -1848,7 +1892,7 @@
                             boxC8F5.position.z = -3;
 
                             var rect85 = new BABYLON.GUI.Rectangle();
-                            rect85.width = 0.025;
+                            rect85.width = 1;
                             rect85.height = "0px";
                             rect85.color = "black";
                             rect85.thickness = 0;
@@ -1856,11 +1900,12 @@
 
                             var label85 = new BABYLON.GUI.TextBlock();
                             label85.text = C8F5;
+                            label85.fontSize = 12;
                             rect85.addControl(label85);
 
                             rect85.linkWithMesh(boxC8F5);
                         }
-                        posicionGround-=0.2;
+                        posicionGround-=0.3;
                         widthGround+=0.5;
 
                         var rectangle9 = new BABYLON.GUI.Rectangle('');
@@ -1881,11 +1926,11 @@
 
                         var mostrarValoresColumna9 = function(isChecked) {
                             if (isChecked) {
-                                rect81.height = "20px";
-                                rect82.height = "20px";
-                                rect83.height = "20px";
-                                rect84.height = "20px";
-                                rect85.height = "20px";
+                                rect81.height = "200px";
+                                rect82.height = "200px";
+                                rect83.height = "200px";
+                                rect84.height = "200px";
+                                rect85.height = "200px";
                             }
                             else {
                                 rect81.height = "0px";
@@ -1906,7 +1951,7 @@
                             boxC9F1.position.z = 1;
 
                             var rect91 = new BABYLON.GUI.Rectangle();
-                            rect91.width = 0.025;
+                            rect91.width = 1;
                             rect91.height = "0px";
                             rect91.color = "black";
                             rect91.thickness = 0;
@@ -1914,6 +1959,7 @@
 
                             var label91 = new BABYLON.GUI.TextBlock();
                             label91.text = C9F1;
+                            label91.fontSize = 12;
                             rect91.addControl(label91);
 
                             rect91.linkWithMesh(boxC9F1);
@@ -1925,7 +1971,7 @@
                             boxC9F2.position.z = 0;
 
                             var rect92 = new BABYLON.GUI.Rectangle();
-                            rect92.width = 0.025;
+                            rect92.width = 1;
                             rect92.height = "0px";
                             rect92.color = "black";
                             rect92.thickness = 0;
@@ -1933,6 +1979,7 @@
 
                             var label92 = new BABYLON.GUI.TextBlock();
                             label92.text = C9F2;
+                            label92.fontSize = 12;
                             rect92.addControl(label92);
 
                             rect92.linkWithMesh(boxC9F2);
@@ -1944,7 +1991,7 @@
                             boxC9F3.position.z = -1;
 
                             var rect93 = new BABYLON.GUI.Rectangle();
-                            rect93.width = 0.025;
+                            rect93.width = 1;
                             rect93.height = "0px";
                             rect93.color = "black";
                             rect93.thickness = 0;
@@ -1952,6 +1999,7 @@
 
                             var label93 = new BABYLON.GUI.TextBlock();
                             label93.text = C9F3;
+                            label93.fontSize = 12;
                             rect93.addControl(label93);
 
                             rect93.linkWithMesh(boxC9F3);
@@ -1963,7 +2011,7 @@
                             boxC9F4.position.z = -2;
 
                             var rect94 = new BABYLON.GUI.Rectangle();
-                            rect94.width = 0.025;
+                            rect94.width = 1;
                             rect94.height = "0px";
                             rect94.color = "black";
                             rect94.thickness = 0;
@@ -1971,6 +2019,7 @@
 
                             var label94 = new BABYLON.GUI.TextBlock();
                             label94.text = C9F4;
+                            label94.fontSize = 12;
                             rect94.addControl(label94);
 
                             rect94.linkWithMesh(boxC9F4);
@@ -1982,7 +2031,7 @@
                             boxC9F5.position.z = -3;
 
                             var rect95 = new BABYLON.GUI.Rectangle();
-                            rect95.width = 0.025;
+                            rect95.width = 1;
                             rect95.height = "0px";
                             rect95.color = "black";
                             rect95.thickness = 0;
@@ -1990,11 +2039,12 @@
 
                             var label95 = new BABYLON.GUI.TextBlock();
                             label95.text = C9F5;
+                            label95.fontSize = 12;
                             rect95.addControl(label95);
 
                             rect95.linkWithMesh(boxC9F5);
                         }
-                        posicionGround-=0.25;
+                        posicionGround-=0.35;
                         widthGround+=0.5;
 
                         var rectangle10 = new BABYLON.GUI.Rectangle('');
@@ -2015,11 +2065,11 @@
 
                         var mostrarValoresColumna10 = function(isChecked) {
                             if (isChecked) {
-                                rect91.height = "20px";
-                                rect92.height = "20px";
-                                rect93.height = "20px";
-                                rect94.height = "20px";
-                                rect95.height = "20px";
+                                rect91.height = "200px";
+                                rect92.height = "200px";
+                                rect93.height = "200px";
+                                rect94.height = "200px";
+                                rect95.height = "200px";
                             }
                             else {
                                 rect91.height = "0px";
@@ -2040,7 +2090,7 @@
                             boxC10F1.position.z = 1;
 
                             var rect101 = new BABYLON.GUI.Rectangle();
-                            rect101.width = 0.025;
+                            rect101.width = 1;
                             rect101.height = "0px";
                             rect101.color = "black";
                             rect101.thickness = 0;
@@ -2048,6 +2098,7 @@
 
                             var label101 = new BABYLON.GUI.TextBlock();
                             label101.text = C10F1;
+                            label101.fontSize = 12;
                             rect101.addControl(label101);
 
                             rect101.linkWithMesh(boxC10F1);
@@ -2060,7 +2111,7 @@
                             boxC10F2.position.z = 0;
 
                             var rect102 = new BABYLON.GUI.Rectangle();
-                            rect102.width = 0.025;
+                            rect102.width = 1;
                             rect102.height = "0px";
                             rect102.color = "black";
                             rect102.thickness = 0;
@@ -2068,6 +2119,7 @@
 
                             var label102 = new BABYLON.GUI.TextBlock();
                             label102.text = C10F2;
+                            label102.fontSize = 12;
                             rect102.addControl(label102);
 
                             rect102.linkWithMesh(boxC10F2);
@@ -2080,7 +2132,7 @@
                             boxC10F3.position.z = -1;
 
                             var rect103 = new BABYLON.GUI.Rectangle();
-                            rect103.width = 0.025;
+                            rect103.width = 1;
                             rect103.height = "0px";
                             rect103.color = "black";
                             rect103.thickness = 0;
@@ -2088,6 +2140,7 @@
 
                             var label103 = new BABYLON.GUI.TextBlock();
                             label103.text = C10F3;
+                            label103.fontSize = 12;
                             rect103.addControl(label103);
 
                             rect103.linkWithMesh(boxC10F3);
@@ -2099,14 +2152,15 @@
                             boxC10F4.position.z = -2;
 
                             var rect104 = new BABYLON.GUI.Rectangle();
-                            rect104.width = 0.025;
+                            rect104.width = 1;
                             rect104.height = "0px";
                             rect104.color = "black";
                             rect104.thickness = 0;
                             advancedTexture.addControl(rect104);
 
                             var label104 = new BABYLON.GUI.TextBlock();
-                            label104.text = C0F4;
+                            label104.text = C10F4;
+                            label104.fontSize = 12;
                             rect104.addControl(label104);
 
                             rect104.linkWithMesh(boxC10F4);
@@ -2118,7 +2172,7 @@
                             boxC10F5.position.z = -3;
 
                             var rect105 = new BABYLON.GUI.Rectangle();
-                            rect105.width = 0.025;
+                            rect105.width = 1;
                             rect105.height = "0px";
                             rect105.color = "black";
                             rect105.thickness = 0;
@@ -2126,14 +2180,15 @@
 
                             var label105 = new BABYLON.GUI.TextBlock();
                             label105.text = C10F5;
+                            label105.fontSize = 12;
                             rect105.addControl(label105);
 
                             rect105.linkWithMesh(boxC10F5);
 
                         }
 
-                        posicionGround-=0.25;
-                        widthGround+=0.5;
+                        posicionGround-=0.30;
+                        widthGround+=0.6;
 
                         var rectangle11 = new BABYLON.GUI.Rectangle('');
                         rectangle11.width ="20px";
@@ -2153,11 +2208,11 @@
 
                         var mostrarValoresColumna11 = function(isChecked) {
                             if (isChecked) {
-                                rect101.height = "20px";
-                                rect102.height = "20px";
-                                rect103.height = "20px";
-                                rect104.height = "20px";
-                                rect105.height = "20px";
+                                rect101.height = "200px";
+                                rect102.height = "200px";
+                                rect103.height = "200px";
+                                rect104.height = "200px";
+                                rect105.height = "200px";
                             }
                             else {
                                 rect101.height = "0px";
@@ -2179,7 +2234,7 @@
                             boxC11F1.position.z = 1;
 
                             var rect111 = new BABYLON.GUI.Rectangle();
-                            rect111.width = 0.025;
+                            rect111.width = 1;
                             rect111.height = "0px";
                             rect111.color = "black";
                             rect111.thickness = 0;
@@ -2187,6 +2242,7 @@
 
                             var label111 = new BABYLON.GUI.TextBlock();
                             label111.text = C11F1;
+                            label111.fontSize = 12;
                             rect111.addControl(label111);
 
                             rect111.linkWithMesh(boxC11F1);
@@ -2198,7 +2254,7 @@
                             boxC11F2.position.z = 0;
 
                             var rect112 = new BABYLON.GUI.Rectangle();
-                            rect112.width = 0.025;
+                            rect112.width = 1;
                             rect112.height = "0px";
                             rect112.color = "black";
                             rect112.thickness = 0;
@@ -2206,6 +2262,7 @@
 
                             var label112 = new BABYLON.GUI.TextBlock();
                             label112.text = C11F2;
+                            label112.fontSize = 12;
                             rect112.addControl(label112);
 
                             rect112.linkWithMesh(boxC11F2);
@@ -2218,7 +2275,7 @@
                             boxC11F3.position.z = -1;
 
                             var rect113 = new BABYLON.GUI.Rectangle();
-                            rect113.width = 0.025;
+                            rect113.width = 1;
                             rect113.height = "0px";
                             rect113.color = "black";
                             rect113.thickness = 0;
@@ -2226,6 +2283,7 @@
 
                             var label113 = new BABYLON.GUI.TextBlock();
                             label113.text = C11F3;
+                            label113.fontSize = 12;
                             rect113.addControl(label113);
 
                             rect113.linkWithMesh(boxC11F3);
@@ -2237,7 +2295,7 @@
                             boxC11F4.position.z = -2;
 
                             var rect114 = new BABYLON.GUI.Rectangle();
-                            rect114.width = 0.025;
+                            rect114.width = 1;
                             rect114.height = "0px";
                             rect114.color = "black";
                             rect114.thickness = 0;
@@ -2245,6 +2303,7 @@
 
                             var label114 = new BABYLON.GUI.TextBlock();
                             label114.text = C11F4;
+                            label114.fontSize = 12;
                             rect114.addControl(label114);
 
                             rect114.linkWithMesh(boxC11F4);
@@ -2256,7 +2315,7 @@
                             boxC11F5.position.z = -3;
 
                             var rect115 = new BABYLON.GUI.Rectangle();
-                            rect115.width = 0.025;
+                            rect115.width = 1;
                             rect115.height = "0px";
                             rect115.color = "black";
                             rect115.thickness = 0;
@@ -2264,14 +2323,15 @@
 
                             var label115 = new BABYLON.GUI.TextBlock();
                             label115.text = C11F5;
+                            label115.fontSize = 12;
                             rect115.addControl(label115);
 
                             rect115.linkWithMesh(boxC11F5);
 
                         }
 
-                        posicionGround-=0.25;
-                        widthGround+=1;
+                        posicionGround-=0.30;
+                        widthGround+=0.8;
 
                         var rectangle12 = new BABYLON.GUI.Rectangle('');
                         rectangle12.width ="20px";
@@ -2291,11 +2351,11 @@
 
                         var mostrarValoresColumna12 = function(isChecked) {
                             if (isChecked) {
-                                rect111.height = "20px";
-                                rect112.height = "20px";
-                                rect113.height = "20px";
-                                rect114.height = "20px";
-                                rect115.height = "20px";
+                                rect111.height = "200px";
+                                rect112.height = "200px";
+                                rect113.height = "200px";
+                                rect114.height = "200px";
+                                rect115.height = "200px";
                             }
                             else {
                                 rect111.height = "0px";
@@ -2317,7 +2377,7 @@
                             boxC12F1.position.z = 1;
 
                             var rect121 = new BABYLON.GUI.Rectangle();
-                            rect121.width = 0.025;
+                            rect121.width = 1;
                             rect121.height = "0px";
                             rect121.color = "black";
                             rect121.thickness = 0;
@@ -2325,6 +2385,7 @@
 
                             var label121 = new BABYLON.GUI.TextBlock();
                             label121.text = C12F1;
+                            label121.fontSize = 12;
                             rect121.addControl(label121);
 
                             rect121.linkWithMesh(boxC12F1);
@@ -2336,7 +2397,7 @@
                             boxC12F2.position.z = 0;
 
                             var rect122 = new BABYLON.GUI.Rectangle();
-                            rect122.width = 0.025;
+                            rect122.width = 1;
                             rect122.height = "0px";
                             rect122.color = "black";
                             rect122.thickness = 0;
@@ -2344,6 +2405,7 @@
 
                             var label122 = new BABYLON.GUI.TextBlock();
                             label122.text = C12F2;
+                            label122.fontSize = 12;
                             rect122.addControl(label122);
 
                             rect122.linkWithMesh(boxC12F2);
@@ -2355,7 +2417,7 @@
                             boxC12F3.position.z = -1;
 
                             var rect123 = new BABYLON.GUI.Rectangle();
-                            rect123.width = 0.025;
+                            rect123.width = 1;
                             rect123.height = "0px";
                             rect123.color = "black";
                             rect123.thickness = 0;
@@ -2363,6 +2425,7 @@
 
                             var label123 = new BABYLON.GUI.TextBlock();
                             label123.text = C12F3;
+                            label123.fontSize = 12;
                             rect123.addControl(label123);
 
                             rect123.linkWithMesh(boxC12F3);
@@ -2375,7 +2438,7 @@
                             boxC12F4.position.z = -2;
 
                             var rect124 = new BABYLON.GUI.Rectangle();
-                            rect124.width = 0.025;
+                            rect124.width = 1;
                             rect124.height = "0px";
                             rect124.color = "black";
                             rect124.thickness = 0;
@@ -2383,6 +2446,7 @@
 
                             var label124 = new BABYLON.GUI.TextBlock();
                             label124.text = C12F4;
+                            label124.fontSize = 12;
                             rect124.addControl(label124);
 
                             rect124.linkWithMesh(boxC12F4);
@@ -2394,7 +2458,7 @@
                             boxC12F5.position.z = -3;
 
                             var rect125 = new BABYLON.GUI.Rectangle();
-                            rect125.width = 0.025;
+                            rect125.width = 1;
                             rect125.height = "0px";
                             rect125.color = "black";
                             rect125.thickness = 0;
@@ -2402,13 +2466,14 @@
 
                             var label125 = new BABYLON.GUI.TextBlock();
                             label125.text = C12F5;
+                            label125.fontSize = 12;
                             rect125.addControl(label125);
 
                             rect125.linkWithMesh(boxC12F5);
                         }
 
-                        posicionGround-=0.20;
-                        widthGround+=0.2;
+                        posicionGround-=0.30;
+                        widthGround+=0.5;
 
                         var rectangle13 = new BABYLON.GUI.Rectangle('');
                         rectangle13.width ="20px";
@@ -2428,11 +2493,11 @@
 
                         var mostrarValoresColumna13 = function(isChecked) {
                             if (isChecked) {
-                                rect121.height = "20px";
-                                rect122.height = "20px";
-                                rect123.height = "20px";
-                                rect124.height = "20px";
-                                rect125.height = "20px";
+                                rect121.height = "200px";
+                                rect122.height = "200px";
+                                rect123.height = "200px";
+                                rect124.height = "200px";
+                                rect125.height = "200px";
                             }
                             else {
                                 rect121.height = "0px";
@@ -2452,7 +2517,7 @@
                             boxC13F1.position.z = 1;
 
                             var rect131 = new BABYLON.GUI.Rectangle();
-                            rect131.width = 0.025;
+                            rect131.width = 1;
                             rect131.height = "0px";
                             rect131.color = "black";
                             rect131.thickness = 0;
@@ -2460,6 +2525,7 @@
 
                             var label131 = new BABYLON.GUI.TextBlock();
                             label131.text = C13F1;
+                            label131.fontSize = 12;
                             rect131.addControl(label131);
 
                             rect131.linkWithMesh(boxC13F1);
@@ -2471,7 +2537,7 @@
                             boxC13F2.position.z = 0;
 
                             var rect132 = new BABYLON.GUI.Rectangle();
-                            rect132.width = 0.025;
+                            rect132.width = 1;
                             rect132.height = "0px";
                             rect132.color = "black";
                             rect132.thickness = 0;
@@ -2479,6 +2545,7 @@
 
                             var label132 = new BABYLON.GUI.TextBlock();
                             label132.text = C13F2;
+                            label132.fontSize = 12;
                             rect132.addControl(label132);
 
                             rect132.linkWithMesh(boxC13F2);
@@ -2490,7 +2557,7 @@
                             boxC13F3.position.z = -1;
 
                             var rect133 = new BABYLON.GUI.Rectangle();
-                            rect133.width = 0.025;
+                            rect133.width = 1;
                             rect133.height = "0px";
                             rect133.color = "black";
                             rect133.thickness = 0;
@@ -2498,6 +2565,7 @@
 
                             var label133 = new BABYLON.GUI.TextBlock();
                             label133.text = C13F3;
+                            label133.fontSize = 12;
                             rect133.addControl(label133);
 
                             rect133.linkWithMesh(boxC13F3);
@@ -2509,7 +2577,7 @@
                             boxC13F4.position.z = -2;
 
                             var rect134 = new BABYLON.GUI.Rectangle();
-                            rect134.width = 0.025;
+                            rect134.width = 1;
                             rect134.height = "0px";
                             rect134.color = "black";
                             rect134.thickness = 0;
@@ -2517,6 +2585,7 @@
 
                             var label134 = new BABYLON.GUI.TextBlock();
                             label134.text = C13F4;
+                            label134.fontSize = 12;
                             rect134.addControl(label134);
 
                             rect134.linkWithMesh(boxC13F4);
@@ -2528,7 +2597,7 @@
                             boxC13F5.position.z = -3;
 
                             var rect135 = new BABYLON.GUI.Rectangle();
-                            rect135.width = 0.025;
+                            rect135.width = 1;
                             rect135.height = "0px";
                             rect135.color = "black";
                             rect135.thickness = 0;
@@ -2536,12 +2605,14 @@
 
                             var label135 = new BABYLON.GUI.TextBlock();
                             label135.text = C13F5;
+                            label135.fontSize = 12;
                             rect135.addControl(label135);
 
                             rect135.linkWithMesh(boxC13F5);
                         }
 
-                        posicionGround-=0.20;
+                        posicionGround-=0.30;
+                        widthGround+=0.5;
 
                         var rectangle14 = new BABYLON.GUI.Rectangle('');
                         rectangle14.width ="20px";
@@ -2561,11 +2632,11 @@
 
                         var mostrarValoresColumna14 = function(isChecked) {
                             if (isChecked) {
-                                rect131.height = "20px";
-                                rect132.height = "20px";
-                                rect133.height = "20px";
-                                rect134.height = "20px";
-                                rect135.height = "20px";
+                                rect131.height = "200px";
+                                rect132.height = "200px";
+                                rect133.height = "200px";
+                                rect134.height = "200px";
+                                rect135.height = "200px";
                             }
                             else {
                                 rect131.height = "0px";
@@ -2587,7 +2658,7 @@
                             boxC14F1.position.z = 1;
 
                             var rect141 = new BABYLON.GUI.Rectangle();
-                            rect141.width = 0.025;
+                            rect141.width = 1;
                             rect141.height = "0px";
                             rect141.color = "black";
                             rect141.thickness = 0;
@@ -2595,6 +2666,7 @@
 
                             var label141 = new BABYLON.GUI.TextBlock();
                             label141.text = C14F1;
+                            label141.fontSize = 12;
                             rect141.addControl(label141);
 
                             rect141.linkWithMesh(boxC14F1);
@@ -2606,7 +2678,7 @@
                             boxC14F2.position.z = 0;
 
                             var rect142 = new BABYLON.GUI.Rectangle();
-                            rect142.width = 0.025;
+                            rect142.width = 1;
                             rect142.height = "0px";
                             rect142.color = "black";
                             rect142.thickness = 0;
@@ -2614,6 +2686,7 @@
 
                             var label142 = new BABYLON.GUI.TextBlock();
                             label142.text = C14F2;
+                            label142.fontSize = 12;
                             rect142.addControl(label142);
 
                             rect142.linkWithMesh(boxC14F2);
@@ -2625,7 +2698,7 @@
                             boxC14F3.position.z = -1;
 
                             var rect143 = new BABYLON.GUI.Rectangle();
-                            rect143.width = 0.025;
+                            rect143.width = 1;
                             rect143.height = "0px";
                             rect143.color = "black";
                             rect143.thickness = 0;
@@ -2633,6 +2706,7 @@
 
                             var label143 = new BABYLON.GUI.TextBlock();
                             label143.text = C14F3;
+                            label143.fontSize = 12;
                             rect143.addControl(label143);
 
                             rect143.linkWithMesh(boxC14F3);
@@ -2644,7 +2718,7 @@
                             boxC14F4.position.z = -2;
 
                             var rect144 = new BABYLON.GUI.Rectangle();
-                            rect144.width = 0.025;
+                            rect144.width = 1;
                             rect144.height = "0px";
                             rect144.color = "black";
                             rect144.thickness = 0;
@@ -2652,6 +2726,7 @@
 
                             var label144 = new BABYLON.GUI.TextBlock();
                             label144.text = C14F4;
+                            label144.fontSize = 12;
                             rect144.addControl(label144);
 
                             rect144.linkWithMesh(boxC14F4);
@@ -2663,7 +2738,7 @@
                             boxC14F5.position.z = -3;
 
                             var rect145 = new BABYLON.GUI.Rectangle();
-                            rect145.width = 0.025;
+                            rect145.width = 1;
                             rect145.height = "0px";
                             rect145.color = "black";
                             rect145.thickness = 0;
@@ -2671,12 +2746,14 @@
 
                             var label145 = new BABYLON.GUI.TextBlock();
                             label145.text = C14F5;
+                            label145.fontSize = 12;
                             rect145.addControl(label145);
 
                             rect145.linkWithMesh(boxC14F5);
                         }
 
-                        posicionGround-=0.20;
+                        posicionGround-=0.30;
+                        widthGround+=0.80;
 
                         var rectangle15 = new BABYLON.GUI.Rectangle('');
                         rectangle15.width ="20px";
@@ -2696,11 +2773,11 @@
 
                         var mostrarValoresColumna15 = function(isChecked) {
                             if (isChecked) {
-                                rect141.height = "20px";
-                                rect142.height = "20px";
-                                rect143.height = "20px";
-                                rect144.height = "20px";
-                                rect145.height = "20px";
+                                rect141.height = "200px";
+                                rect142.height = "200px";
+                                rect143.height = "200px";
+                                rect144.height = "200px";
+                                rect145.height = "200px";
                             }
                             else {
                                 rect141.height = "0px";
@@ -2717,81 +2794,81 @@
                     <!-- Creamos esta funcion para poder ver todos los valores de todas las columnas a la vez -->
                     var mostrarValores = function(isChecked) {
                         if (isChecked) {
-                            rect01.height = "20px";
-                            rect02.height = "20px";
-                            rect03.height = "20px";
-                            rect04.height = "20px";
-                            rect05.height = "20px";
-                            rect11.height = "20px";
-                            rect12.height = "20px";
-                            rect13.height = "20px";
-                            rect14.height = "20px";
-                            rect15.height = "20px";
-                            rect21.height = "20px";
-                            rect22.height = "20px";
-                            rect23.height = "20px";
-                            rect24.height = "20px";
-                            rect25.height = "20px";
-                            rect31.height = "20px";
-                            rect32.height = "20px";
-                            rect33.height = "20px";
-                            rect34.height = "20px";
-                            rect35.height = "20px";
-                            rect41.height = "20px";
-                            rect42.height = "20px";
-                            rect43.height = "20px";
-                            rect44.height = "20px";
-                            rect45.height = "20px";
-                            rect51.height = "20px";
-                            rect52.height = "20px";
-                            rect53.height = "20px";
-                            rect54.height = "20px";
-                            rect55.height = "20px";
-                            rect61.height = "20px";
-                            rect62.height = "20px";
-                            rect63.height = "20px";
-                            rect64.height = "20px";
-                            rect65.height = "20px";
-                            rect71.height = "20px";
-                            rect72.height = "20px";
-                            rect73.height = "20px";
-                            rect74.height = "20px";
-                            rect75.height = "20px";
-                            rect81.height = "20px";
-                            rect82.height = "20px";
-                            rect83.height = "20px";
-                            rect84.height = "20px";
-                            rect85.height = "20px";
-                            rect91.height = "20px";
-                            rect92.height = "20px";
-                            rect93.height = "20px";
-                            rect94.height = "20px";
-                            rect95.height = "20px";
-                            rect101.height = "20px";
-                            rect102.height = "20px";
-                            rect103.height = "20px";
-                            rect104.height = "20px";
-                            rect105.height = "20px";
-                            rect111.height = "20px";
-                            rect112.height = "20px";
-                            rect113.height = "20px";
-                            rect114.height = "20px";
-                            rect115.height = "20px";
-                            rect121.height = "20px";
-                            rect122.height = "20px";
-                            rect123.height = "20px";
-                            rect124.height = "20px";
-                            rect125.height = "20px";
-                            rect131.height = "20px";
-                            rect132.height = "20px";
-                            rect133.height = "20px";
-                            rect134.height = "20px";
-                            rect135.height = "20px";
-                            rect141.height = "20px";
-                            rect142.height = "20px";
-                            rect143.height = "20px";
-                            rect144.height = "20px";
-                            rect145.height = "20px";
+                            rect01.height = "200px";
+                            rect02.height = "200px";
+                            rect03.height = "200px";
+                            rect04.height = "200px";
+                            rect05.height = "200px";
+                            rect11.height = "200px";
+                            rect12.height = "200px";
+                            rect13.height = "200px";
+                            rect14.height = "200px";
+                            rect15.height = "200px";
+                            rect21.height = "200px";
+                            rect22.height = "200px";
+                            rect23.height = "200px";
+                            rect24.height = "200px";
+                            rect25.height = "200px";
+                            rect31.height = "200px";
+                            rect32.height = "200px";
+                            rect33.height = "200px";
+                            rect34.height = "200px";
+                            rect35.height = "200px";
+                            rect41.height = "200px";
+                            rect42.height = "200px";
+                            rect43.height = "200px";
+                            rect44.height = "200px";
+                            rect45.height = "200px";
+                            rect51.height = "200px";
+                            rect52.height = "200px";
+                            rect53.height = "200px";
+                            rect54.height = "200px";
+                            rect55.height = "200px";
+                            rect61.height = "200px";
+                            rect62.height = "200px";
+                            rect63.height = "200px";
+                            rect64.height = "200px";
+                            rect65.height = "200px";
+                            rect71.height = "200px";
+                            rect72.height = "200px";
+                            rect73.height = "200px";
+                            rect74.height = "200px";
+                            rect75.height = "200px";
+                            rect81.height = "200px";
+                            rect82.height = "200px";
+                            rect83.height = "200px";
+                            rect84.height = "200px";
+                            rect85.height = "200px";
+                            rect91.height = "200px";
+                            rect92.height = "200px";
+                            rect93.height = "200px";
+                            rect94.height = "200px";
+                            rect95.height = "200px";
+                            rect101.height = "200px";
+                            rect102.height = "200px";
+                            rect103.height = "200px";
+                            rect104.height = "200px";
+                            rect105.height = "200px";
+                            rect111.height = "200px";
+                            rect112.height = "200px";
+                            rect113.height = "200px";
+                            rect114.height = "200px";
+                            rect115.height = "200px";
+                            rect121.height = "200px";
+                            rect122.height = "200px";
+                            rect123.height = "200px";
+                            rect124.height = "200px";
+                            rect125.height = "200px";
+                            rect131.height = "200px";
+                            rect132.height = "200px";
+                            rect133.height = "200px";
+                            rect134.height = "200px";
+                            rect135.height = "200px";
+                            rect141.height = "200px";
+                            rect142.height = "200px";
+                            rect143.height = "200px";
+                            rect144.height = "200px";
+                            rect145.height = "200px";
                         }
                         else {
                             rect01.height = "0px";
