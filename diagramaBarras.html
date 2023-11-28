@@ -453,7 +453,7 @@
 
                         <!-- Añadimos el valor de la columna -->
                         var rect1 = new BABYLON.GUI.Rectangle();
-                        rect1.width = 0.025;
+                        rect1.width = 1;
                         rect1.height = "0px";
                         rect1.color = "black";
                         rect1.thickness = 0;
@@ -461,6 +461,7 @@
 
                         var label = new BABYLON.GUI.TextBlock();
                         label.text = column1;
+                        label.fontSize = 12;
                         rect1.addControl(label);
 
                         rect1.linkWithMesh(box);
@@ -468,7 +469,7 @@
                         <!-- Creamos la opccion de hacer check en esta columna para ver su valor -->
                         var mostrarValoresColumna1 = function(isChecked) {
                             if (isChecked) {
-                                rect1.height = "20px";
+                                rect1.height = "200px";
                             }
                             else {
                                 rect1.height = "0px";
@@ -502,7 +503,7 @@
                         text2.moveToVector3(postext2,scene);
 
                         var rect2 = new BABYLON.GUI.Rectangle();
-                        rect2.width = 0.025;
+                        rect2.width = 1;
                         rect2.height = "0px";
                         rect2.color = "black";
                         rect2.thickness = 0;
@@ -510,13 +511,14 @@
 
                         var label2 = new BABYLON.GUI.TextBlock();
                         label2.text = column2;
+                        label2.fontSize = 12;
                         rect2.addControl(label2);
 
                         rect2.linkWithMesh(box1);
 
                         var mostrarValoresColumna2 = function(isChecked) {
                             if (isChecked) {
-                                rect2.height = "20px";
+                                rect2.height = "200px";
                             }
                             else {
                                 rect2.height = "0px";
@@ -550,7 +552,7 @@
                         text3.moveToVector3(postext3,scene);
 
                         var rect3 = new BABYLON.GUI.Rectangle();
-                        rect3.width = 0.025;
+                        rect3.width = 1;
                         rect3.height = "0px";
                         rect3.color = "black";
                         rect3.thickness = 0;
@@ -558,12 +560,13 @@
 
                         var label3 = new BABYLON.GUI.TextBlock();
                         label3.text = column3;
+                        label3.fontSize = 12;
                         rect3.addControl(label3);
 
                         rect3.linkWithMesh(box2);
                         var mostrarValoresColumna3 = function(isChecked) {
                             if (isChecked) {
-                                rect3.height = "20px";
+                                rect3.height = "200px";
                             }
                             else {
                                 rect3.height = "0px";
@@ -596,7 +599,7 @@
                         text4.moveToVector3(postext4,scene);
 
                         var rect4 = new BABYLON.GUI.Rectangle();
-                        rect4.width = 0.025;
+                        rect4.width = 1;
                         rect4.height = "0px";
                         rect4.color = "black";
                         rect4.thickness = 0;
@@ -604,13 +607,14 @@
 
                         var label4 = new BABYLON.GUI.TextBlock();
                         label4.text = column4;
+                        label4.fontSize = 12;
                         rect4.addControl(label4);
 
                         rect4.linkWithMesh(box3);
 
                         var mostrarValoresColumna4 = function(isChecked) {
                             if (isChecked) {
-                                rect4.height = "20px";
+                                rect4.height = "200px";
                             }
                             else {
                                 rect4.height = "0px";
@@ -645,7 +649,7 @@
                         text5.moveToVector3(postext5,scene);
 
                         var rect5 = new BABYLON.GUI.Rectangle();
-                        rect5.width = 0.025;
+                        rect5.width = 1;
                         rect5.height = "0px";
                         rect5.color = "black";
                         rect5.thickness = 0;
@@ -653,13 +657,14 @@
 
                         var label5 = new BABYLON.GUI.TextBlock();
                         label5.text = column5;
+                        label5.fontSize = 12;
                         rect5.addControl(label5);
 
                         rect5.linkWithMesh(box4);
 
                         var mostrarValoresColumna5 = function(isChecked) {
                             if (isChecked) {
-                                rect5.height = "20px";
+                                rect5.height = "200px";
                             }
                             else {
                                 rect5.height = "0px";
@@ -693,7 +698,7 @@
                         text6.moveToVector3(postext6,scene);
 
                         var rect6 = new BABYLON.GUI.Rectangle();
-                        rect6.width = 0.025;
+                        rect6.width = 1;
                         rect6.height = "0px";
                         rect6.color = "black";
                         rect6.thickness = 0;
@@ -701,13 +706,14 @@
 
                         var label6 = new BABYLON.GUI.TextBlock();
                         label6.text = column6;
+                        label6.fontSize = 12;
                         rect6.addControl(label6);
 
                         rect6.linkWithMesh(box5);
 
                         var mostrarValoresColumna6 = function(isChecked) {
                             if (isChecked) {
-                                rect6.height = "20px";
+                                rect6.height = "200px";
                             }
                             else {
                                 rect6.height = "0px";
@@ -742,7 +748,7 @@
                         text7.moveToVector3(postext7,scene);
 
                         var rect7 = new BABYLON.GUI.Rectangle();
-                        rect7.width = 0.025;
+                        rect7.width = 1;
                         rect7.height = "0px";
                         rect7.color = "black";
                         rect7.thickness = 0;
@@ -750,13 +756,14 @@
 
                         var label7 = new BABYLON.GUI.TextBlock();
                         label7.text = column7;
+                        label7.fontSize = 12;
                         rect7.addControl(label7);
 
                         rect7.linkWithMesh(box6);
 
                         var mostrarValoresColumna7 = function(isChecked) {
                             if (isChecked) {
-                                rect7.height = "20px";
+                                rect7.height = "200px";
                             }
                             else {
                                 rect7.height = "0px";
@@ -789,7 +796,7 @@
                         text8.moveToVector3(postext8,scene);
 
                         var rect8 = new BABYLON.GUI.Rectangle();
-                        rect8.width = 0.025;
+                        rect8.width = 1;
                         rect8.height = "0px";
                         rect8.color = "black";
                         rect8.thickness = 0;
@@ -797,13 +804,14 @@
 
                         var label8 = new BABYLON.GUI.TextBlock();
                         label8.text = column8;
+                        label8.fontSize = 12;
                         rect8.addControl(label8);
 
                         rect8.linkWithMesh(box7);
 
                         var mostrarValoresColumna8 = function(isChecked) {
                             if (isChecked) {
-                                rect8.height = "20px";
+                                rect8.height = "200px";
                             }
                             else {
                                 rect8.height = "0px";
@@ -838,7 +846,7 @@
                         text9.moveToVector3(postext9,scene);
 
                         var rect9 = new BABYLON.GUI.Rectangle();
-                        rect9.width = 0.025;
+                        rect9.width = 1;
                         rect9.height = "0px";
                         rect9.color = "black";
                         rect9.thickness = 0;
@@ -846,13 +854,14 @@
 
                         var label9 = new BABYLON.GUI.TextBlock();
                         label9.text = column9;
+                        label9.fontSize = 12;
                         rect9.addControl(label9);
 
                         rect9.linkWithMesh(box8);
 
                         var mostrarValoresColumna9 = function(isChecked) {
                             if (isChecked) {
-                                rect9.height = "20px";
+                                rect9.height = "200px";
                             }
                             else {
                                 rect9.height = "0px";
@@ -886,7 +895,7 @@
                         text10.moveToVector3(postext10,scene);
 
                         var rect10 = new BABYLON.GUI.Rectangle();
-                        rect10.width = 0.025;
+                        rect10.width = 1;
                         rect10.height = "0px";
                         rect10.color = "black";
                         rect10.thickness = 0;
@@ -894,13 +903,14 @@
 
                         var label10 = new BABYLON.GUI.TextBlock();
                         label10.text = column10;
+                        label10.fontSize = 12;
                         rect10.addControl(label10);
 
                         rect10.linkWithMesh(box9);
 
                         var mostrarValoresColumna10 = function(isChecked) {
                             if (isChecked) {
-                                rect10.height = "20px";
+                                rect10.height = "200px";
                             }
                             else {
                                 rect10.height = "0px";
@@ -935,7 +945,7 @@
                         text11.moveToVector3(postext11,scene);
 
                         var rect11 = new BABYLON.GUI.Rectangle();
-                        rect11.width = 0.025;
+                        rect11.width = 1;
                         rect11.height = "0px";
                         rect11.color = "black";
                         rect11.thickness = 0;
@@ -943,13 +953,14 @@
 
                         var label11 = new BABYLON.GUI.TextBlock();
                         label11.text = column11;
+                        label11.fontSize = 12;
                         rect11.addControl(label11);
 
                         rect11.linkWithMesh(box10);
 
                         var mostrarValoresColumna11 = function(isChecked) {
                             if (isChecked) {
-                                rect11.height = "20px";
+                                rect11.height = "200px";
                             }
                             else {
                                 rect11.height = "0px";
@@ -984,21 +995,22 @@
                         text12.moveToVector3(postext12,scene);
 
                         var rect12 = new BABYLON.GUI.Rectangle();
-                        rect12.width = 0.025;
+                        rect12.width = 1;
                         rect12.height = "0px";
                         rect12.color = "black";
                         rect12.thickness = 0;
                         advancedTexture.addControl(rect12);
 
                         var label12 = new BABYLON.GUI.TextBlock();
-                        label12.text = column10;
+                        label12.text = column12;
+                        label12.fontSize = 12;
                         rect12.addControl(label12);
 
                         rect12.linkWithMesh(box11);
 
                         var mostrarValoresColumna12 = function(isChecked) {
                             if (isChecked) {
-                                rect12.height = "20px";
+                                rect12.height = "200px";
                             }
                             else {
                                 rect12.height = "0px";
@@ -1033,7 +1045,7 @@
                         text13.moveToVector3(postext13,scene);
 
                         var rect13 = new BABYLON.GUI.Rectangle();
-                        rect13.width = 0.025;
+                        rect13.width = 1;
                         rect13.height = "0px";
                         rect13.color = "black";
                         rect13.thickness = 0;
@@ -1041,13 +1053,14 @@
 
                         var label13 = new BABYLON.GUI.TextBlock();
                         label13.text = column13;
+                        label13.fontSize = 12;
                         rect13.addControl(label13);
 
                         rect13.linkWithMesh(box12);
 
                         var mostrarValoresColumna13 = function(isChecked) {
                             if (isChecked) {
-                                rect13.height = "20px";
+                                rect13.height = "200px";
                             }
                             else {
                                 rect13.height = "0px";
@@ -1082,7 +1095,7 @@
                         text14.moveToVector3(postext14,scene);
 
                         var rect14 = new BABYLON.GUI.Rectangle();
-                        rect14.width = 0.025;
+                        rect14.width = 1;
                         rect14.height = "0px";
                         rect14.color = "black";
                         rect14.thickness = 0;
@@ -1090,13 +1103,14 @@
 
                         var label14 = new BABYLON.GUI.TextBlock();
                         label14.text = column14;
+                        label14.fontSize = 12;
                         rect14.addControl(label14);
 
                         rect14.linkWithMesh(box13);
 
                         var mostrarValoresColumna14 = function(isChecked) {
                             if (isChecked) {
-                                rect14.height = "20px";
+                                rect14.height = "200px";
                             }
                             else {
                                 rect14.height = "0px";
@@ -1131,7 +1145,7 @@
                         text15.moveToVector3(postext15,scene);
 
                         var rect15 = new BABYLON.GUI.Rectangle();
-                        rect15.width = 0.025;
+                        rect15.width = 1;
                         rect15.height = "0px";
                         rect15.color = "black";
                         rect15.thickness = 0;
@@ -1139,13 +1153,14 @@
 
                         var label15 = new BABYLON.GUI.TextBlock();
                         label15.text = column15;
+                        label15.fontSize = 12;
                         rect15.addControl(label15);
 
                         rect15.linkWithMesh(box14);
 
                         var mostrarValoresColumna15 = function(isChecked) {
                             if (isChecked) {
-                                rect15.height = "20px";
+                                rect15.height = "200px";
                             }
                             else {
                                 rect15.height = "0px";
@@ -1180,7 +1195,7 @@
                         text16.moveToVector3(postext16,scene);
 
                         var rect16 = new BABYLON.GUI.Rectangle();
-                        rect16.width = 0.025;
+                        rect16.width = 1;
                         rect16.height = "0px";
                         rect16.color = "black";
                         rect16.thickness = 0;
@@ -1188,13 +1203,14 @@
 
                         var label16 = new BABYLON.GUI.TextBlock();
                         label16.text = column16;
+                        label16.fontSize = 12;
                         rect16.addControl(label16);
 
                         rect16.linkWithMesh(box15);
 
                         var mostrarValoresColumna16 = function(isChecked) {
                             if (isChecked) {
-                                rect16.height = "20px";
+                                rect16.height = "200px";
                             }
                             else {
                                 rect16.height = "0px";
@@ -1229,7 +1245,7 @@
                         text17.moveToVector3(postext17,scene);
 
                         var rect17 = new BABYLON.GUI.Rectangle();
-                        rect17.width = 0.025;
+                        rect17.width = 1;
                         rect17.height = "0px";
                         rect17.color = "black";
                         rect17.thickness = 0;
@@ -1237,13 +1253,14 @@
 
                         var label17 = new BABYLON.GUI.TextBlock();
                         label17.text = column17;
+                        label17.fontSize = 12;
                         rect17.addControl(label17);
 
                         rect17.linkWithMesh(box16);
 
                         var mostrarValoresColumna17 = function(isChecked) {
                             if (isChecked) {
-                                rect17.height = "20px";
+                                rect17.height = "200px";
                             }
                             else {
                                 rect17.height = "0px";
@@ -1277,7 +1294,7 @@
                         text18.moveToVector3(postext18,scene);
 
                         var rect18 = new BABYLON.GUI.Rectangle();
-                        rect18.width = 0.025;
+                        rect18.width = 1;
                         rect18.height = "0px";
                         rect18.color = "black";
                         rect18.thickness = 0;
@@ -1285,13 +1302,14 @@
 
                         var label18 = new BABYLON.GUI.TextBlock();
                         label18.text = column18;
+                        label18.fontSize = 12;
                         rect18.addControl(label18);
 
                         rect18.linkWithMesh(box17);
 
                         var mostrarValoresColumna18 = function(isChecked) {
                             if (isChecked) {
-                                rect18.height = "20px";
+                                rect18.height = "200px";
                             }
                             else {
                                 rect18.height = "0px";
@@ -1325,7 +1343,7 @@
                         text19.moveToVector3(postext19,scene);
 
                         var rect19 = new BABYLON.GUI.Rectangle();
-                        rect19.width = 0.025;
+                        rect19.width = 1;
                         rect19.height = "0px";
                         rect19.color = "black";
                         rect19.thickness = 0;
@@ -1333,13 +1351,14 @@
 
                         var label19 = new BABYLON.GUI.TextBlock();
                         label19.text = column19;
+                        label19.fontSize = 12;
                         rect19.addControl(label19);
 
                         rect19.linkWithMesh(box18);
 
                         var mostrarValoresColumna19 = function(isChecked) {
                             if (isChecked) {
-                                rect19.height = "20px";
+                                rect19.height = "200px";
                             }
                             else {
                                 rect19.height = "0px";
@@ -1374,7 +1393,7 @@
                         text20.moveToVector3(postext20,scene);
 
                         var rect20 = new BABYLON.GUI.Rectangle();
-                        rect20.width = 0.025;
+                        rect20.width = 1;
                         rect20.height = "0px";
                         rect20.color = "black";
                         rect20.thickness = 0;
@@ -1382,13 +1401,14 @@
 
                         var label20 = new BABYLON.GUI.TextBlock();
                         label20.text = column20;
+                        label20.fontSize = 12;
                         rect20.addControl(label20);
 
                         rect20.linkWithMesh(box19);
 
                         var mostrarValoresColumna20 = function(isChecked) {
                             if (isChecked) {
-                                rect20.height = "20px";
+                                rect20.height = "200px";
                             }
                             else {
                                 rect20.height = "0px";
@@ -1402,26 +1422,26 @@
                     <!-- Creamos esta funcion para poder ver todos los valores de todas las columnas a la vez -->
                     var mostrarValores = function(isChecked) {
                         if (isChecked) {
-                            rect1.height = "20px";
-                            rect2.height = "20px";
-                            rect3.height = "20px";
-                            rect4.height = "20px";
-                            rect5.height = "20px";
-                            rect6.height = "20px";
-                            rect7.height = "20px";
-                            rect8.height = "20px";
-                            rect9.height = "20px";
-                            rect10.height = "20px";
-                            rect11.height = "20px";
-                            rect12.height = "20px";
-                            rect13.height = "20px";
-                            rect14.height = "20px";
-                            rect15.height = "20px";
-                            rect16.height = "20px";
-                            rect17.height = "20px";
-                            rect18.height = "20px";
-                            rect19.height = "20px";
-                            rect20.height = "20px";
+                            rect1.height = "200px";
+                            rect2.height = "200px";
+                            rect3.height = "200px";
+                            rect4.height = "200px";
+                            rect5.height = "200px";
+                            rect6.height = "200px";
+                            rect7.height = "200px";
+                            rect8.height = "200px";
+                            rect9.height = "200px";
+                            rect10.height = "200px";
+                            rect11.height = "200px";
+                            rect12.height = "200px";
+                            rect13.height = "200px";
+                            rect14.height = "200px";
+                            rect15.height = "200px";
+                            rect16.height = "200px";
+                            rect17.height = "200px";
+                            rect18.height = "200px";
+                            rect19.height = "200px";
+                            rect20.height = "200px";
                         }
                         else {
                             rect1.height = "0px";
